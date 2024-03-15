@@ -8,10 +8,9 @@ public class snghyn {
 		System.out.println("집 보내줘요");
 		Scanner sc = new Scanner(System.in);
 		int i = sc.nextInt();
-		if(i > 10) {
+		if (i > 10) {
 			System.out.println("집가기");
-		}
-		else {
+		} else {
 			System.out.println("집가기");
 		}
 
