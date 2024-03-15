@@ -15,7 +15,6 @@
 				<div class="text_box">
 					<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요">
 					<label class="form_lavel">아이디</label>
-					<input type="button" onclick="test()" value="아이디 중복 확인">
 				</div>
 				<div class="error_box"></div>
 			</div>
@@ -29,7 +28,7 @@
 			</div>
 			<div>
 				<div class="text_box">
-					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호를 재입력하세요">
+					<input type="password" id="user_re pw" name="pw" placeholder="비밀번호를 재입력하세요">
 					<label class="form_lavel">비밀번호 재입력</label>
 				</div>
 			</div>
@@ -74,6 +73,5 @@
 			</div>
 		</form>
 	</div>
-	<script src="js/pw_re.js" charset="UTF-8"></script>
 </body>
 </html>
