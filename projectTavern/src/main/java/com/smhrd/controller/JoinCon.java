@@ -11,6 +11,14 @@ public class JoinCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		request.setCharacterEncoding("UTF-8");
+
+		// 1. 파라미터 수집(email,pw,tel,address)
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		String tel = request.getParameter("");
+		String address = request.getParameter("address");
 	}
 
 }
