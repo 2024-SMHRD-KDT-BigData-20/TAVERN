@@ -10,7 +10,7 @@ public class gyuhyeon {
 		for(int i =0;i<=a;i++) {
 			sum = i+a;
 			System.out.println(sum);
-			a
+			int ba;
 			
 		}
 
