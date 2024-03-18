@@ -14,9 +14,7 @@
 	<!-- 회원가입 끝 -->
 
 	<!-- 로그인 -->
-	<select id="selectMember" parameterType="MemberVO"
-		resultType="MemberVO"
-	>
+	<select id="selectMember" parameterType="MemberVO" resultType="MemberVO">
 		select * from user_info where id=#{id} and pw=#{pw}
 	</select>
 	<!-- 로그인 끝 -->
@@ -30,10 +28,10 @@
 	<!-- 업데이트 끝 -->
 
 	<!-- 아이디 찾기 -->
-	
+
 	<select id="idsearch" parameterType="MemverVO">
-        select id from user_info where email = #{email}
-    </select>
+		select id from user_info where email = #{email}
+	</select>
 
 
 
