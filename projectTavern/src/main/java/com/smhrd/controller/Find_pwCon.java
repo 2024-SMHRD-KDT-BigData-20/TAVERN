@@ -11,15 +11,8 @@ public class Find_pwCon extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("[Find_Pw]");
-		
-		request.setCharacterEncoding("UTF-8");
-		fpwdao = new MemberDAO();
-		String id = request.getParameter("id");
-		
 		
 		
 		
 	}
-
 }

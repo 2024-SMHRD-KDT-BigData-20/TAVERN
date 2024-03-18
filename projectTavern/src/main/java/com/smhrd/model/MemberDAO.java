@@ -40,11 +40,6 @@ public class MemberDAO {
 	}// updateMember 끝
 	
 	// 비밀번호 찾기 구현
-	public String find_pw(String id) {
-		String id = null;
-		
-		
-		
-	}
+	
 
 }
