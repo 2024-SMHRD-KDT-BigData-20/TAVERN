@@ -46,5 +46,14 @@ public class MemberDAO {
 
 		return cnt;
 	}// insertMember 끝
+	
+	// 회원정보수정 기능구현
+		public int updateMember(MemberVO update) {
+			int cnt = 0;
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			cnt = sqlSession.update("com.smhrd.db.MemberMapper.updateMember",update);
+			sqlSession.close();
+			return cnt;
+		}// updateMember 끝
 
 }
