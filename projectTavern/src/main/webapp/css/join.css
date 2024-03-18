@@ -1,0 +1,6 @@
+@charset "EUC-KR";
+
+.error_box {
+	display: none;
+	color: red;
+}
