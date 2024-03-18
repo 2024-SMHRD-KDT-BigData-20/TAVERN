@@ -46,14 +46,14 @@ public class JoinCon extends HttpServlet {
 			// 회원가입 축하드립니다~ 000님 --> email 정보 보내기
 			// request에 담아서 forward방식 이동
 			// /MessageSystem/src/main/webapp/join
-			RequestDispatcher rd = request.getRequestDispatcher("joinSuccess.jsp");
-			request.setAttribute("joinEmail", email);
+			RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
+			request.setAttribute("joinnick", nick);
 			rd.forward(request, response);
 
 		} else {
 			// 실패
 			System.out.println("회원가입 실패");
-			response.sendRedirect("Main.jsp");
+			response.sendRedirect("main.jsp");
 		}
 
 	}

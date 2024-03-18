@@ -23,6 +23,7 @@ public class UpdateCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		// 1. 파라미터 수집
+		
 		// id기준으로 pw,nick
 		// session에 저장된 정보 id
 		String pw = request.getParameter("pw");

@@ -9,6 +9,7 @@
 <body>
 	<div>
 	<h1>메인화면</h1>
+	<p>{}</p>
 	<a href="login_home.jsp">로그인/회원가입</a>
 	</div>
 </body>
