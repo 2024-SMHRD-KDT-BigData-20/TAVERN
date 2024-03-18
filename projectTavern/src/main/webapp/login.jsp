@@ -13,12 +13,14 @@
 				<div>
 					<form action="LoginCon" method="post">
 						<div class="text_box">
-							<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요"> <label class="form_lavel">아이디</label>
+							<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요">
+							<label class="form_lavel">아이디</label>
 						</div>
 						<div class="error_box"></div>
 						<div></div>
 						<div>
-							<input type="password" name="pw" placeholder="비밀번호를 입력하세요"> <label class="form_lavel">비밀번호</label>
+							<input type="password" name="pw" placeholder="비밀번호를 입력하세요">
+							<label class="form_lavel">비밀번호</label>
 						</div>
 						<div class="error_box"></div>
 						<input type="submit" value="로그인">
