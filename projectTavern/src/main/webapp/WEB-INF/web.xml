@@ -31,8 +31,8 @@
 		<url-pattern>/UpdateCon</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>Find_Pw</servlet-name>
-		<url-pattern>/Find_Pw</url-pattern>
+		<servlet-name>Find_pwCon</servlet-name>
+		<url-pattern>/Find_pwCon</url-pattern>
 	</servlet-mapping>
 	<session-config>
 		<session-timeout>5</session-timeout> <!-- 세션 유효 시간을 5분으로 설정 -->
