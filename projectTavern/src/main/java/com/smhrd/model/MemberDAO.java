@@ -38,6 +38,11 @@ public class MemberDAO {
 		sqlSession.close();
 		return cnt;
 	}// updateMember 끝
+
+	public String find_id(String email) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 

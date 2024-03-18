@@ -17,6 +17,10 @@
 		<servlet-class>com.smhrd.controller.UpdateCon</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>find_id_con</servlet-name>
+		<display-name>find_id_con</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.find_id_con</servlet-class>
 		<servlet-name>Find_Pw</servlet-name>
 		<display-name>Find_Pw</display-name>
 		<description></description>
@@ -31,8 +35,25 @@
 		<url-pattern>/UpdateCon</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>Find_pwCon</servlet-name>
-		<url-pattern>/Find_pwCon</url-pattern>
+		<<<<<<< HEAD
+		<servlet-name>find_id_con</servlet-name>
+		<url-pattern>/find_id_con</url-pattern>
+	</servlet-mapping>
+	=======
+	<servlet-name>Find_Pw</servlet-name>
+	<url-pattern>/Find_Pw</url-pattern>
+</servlet-mapping>
+	<session-config>
+		<session-timeout>5</session-timeout> <!-- 세션 유효 시간을 5분으로 설정 -->
+	</session-config>
+	>>>>>>> branch 'master' of
+	https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN.git
+</web-app>
+rn>/Find_pwCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Find_id_con</servlet-name>
+		<url-pattern>/Find_id_con</url-pattern>
 	</servlet-mapping>
 	<session-config>
 		<session-timeout>5</session-timeout> <!-- 세션 유효 시간을 5분으로 설정 -->
