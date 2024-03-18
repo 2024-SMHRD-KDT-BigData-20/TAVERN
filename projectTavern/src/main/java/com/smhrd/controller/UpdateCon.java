@@ -26,10 +26,14 @@ public class UpdateCon extends HttpServlet {
 		// id기준으로 pw,nick
 		// session에 저장된 정보 id
 		String pw = request.getParameter("pw");
+		String name = request.getParameter("name");
 		String nick = request.getParameter("nick");
+		String birthdate = request.getParameter("birthdate");
+		String gender = request.getParameter("gender");
+		String email = request.getParameter("email");
 		HttpSession session = request.getSession();
 		MemberVO loginMember = (MemberVO)session.getAttribute("loginMember");
-		String email = loginMember.getEmail();
+		String id = loginMember.getId();
 		// String pw2 = loginMember.getPw();
 		
 		// pw 확인해서 맞으면~~~DB저장
@@ -39,7 +43,7 @@ public class UpdateCon extends HttpServlet {
 		// }
 		
 		// 2. MemberVO에 e,p,t,a 정보를 담아서 묶기
-		MemberVO update = new MemberVO(id, pw, name, nick, birthdate, gender, email, joined_at);
+		MemberVO update = new MemberVO(id, pw, name, nick, birthdate, gender, email);
 		
 		// 3. MemberMapper.xml에서 sql문 완성
 		
