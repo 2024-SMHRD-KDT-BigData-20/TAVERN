@@ -25,7 +25,7 @@
 					</form>
 				</div>
 				<div>
-					<button type="button" onclick="location.href='joinUs.jsp'">회원가입</button>
+					<button type="button" onclick="location.href='join.jsp'">회원가입</button>
 				</div>
 				<div>
 					<a href="find.jsp">아이디/비밀번호 찾기</a>

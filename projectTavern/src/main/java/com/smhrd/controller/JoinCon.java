@@ -29,7 +29,7 @@ public class JoinCon extends HttpServlet {
 		String email = request.getParameter("email");
 
 		// 2. 묶어주기
-		MemberVO joinMember = new MemberVO(email, pw, name, nick, birth_date, gender, email);
+		MemberVO joinMember = new MemberVO(id, pw, name, nick, birth_date, gender, email);
 
 		System.out.println(joinMember.toString());
 

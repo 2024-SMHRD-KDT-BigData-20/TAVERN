@@ -26,6 +26,5 @@
   <mappers>
   <!-- SQL문을 JAVA파일과 별도 관리 (기능별로 파일 추가하면 됨, mapper태그 추가)-->
     <mapper resource="com/smhrd/db/MemberMapper.xml"/>
-    <mapper resource="com/smhrd/db/MessageMapper.xml"/>
   </mappers>
 </configuration>

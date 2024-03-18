@@ -7,3 +7,4 @@ select * from tavern
 insert into tavern values('1');
 
 select * from user_info
+
