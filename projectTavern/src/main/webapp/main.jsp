@@ -12,7 +12,7 @@
 		<!-- 로그인 했을 때 마이페이지/로그아웃 띄우기 -->
 		<c:choose>
 			<c:when test="${empty loginMember }">
-				<a href="#menu">로그인/회원가입</a>
+				<a href="login.jsp">로그인/회원가입</a>
 			</c:when>
 			<c:otherwise>
 				<%-- 만약에 로그인 한 사람의 email이 admin이면 select.jsp 이동 --%>

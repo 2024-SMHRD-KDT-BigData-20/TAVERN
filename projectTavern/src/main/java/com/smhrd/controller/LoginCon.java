@@ -17,10 +17,12 @@ public class LoginCon extends HttpServlet {
 			throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
-
+		
+		// 아이디와 페스워드 파라미터 불러오기
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-
+		
+		// membervo에 묶어주기
 		MemberVO login = new MemberVO(id, pw);
 
 		MemberVO login_vo = new MemberDAO().selectMember(login);
@@ -31,7 +33,7 @@ public class LoginCon extends HttpServlet {
 			session.setAttribute("login_vo", login_vo);
 		}
 
-		response.sendRedirect("Main.jsp");
+		response.sendRedirect("main.jsp");
 	}
 
 }

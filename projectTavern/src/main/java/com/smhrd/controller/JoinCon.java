@@ -35,7 +35,7 @@ public class JoinCon extends HttpServlet {
 
 		// 3.
 		MemberDAO dao = new MemberDAO();
-		
+
 		// 4.
 		int cnt = dao.insertMember(joinMember);
 
