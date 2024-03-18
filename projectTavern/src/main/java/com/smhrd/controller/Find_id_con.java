@@ -30,16 +30,7 @@ public class Find_id_con extends HttpServlet {
 		return "login/findIdAfter.jsp";
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 	}
 
 }
