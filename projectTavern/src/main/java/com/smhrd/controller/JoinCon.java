@@ -39,19 +39,12 @@ public class JoinCon extends HttpServlet {
 		int cnt = dao.insertMember(joinMember);
 
 		// 5. 명령 후 처리
-		// 회원가입 성공(cnt>0) => joinSuccess.jsp
-		// 회원가입 실패 => main.jspㄴ
 		if (cnt > 0) {
-			// 성공
-			// 회원가입 축하드립니다~ 000님 --> email 정보 보내기
-			// request에 담아서 forward방식 이동
-			// /MessageSystem/src/main/webapp/join
 			RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
 			request.setAttribute("joinnick", nick);
 			rd.forward(request, response);
 
 		} else {
-			// 실패
 			System.out.println("회원가입 실패");
 			response.sendRedirect("main.jsp");
 		}

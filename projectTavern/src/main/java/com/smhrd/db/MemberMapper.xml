@@ -7,7 +7,7 @@
 
 
 	<!-- 회원가입 -->
-	<insert id="join" parameterType="MemberVO">
+	<insert id="joinMember" parameterType="MemberVO">
 		insert into member values
 		(#{id},#{pw},#{name},#{nick},#{date},#{gender},#{email})
 	</insert>
@@ -23,7 +23,8 @@
 
 	<!-- 업데이트sql문 -->
 	<update id="updateMember" parameterType="MemberVO">
-		update member set pw=#{pw} , nick=#{nick}
+		update member set
+		pw=#{pw} , nick=#{nick}
 		where id=#{id}
 	</update>
 	<!-- 업데이트 끝 -->
