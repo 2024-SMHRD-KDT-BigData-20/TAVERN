@@ -38,5 +38,7 @@ public class MemberDAO {
 		sqlSession.close();
 		return cnt;
 	}// updateMember 끝
+	
+	
 
 }
