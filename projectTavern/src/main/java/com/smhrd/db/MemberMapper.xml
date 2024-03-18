@@ -17,6 +17,13 @@
 	select * from member where id=#{id} and pw=#{pw}
 	</select>
 	<!-- 로그인 끝 -->
+	
+	<!-- 업데이트sql문 -->
+ 	<update id="updateMember" parameterType="MemberVO">
+ 		update member set pw=#{pw} , nick=#{nick}
+ 		where id=#{id}
+ 	</update>
+ 	<!-- 업데이트 끝 -->
 
 
 
