@@ -29,7 +29,7 @@ public class MemberVO {
 	private String nick;
 	private String gender;
 	private String birthdate;
-
+//a
 
 }
 
