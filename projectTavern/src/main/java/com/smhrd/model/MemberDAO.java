@@ -39,6 +39,16 @@ public class MemberDAO {
 		return cnt;
 	}// updateMember 끝
 	
+	// 아이디 찾기 구현
+	
+	public String idsearch(String email) {
+        String id = null;
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        id = sqlSession.selectOne("com.smhrd.db.MemberMapper.idsearch", email);
+        sqlSession.close();
+        return id;
+	}// 아이디 찾기 끝
+        
 	// 비밀번호 찾기 구현
 	
 
