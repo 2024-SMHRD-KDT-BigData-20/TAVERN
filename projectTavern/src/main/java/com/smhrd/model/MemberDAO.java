@@ -36,7 +36,7 @@ public class MemberDAO {
 		sqlSession.close();
 		return loginMember;
 		
-	} // selectMember 끝a
+	} // selectMember 끝aa
 
 
 
