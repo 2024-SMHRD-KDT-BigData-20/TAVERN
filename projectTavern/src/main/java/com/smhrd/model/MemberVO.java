@@ -2,34 +2,37 @@ package com.smhrd.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
-// @Data // 만능
-// 기본생성자 메소드
-@NoArgsConstructor
-// 모든 파라미터를 받는 생성자 메소드
-@AllArgsConstructor
-// 필요한 파라미터를 받는 생성자 메소드
-@RequiredArgsConstructor
-// getter 메소드
 @Getter
-// setter 메소드
-// @Setter
+@RequiredArgsConstructor
+@AllArgsConstructor
+@ToString
 public class MemberVO {
 
+	public MemberVO(@NonNull String id, @NonNull String pw, String name, String email, String nick, String gender,
+			String birthdate) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.email = email;
+		this.nick = nick;
+		this.gender = gender;
+		this.birthdate = birthdate;
+	}
 
 	@NonNull
-	private String id;
+	private final String id;
 	@NonNull
-	private String pw;
+	private final String pw;
 	private String name;
 	private String email;
 	private String nick;
 	private String gender;
 	private String birthdate;
-//a
+	private String joined_at;
 
 }
-

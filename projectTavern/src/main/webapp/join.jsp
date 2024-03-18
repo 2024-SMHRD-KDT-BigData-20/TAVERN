@@ -52,7 +52,7 @@
 			</div>
 			<div>
 				<div class="text_box">
-					<input type="text" id="user_date" name="birth_date" placeholder="생년월일을 입력하세요">
+					<input type="text" id="user_date" name="birthdate" placeholder="생년월일을 입력하세요">
 					<label class="form_lavel">생년월일 ex)20011203</label>
 				</div>
 				<div class="date error_box" id="date_error_box">양식에 맞게 입력해주세요</div>
@@ -61,8 +61,8 @@
 				<div>
 					<label for="gender">성별</label>
 					<select name="gender" id="gender">
-						<option value="man">남성</option>
-						<option value="woman">여성</option>
+						<option value="0">남성</option>
+						<option value="1">여성</option>
 					</select>
 				</div>
 			</div>

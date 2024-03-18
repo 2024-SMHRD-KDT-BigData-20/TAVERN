@@ -13,23 +13,24 @@ import com.smhrd.model.MemberVO;
 
 @WebServlet("/LoginCon")
 public class LoginCon extends HttpServlet {
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		request.setCharacterEncoding("UTF-8");
-		
+
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-	
+
 		MemberVO login = new MemberVO(id, pw);
-		
+
 		MemberVO login_vo = new MemberDAO().selectMember(login);
-		
-		if(login_vo != null) {
+
+		if (login_vo != null) {
 			// 로그인 성공
 			HttpSession session = request.getSession();
 			session.setAttribute("login_vo", login_vo);
 		}
-		
+
 		response.sendRedirect("Main.jsp");
 	}
 

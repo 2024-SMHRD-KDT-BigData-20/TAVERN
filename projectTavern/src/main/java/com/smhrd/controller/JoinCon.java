@@ -24,12 +24,12 @@ public class JoinCon extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String name = request.getParameter("name");
 		String nick = request.getParameter("nick");
-		String birth_date = request.getParameter("birth_date");
+		String birthdate = request.getParameter("birthdate");
 		String gender = request.getParameter("gender");
 		String email = request.getParameter("email");
 
 		// 2. 묶어주기
-		MemberVO joinMember = new MemberVO(id, pw, name, nick, birth_date, gender, email);
+		MemberVO joinMember = new MemberVO(id, pw, name, nick, birthdate, gender, email);
 
 		System.out.println(joinMember.toString());
 
