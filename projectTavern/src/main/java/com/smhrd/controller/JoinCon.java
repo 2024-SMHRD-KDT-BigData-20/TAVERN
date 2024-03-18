@@ -17,8 +17,13 @@ public class JoinCon extends HttpServlet {
 		// 1. 파라미터 수집(email,pw,tel,address)
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
-		String tel = request.getParameter("");
-		String address = request.getParameter("address");
+		String name = request.getParameter("name");
+		String nick = request.getParameter("nick");
+		String birth_date = request.getParameter("birth_date");
+		String gender = request.getParameter("gender");
+		String email = request.getParameter("email");
+		
+		
 	}
 
 }
