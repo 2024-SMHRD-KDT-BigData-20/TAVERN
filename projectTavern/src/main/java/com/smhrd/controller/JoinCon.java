@@ -6,12 +6,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.smhrd.model.MemberVO;
+
 public class JoinCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		request.setCharacterEncoding("UTF-8");
 
 		// 1. 파라미터 수집(email,pw,tel,address)
@@ -22,8 +24,11 @@ public class JoinCon extends HttpServlet {
 		String birth_date = request.getParameter("birth_date");
 		String gender = request.getParameter("gender");
 		String email = request.getParameter("email");
+
+		MemberVO joinMember = new MemberVO(email, pw, name, nick, birth_date, gender, email);
 		
-		
+		System.out.println(joinMember.toString());
+
 	}
 
 }

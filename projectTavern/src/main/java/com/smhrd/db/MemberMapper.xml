@@ -5,15 +5,25 @@
   
 <mapper namespace="com/smhrd/db/MemberMapper">
 
-	<insert id="join" parameterType="MemberVO">
-		insert into member values (#{id},#{pw},#{pw_re},#{name},#{nick},#{date},#{gender},#{email})
-	</insert>
 
+	<!-- 회원가입 -->
+	<insert id="join" parameterType="MemberVO">
+		insert into member values (#{id},#{pw},#{name},#{nick},#{date},#{gender},#{email})
+	</insert>
+	<!-- 회원가입 끝 -->
+
+	<!-- 로그인 -->
 	<select id="selectMember" parameterType="MemberVO" resultType="MemberVO">
 	select * from member where id=#{id} and pw=#{pw}
 	</select>
-
-
+	<!-- 로그인 끝 -->
+	
+	<!-- 업데이트sql문 -->
+ 	<update id="updateMember" parameterType="MemberVO">
+ 		update member set pw=#{pw} , nick=#{nick}
+ 		where id=#{id}
+ 	</update>
+ 	<!-- 업데이트 끝 -->
 
 
 
