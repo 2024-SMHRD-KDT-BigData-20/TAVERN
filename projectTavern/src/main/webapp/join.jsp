@@ -4,6 +4,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/join.css">
 </head>
 <body>
 	<div id="container">
@@ -13,7 +14,7 @@
 			<!-- 회원 아이디 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요">
+					<input type="text" id="user_id" name="id" placeholder="아이디">
 					<label class="form_lavel">아이디</label>
 				</div>
 				<div class="error_box"></div>
@@ -21,14 +22,14 @@
 			<!-- 비밀번호 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="password" id="user_pw" name="pw" placeholder="비밀번호를 입력하세요">
+					<input type="password" id="user_re_pw" name="pw" placeholder="비밀번호 확인">
 					<label class="form_lavel">비밀번호</label>
 				</div>
 				<div class="pw error_box">6글자 이상 입력해주세요</div>
 			</div>
 			<div>
 				<div class="text_box">
-					<input type="password" id="user_re pw" name="pw" placeholder="비밀번호를 재입력하세요">
+					<input type="password" id="user_re pw" name="pw" placeholder="비밀번호 확인">
 					<label class="form_lavel">비밀번호 재입력</label>
 				</div>
 				<div class="re_pw error_box">비밀번호가 일치하지 않습니다</div>
@@ -73,7 +74,7 @@
 				<input type="submit" value="가입">
 			</div>
 		</form>
-		<script src="pw_re.js"></script>
+		<script src="js/pw.js"></script>
 	</div>
 </body>
 </html>
