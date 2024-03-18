@@ -34,9 +34,7 @@
 		<servlet-name>Find_Pw</servlet-name>
 		<url-pattern>/Find_Pw</url-pattern>
 	</servlet-mapping>
-=======
 	<session-config>
-    <session-timeout>5</session-timeout> <!-- 세션 유효 시간을 5분으로 설정 -->
-</session-config>
->>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN.git
+		<session-timeout>5</session-timeout> <!-- 세션 유효 시간을 5분으로 설정 -->
+	</session-config>
 </web-app>
