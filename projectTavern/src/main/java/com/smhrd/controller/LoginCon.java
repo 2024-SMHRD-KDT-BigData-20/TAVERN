@@ -16,6 +16,8 @@ public class LoginCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		System.out.println("[LoginCon]");
+
 		request.setCharacterEncoding("UTF-8"); // 요청의 인코딩을 UTF-8로 설정합니다.
 
 		// 아이디와 패스워드 파라미터를 받아옵니다.
@@ -24,12 +26,14 @@ public class LoginCon extends HttpServlet {
 
 		// 받아온 아이디와 패스워드를 MemberVO 객체로 묶어줍니다.
 		MemberVO login = new MemberVO(id, pw);
+		System.out.println(login.toString());
 
 		// MemberDAO 객체를 생성합니다.
 		MemberDAO dao = new MemberDAO();
 
 		// 입력받은 아이디와 패스워드를 이용하여 로그인을 시도하고, 로그인한 멤버 정보를 가져옵니다.
 		MemberVO loginMember = dao.selectMember(login);
+		System.out.println(loginMember.toString());
 
 		if (loginMember != null) { // 로그인에 성공했을 경우
 			// 세션을 생성하고 로그인한 멤버 정보를 세션에 저장합니다.

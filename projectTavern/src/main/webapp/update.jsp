@@ -13,49 +13,55 @@
 	<div id="container">
 		<!-- Menu -->
 		<nav id="Update">
-			<li><h5>회원정보수정</h5></li>
-			<form action="UpdateCon" method="post">
-				<input type="hidden" value="보낼값" name="name값">
-				<!-- id 보여주는곳 -->
-				<div>접속한 Email : ${loginMember.email }</div>>
-				<!-- 비밀번호 입력 -->
-				<div>
-					<div class="text_box">
-						<input type="password" id="user_pw" name="pw" placeholder="비밀번호">
-						<label class="form_label">비밀번호</label>
-					</div>
-					<div class="pw error_box" id="pw_error">6글자 이상 입력해주세요</div>
+		<li><h5>회원정보수정</h5></li>
+		<form action="UpdateCon" method="post">
+			<input type="hidden" value="보낼값" name="name값">
+			<!-- id 보여주는곳 -->
+			<div>접속한 Email : ${loginMember.email }</div>
+			>
+			<!-- 비밀번호 입력 -->
+			<div>
+				<div class="text_box">
+					<input type="password" id="user_pw" name="pw" placeholder="비밀번호">
+					<label class="form_label">비밀번호</label>
 				</div>
-				<!-- 비밀번호 확인 -->
-				<div>
-					<div class="text_box">
-						<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인">
-						<label class="form_label">비밀번호 재입력</label>
-					</div>
-					<div class="re_pw error_box" id="re_pw_error">비밀번호가 일치하지 않습니다</div>
+				<div class="pw error_box" id="pw_error">6글자 이상 입력해주세요</div>
+			</div>
+			<!-- 비밀번호 확인 -->
+			<div>
+				<div class="text_box">
+					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인">
+					<label class="form_label">비밀번호 재입력</label>
 				</div>
-				<!-- 이름 보여주는곳 -->
-				<div>이름 Name : ${loginMember.name }</div>
-				>
-				<!-- 닉네임 변경 -->
-				<div>
-					<div class="text_box">
-						<input type="text" id="user_nick" name="nick" placeholder="닉네임을 입력하세요">
-						<label class="form_lavel">닉네임</label>
-					</div>
-					<div class="error_box"></div>
+				<div class="re_pw error_box" id="re_pw_error">비밀번호가 일치하지 않습니다</div>
+			</div>
+			<!-- 이름 보여주는곳 -->
+			<div>이름 Name : ${loginMember.name }</div>
+			>
+			<!-- 닉네임 변경 -->
+			<div>
+				<div class="text_box">
+					<input type="text" id="user_nick" name="nick" placeholder="닉네임을 입력하세요">
+					<label class="form_lavel">닉네임</label>
 				</div>
-				<!-- 생일 보여주는곳 -->
-				<div>생일 : ${loginMember.birthdate }</div>
-				>
-				<!-- 성별 보여주는곳 -->
-				<div>성별 : ${loginMember.gender }</div>>
-				<!-- 이메일 보여주는곳 -->
-				<div>Email : ${loginMember.email }</div>>
-				<!-- 가입일자 보여주는곳 -->
-				<div>가입일자 : ${loginMember.joined_at }</div>
-				<div><input type="submit" value="JoinUs" class="button fit" style="width: 500px; margin: 0 auto;"></div>>
-			</form>
+				<div class="error_box"></div>
+			</div>
+			<!-- 생일 보여주는곳 -->
+			<div>생일 : ${loginMember.birthdate }</div>
+			>
+			<!-- 성별 보여주는곳 -->
+			<div>성별 : ${loginMember.gender }</div>
+			>
+			<!-- 이메일 보여주는곳 -->
+			<div>Email : ${loginMember.email }</div>
+			>
+			<!-- 가입일자 보여주는곳 -->
+			<div>가입일자 : ${loginMember.joined_at }</div>
+			<div>
+				<input type="submit" value="JoinUs" class="button fit" style="width: 500px; margin: 0 auto;">
+			</div>
+			>
+		</form>
 		</nav>
 		<script src="js/pw.js"></script>
 	</div>

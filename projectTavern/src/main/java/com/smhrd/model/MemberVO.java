@@ -6,13 +6,16 @@ import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 @Getter
-@RequiredArgsConstructor
 @ToString
 public class MemberVO {
 
-	@NonNull
+	public MemberVO(String id, String pw) {
+		super();
+		this.id = id;
+		this.pw = pw;
+	}
+
 	private final String id;
-	@NonNull
 	private final String pw;
 	private String name;
 	private String email;
@@ -21,9 +24,13 @@ public class MemberVO {
 	private String birthdate;
 	private String joined_at;
 
-	public MemberVO(@NonNull String id, @NonNull String pw, String name, String email, String nick, String gender,
-			String birthdate, String joined_at) {
-		super();
+	public MemberVO() {
+		this.id = null;
+		this.pw = null;
+	}
+
+	public MemberVO(String id, String pw, String name, String email, String nick, String gender, String birthdate,
+			String joined_at) {
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
@@ -34,9 +41,7 @@ public class MemberVO {
 		this.joined_at = joined_at;
 	}
 
-	public MemberVO(@NonNull String id, @NonNull String pw, String name, String email, String nick, String gender,
-			String birthdate) {
-		super();
+	public MemberVO(String id, String pw, String name, String email, String nick, String gender, String birthdate) {
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
