@@ -38,12 +38,13 @@ public class MemberDAO {
 		sqlSession.close();
 		return cnt;
 	}// updateMember 끝
-
-	public String find_id(String email) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	// 비밀번호 찾기 구현
+	public String find_pw(String id) {
+		String id = null;
+		
+		
+		
 	}
-	
-	
 
 }

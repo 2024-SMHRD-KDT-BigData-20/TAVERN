@@ -14,8 +14,8 @@ public class Find_pwCon extends HttpServlet {
 		System.out.println("[Find_Pw]");
 		
 		request.setCharacterEncoding("UTF-8");
-		
-		String pw = request.getParameter("pw");
+		fpwdao = new MemberDAO();
+		String id = request.getParameter("id");
 		
 		
 		
