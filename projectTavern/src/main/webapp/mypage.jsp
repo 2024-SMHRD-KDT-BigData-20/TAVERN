@@ -18,7 +18,7 @@
 			<div>임시저장보기</div>
 			<div>문의보기</div>
 			<div>댓글보기</div>
-			<div><a href="">정보수정</div>
+			<div><a href="update.jsp">정보수정</div>
 			<div>회원삭제</div>
 		</div>
 	</div>

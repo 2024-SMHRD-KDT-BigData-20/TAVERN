@@ -10,65 +10,50 @@ import javax.servlet.http.HttpSession;
 import com.smhrd.model.MemberDAO;
 import com.smhrd.model.MemberVO;
 
-
 public class UpdateCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
+
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		System.out.println("[UpdateCon]");
-		
-		// 0.post방식 인코딩
+
+		// 0. POST 방식으로 전송된 데이터의 한글 처리
 		request.setCharacterEncoding("UTF-8");
-		
+
 		// 1. 파라미터 수집
-		
-		// id기준으로 pw,nick
-		// session에 저장된 정보 id
 		String pw = request.getParameter("pw");
-		String name = request.getParameter("name");
 		String nick = request.getParameter("nick");
-		String birthdate = request.getParameter("birthdate");
-		String gender = request.getParameter("gender");
-		String email = request.getParameter("email");
+
+		// 세션에서 로그인 정보 가져오기
 		HttpSession session = request.getSession();
-		MemberVO loginMember = (MemberVO)session.getAttribute("loginMember");
+		MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
+
+		if (loginMember == null) {
+			// 로그인되지 않은 경우 처리
+			response.sendRedirect("login.jsp");
+			return;
+		}
+
+		// 세션에서 가져온 아이디 정보
 		String id = loginMember.getId();
-		// String pw2 = loginMember.getPw();
-		
-		// pw 확인해서 맞으면~~~DB저장
-		// if(pw.equals(pw2)) {
-			// DAO객체, 메소드 호출, 결과가 실행성공->main.....
-			
-		// }
-		
-		// 2. MemberVO에 e,p,t,a 정보를 담아서 묶기
-		MemberVO update = new MemberVO(id, pw, name, nick, birthdate, gender, email);
-		
-		// 3. MemberMapper.xml에서 sql문 완성
-		
-		// 4-1. DAO에 메소드 구현
-		// 4-2. DAO 객체 생성
+
+		// 2. MemberVO에 정보를 담아서 묶기
+		MemberVO update = new MemberVO(id, pw, null, null, nick, null, null);
+
+		// 3. DAO 객체 생성 및 메소드 호출
 		MemberDAO dao = new MemberDAO();
-		// 4-3. DAO 메소드 호출
 		int cnt = dao.updateMember(update);
-		
-		// 5. 명령 후 처리
-		// 회원정보 수정 성공 -> main.jsp 진짜로 바꼈는지 확인
-		// 회원정보 수정 실패...-> update.jsp 다시 수정
-		if(cnt>0) {
-			// 성공
-			// 수정된 정보를 다시 세션에 저장 -> loginMember에 덮어쓰기
+
+		// 4. 결과에 따른 처리
+		if (cnt > 0) {
+			// 회원 정보 수정 성공 시
+			// 수정된 정보를 다시 세션에 저장
 			session.setAttribute("loginMember", update);
 			response.sendRedirect("main.jsp");
-			
-		}else {
-			// 실패
-			System.out.println("회원정보 수정 실패였습니다");
+		} else {
+			// 회원 정보 수정 실패 시
 			response.sendRedirect("update.jsp");
 		}
-		
 	}
-
 }
