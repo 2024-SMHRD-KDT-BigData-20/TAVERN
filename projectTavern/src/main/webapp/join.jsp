@@ -76,7 +76,7 @@
 				<input type="submit" value="°¡ÀÔ">
 			</div>
 		</form>
-		<script src="js/pw_re.js"></script>
+		<script src="js/pw.js"></script>
 	</div>
 </body>
 </html>
