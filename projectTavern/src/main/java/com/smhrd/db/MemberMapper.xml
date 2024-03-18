@@ -8,7 +8,7 @@
 
 	<!-- 회원가입 -->
 	<insert id="joinMember" parameterType="MemberVO">
-		insert into member values
+		insert into user_info values
 		(#{id},#{pw},#{name},#{nick},#{date},#{gender},#{email})
 	</insert>
 	<!-- 회원가입 끝 -->
@@ -17,13 +17,13 @@
 	<select id="selectMember" parameterType="MemberVO"
 		resultType="MemberVO"
 	>
-		select * from member where id=#{id} and pw=#{pw}
+		select * from user_info where id=#{id} and pw=#{pw}
 	</select>
 	<!-- 로그인 끝 -->
 
 	<!-- 업데이트sql문 -->
 	<update id="updateMember" parameterType="MemberVO">
-		update member set
+		update user_info set
 		pw=#{pw} , nick=#{nick}
 		where id=#{id}
 	</update>

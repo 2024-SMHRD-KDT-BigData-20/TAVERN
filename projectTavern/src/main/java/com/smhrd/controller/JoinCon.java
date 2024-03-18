@@ -35,7 +35,8 @@ public class JoinCon extends HttpServlet {
 
 		// 3.
 		MemberDAO dao = new MemberDAO();
-		// 4-3. insertMember 메소드 호출
+		
+		// 4.
 		int cnt = dao.insertMember(joinMember);
 
 		// 5. 명령 후 처리
