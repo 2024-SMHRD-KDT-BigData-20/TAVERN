@@ -23,7 +23,7 @@
 				</h4>
 			</div>
 			<div class="text-box">
-				<a href = "login.jsp">
+				<a href = "main.jsp">
 					로그인 화면으로 가기
 				</a>
 			</div>
