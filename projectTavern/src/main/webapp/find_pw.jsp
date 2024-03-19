@@ -1,8 +1,3 @@
-<li><input type="text" name="tel" value="${loginMember.tel }" } style="width: 500px; margin: 0 auto;"></li>
-id pw name nick birthdate gender email joined at
-
-
-
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
