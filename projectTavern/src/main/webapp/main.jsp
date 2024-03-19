@@ -14,11 +14,13 @@ s<%@ page language="java" contentType="text/html; charset=EUC-KR"
 			<a href="main.jsp" class="logo">로고</a>
 			<nav>
 				<c:choose>
-					<c:when test="${empty loginMember }">
+					<c:when test="${empty loginMember}">
 						<a href="login.jsp" class="login-link">로그인</a>
 					</c:when>
 					<c:otherwise>
-						<h1 class="welcome-message">${loginMember.nick}님환영합니다</h1>
+						<c:if test="${not empty loginMember.nick}">
+							<h1 class="welcome-message">${loginMember.nick}님 환영합니다</h1>
+						</c:if>
 						<a href="mypage.jsp" class="my-page">마이페이지</a>
 						<a href="LogoutCon" class="logout">로그아웃</a>
 					</c:otherwise>

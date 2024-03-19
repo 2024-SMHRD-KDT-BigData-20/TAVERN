@@ -37,7 +37,7 @@ public class UpdateCon extends HttpServlet {
 
 		// 세션에서 가져온 아이디 정보
 		String id = loginMember.getId();
-
+				
 		// 2. MemberVO에 정보를 담아서 묶기
 		MemberVO update = new MemberVO(id, pw, null, null, nick, null, null);
 

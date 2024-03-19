@@ -37,7 +37,11 @@ public class LoginCon extends HttpServlet {
 			// 세션을 생성하고 로그인한 멤버 정보를 세션에 저장합니다.
 			HttpSession session = request.getSession();
 			session.setAttribute("loginMember", loginMember);
+		} else {
+			// 로그인에 실패한 경우
+			System.out.println("로그인 실패");
 		}
+
 		// 메인 페이지로 리다이렉트합니다.
 		response.sendRedirect("main.jsp");
 	}
