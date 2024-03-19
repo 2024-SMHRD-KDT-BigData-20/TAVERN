@@ -35,7 +35,7 @@ public class Find_pw_con extends HttpServlet {
             
 		
 		}
-		response.sendRedirect("main.jsp");
+		response.sendRedirect("find_pw.jsp");
 }
 }
 
