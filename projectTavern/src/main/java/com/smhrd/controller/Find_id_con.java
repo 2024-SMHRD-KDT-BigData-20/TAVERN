@@ -35,7 +35,7 @@ public class Find_id_con extends HttpServlet {
             
 		
 		}
-		response.sendRedirect("find_id.jsp");
+		response.sendRedirect("main.jsp");
 }
 }
 
