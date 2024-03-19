@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="container">
-		<form action="JoinCon" method="post">
+		<form id="joinForm" action="javascript:void(0)" method="post">
 			<!-- 회원정보 입력 타이틀 -->
 			<div class="title">회원가입</div>
 			<!-- 회원 아이디 입력 -->
@@ -19,7 +19,7 @@
 					<label class="form_label">아이디</label>
 				</div>
 				<div>
-					<button onclick=""></button>
+					<button type="button" onclick="checkIdValidity()">아이디 중복확인</button>
 				</div>
 				<div class="id error_box" id="id_error">영문자 혹은 영문자와 숫자를 포함해서
 					만들어주세요</div>
@@ -54,7 +54,6 @@
 					<input type="text" id="user_nick" name="nick"
 						placeholder="닉네임을 입력하세요"> <label class="form_lavel">닉네임</label>
 				</div>
-				<div class="error_box"></div>
 			</div>
 			<!-- 생년월일 양식에 맞게 입력 -->
 			<div>
@@ -84,10 +83,16 @@
 				<div class="error_box">이메일 양식에 맞게 해주세요</div>
 			</div>
 			<div>
-				<input type="submit" value="가입">
+				<button type="button" onclick="submitForm()">가입</button>
 			</div>
 		</form>
-		<script src="js/pw.js"></script>
+		<!-- 로그인 가능 메시지 -->
+		<div id="loginMessage" style="display: none;">
+			<p>로그인 가능한 아이디입니다.</p>
+			<button type="button" onclick="resetLoginForm()">로그인 창으로
+				돌아가기</button>
+		</div>
 	</div>
+	<script src="js/pw.js"></script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -38,33 +40,39 @@ public class MemberDAO {
 		sqlSession.close();
 		return cnt;
 	}// updateMember 끝
-	
-	// 아이디 찾기 구현
-	
 
-     public MemberVO findIdByEmail (String email) {
-    	MemberVO idfind = null;
-    
-    	SqlSession sqlSession = sqlSessionFactory.openSession(true);
-    	idfind = sqlSession.selectOne("com.smhrd.db.MemberMapper.findIdByEmail", email);
-    	sqlSession.close();
-    		
-    	return idfind;
+	// 아이디 찾기 구현
+
+	public MemberVO findIdByEmail(String email) {
+		MemberVO idfind = null;
+
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		idfind = sqlSession.selectOne("com.smhrd.db.MemberMapper.findIdByEmail", email);
+		sqlSession.close();
+
+		return idfind;
 	}// 아이디 찾기 끝
 
-
 	// 비밀번호 찾기 구현
-     public MemberVO findIdById (String id) {
-     	MemberVO pwfind = null;
-     
-     	SqlSession sqlSession = sqlSessionFactory.openSession(true);
-     	pwfind = sqlSession.selectOne("com.smhrd.db.MemberMapper.findIdById", id);
-     	sqlSession.close();
-     		
-     	return pwfind; 
-         
-     }// 비밀번호 찾기 끝
+	public MemberVO findIdById(String id) {
+		MemberVO pwfind = null;
 
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		pwfind = sqlSession.selectOne("com.smhrd.db.MemberMapper.findIdById", id);
+		sqlSession.close();
 
+		return pwfind;
+
+	}// 비밀번호 찾기 끝
+
+	// 아이디 유효성 검사 기능 구현
+	public List<MemberVO> checkID(String id){
+		List<MemberVO> idcheck = null;
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		idcheck = sqlSession.selectList("com.smhrd.db.MemberMapper.checkID", id);
+		sqlSession.close();
+		return idcheck;
+	}
+	// 검사 끝
 
 }

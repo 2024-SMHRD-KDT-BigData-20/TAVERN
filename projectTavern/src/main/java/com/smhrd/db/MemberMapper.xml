@@ -14,7 +14,8 @@
 	<!-- 회원가입 끝 -->
 
 	<!-- 로그인 -->
-	<select id="selectMember" parameterType="MemberVO" resultType="MemberVO">
+	<select id="selectMember" parameterType="MemberVO"
+		resultType="MemberVO">
 		select * from user_info where id=#{id} and pw=#{pw}
 	</select>
 	<!-- 로그인 끝 -->
@@ -28,17 +29,25 @@
 	<!-- 업데이트 끝 -->
 
 	<!-- 아이디 찾기 -->
-	<select id="findIdByEmail" parameterType="String" resultType="MemberVO">
+	<select id="findIdByEmail" parameterType="String"
+		resultType="MemberVO">
 		select id from user_info where email = #{email}
 	</select>
 	<!-- 아이디 찾기 끝 -->
-	
+
 	<!-- 비밀번호 찾기 -->
-	<select id="findIdById" parameterType="String" resultType="MemberVO">
+	<select id="findIdById" parameterType="String"
+		resultType="MemberVO">
 		select * from user_info where id = #{id}
 	</select>
 	<!-- 비밀번호 찾기 끝 -->
 
+	<!-- 아이디 유효성 검사 -->
+	<select id="checkID" parameterType="String"
+		resultType="MemberVO">
+		select id from user_info where id=#{id}
+	</select>
+	<!-- 아이디 유효성 검사 끝 -->
 
 
 
