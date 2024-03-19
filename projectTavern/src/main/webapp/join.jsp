@@ -21,7 +21,7 @@
 				<div>
 					<button onclick=""></button>
 				</div>
-				<div class="error_box" id="id_error">영문자 혹은 영문자와 숫자를 포함해서
+				<div class="id error_box" id="id_error">영문자 혹은 영문자와 숫자를 포함해서
 					만들어주세요</div>
 			</div>
 			<!-- 비밀번호 입력 -->

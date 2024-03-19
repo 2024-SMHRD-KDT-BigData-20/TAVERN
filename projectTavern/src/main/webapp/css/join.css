@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#mypage_content {
+#container {
     margin-top: 50px; /* 헤더가 가려지지 않도록 여백 추가 */
     padding: 20px;
 }
