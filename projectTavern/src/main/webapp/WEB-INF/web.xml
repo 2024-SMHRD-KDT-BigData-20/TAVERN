@@ -10,6 +10,18 @@
 		<servlet-class>com.smhrd.controller.JoinCon</servlet-class>
 	</servlet>
 	<servlet>
+		<servlet-name>LoginCon</servlet-name>
+		<display-name>LoginCon</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.LoginCon</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LogoutCon</servlet-name>
+		<display-name>LogoutCon</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.LogoutCon</servlet-class>
+	</servlet>
+	<servlet>
 		<servlet-name>UpdateCon</servlet-name>
 		<display-name>UpdateCon</display-name>
 		<description></description>
@@ -21,17 +33,45 @@
 		<description></description>
 		<servlet-class>com.smhrd.controller.Find_pw_con</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>Find_id_con</servlet-name>
+		<display-name>Find_id_con</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.Find_id_con</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>test</servlet-name>
+		<display-name>test</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.test</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>JoinCon</servlet-name>
 		<url-pattern>/JoinCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LoginCon</servlet-name>
+		<url-pattern>/LoginCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LogoutCon</servlet-name>
+		<url-pattern>/LogoutCon</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>UpdateCon</servlet-name>
 		<url-pattern>/UpdateCon</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
+		<servlet-name>Find_id_con</servlet-name>
+		<url-pattern>/Find_id_con</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>Find_pw_con</servlet-name>
 		<url-pattern>/Find_pw_con</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>test</servlet-name>
+		<url-pattern>/test</url-pattern>
 	</servlet-mapping>
 	<session-config>
 		<session-timeout>5</session-timeout> <!-- 세션 유효 시간을 5분으로 설정 -->

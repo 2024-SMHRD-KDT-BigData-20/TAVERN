@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.smhrd.model.MemberDAO;
 import com.smhrd.model.MemberVO;
 
-@WebServlet("/LoginCon") // 이 서블릿이 "/LoginCon" URL에 매핑됨을 나타냅니다.
+
 public class LoginCon extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
