@@ -1,0 +1,17 @@
+@charset "EUC-KR";
+
+.welcome-message {
+	display: none; /* 로그인한 사용자 환영 메시지를 기본적으로 숨김 */
+}
+
+.logged-in .welcome-message {
+	display: block; /* 로그인한 경우에만 환영 메시지를 보여줌 */
+}
+
+.logged-out .login-link {
+	display: none; /* 로그인하지 않은 경우에만 로그인 링크를 보여줌 */
+}
+
+.logged-in .my-page, .logged-in .logout {
+	display: block; /* 로그인한 경우에만 마이페이지와 로그아웃 링크를 숨김 */
+}
