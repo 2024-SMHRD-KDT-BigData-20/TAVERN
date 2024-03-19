@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div id=find_id_container>
-		<form action="login_home.jsp">
+		<form action="Find_id_con.jsp" method="post">
 			<h2>¾ÆÀÌµð</h2>
 			<div>
 				<h4>

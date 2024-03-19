@@ -12,7 +12,7 @@ id pw name nick birthdate gender email joined at
 </head>
 <body>
 	<div id=find_id_container>
-		<form action="login_home.jsp">
+		<form action="Find_pw_con.jsp" method="post">
 			<h2>비밀번호</h2>
 			<div>
 				<h4>
