@@ -22,15 +22,6 @@ public class Find_pwCon extends HttpServlet {
 		String pw = dao.pwsearch(id);
 
 		request.setAttribute("pw", pw);
-
-
-		if (pw == null)
-
-			return "login.jsp";
-
-		return "login/findPwAfter.jsp";
-		
-		
 	
 		if (pw != null) {
             RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
