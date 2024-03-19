@@ -25,6 +25,16 @@ public class Find_id_con extends HttpServlet {
 
 		request.setAttribute("id", id);
 
+<<<<<<< HEAD
+		if (id == null)
+
+			return "login.jsp";
+
+		return "login/findIdAfter.jsp";
+		
+		
+	
+=======
 		if (id != null) {
             RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
             rd.forward(request, response);
@@ -40,6 +50,7 @@ public class Find_id_con extends HttpServlet {
 		
 		
 		
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN.git
 	}
 
 }
