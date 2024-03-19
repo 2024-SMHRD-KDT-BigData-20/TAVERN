@@ -42,10 +42,10 @@ public class MemberDAO {
 	// 아이디 찾기 구현
 	
 
-     public int idfind(String email) {
+     public int email(String email) {
     	int cnt = 0;
     	SqlSession sqlSession = sqlSessionFactory.openSession(true);
-    	cnt = sqlSession.delete("com.smhrd.db.MemberMapper.idfind", email);
+    	cnt = sqlSession.selectOne("com.smhrd.db.MemberMapper.email", email);
     	sqlSession.close();
     		
     	return cnt;

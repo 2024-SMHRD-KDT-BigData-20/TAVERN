@@ -1,5 +1,12 @@
+<%@page import="com.smhrd.model.MemberVO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.smhrd.model.MemberDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
+
+
+	MemberDAO dao = new MemberDAO();
+	List<MemberVO> memberlist = dao.selectAll();
 <html>
 <head>
 <meta charset="EUC-KR">

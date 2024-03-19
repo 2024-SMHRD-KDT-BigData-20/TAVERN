@@ -7,6 +7,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.smhrd.model.MemberDAO;
 
@@ -22,12 +23,14 @@ public class Find_id_con extends HttpServlet {
 		
 		MemberDAO dao = new MemberDAO();
 		
-		int cnt = dao.idfind(email);
+		int cnt = dao.email(email);
 
 		if(cnt>0) {
-			find_id_con;
-		}else {
-			;
+			HttpSession session = request.getSession();
+            session.setAttribute("email", email);
+			response.sendRedirect("find_id.jsp");
+		
+			return;
 		}
 }
 }
