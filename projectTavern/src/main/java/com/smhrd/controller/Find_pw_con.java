@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.smhrd.model.MemberDAO;
 
-public class Find_pwCon extends HttpServlet {
+public class Find_pw_con extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
