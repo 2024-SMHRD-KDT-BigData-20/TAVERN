@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.smhrd.model.MemberDAO;
+import com.smhrd.model.MemberVO;
 
 public class Find_id_con extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -18,20 +19,23 @@ public class Find_id_con extends HttpServlet {
 		
 		
 		request.setCharacterEncoding("UTF-8");
-
 		String email = request.getParameter("email");
 		
+		
 		MemberDAO dao = new MemberDAO();
+		MemberVO findi = dao.findIdByEmail(email);
 		
-		int cnt = dao.email(email);
+		
+//		String cnt = dao.findid(email);
 
-		if(cnt>0) {
+		if(findi!=null) {
 			HttpSession session = request.getSession();
-            session.setAttribute("email", email);
-			response.sendRedirect("find_id.jsp");
+            session.setAttribute("findi", findi.getId());
+			
+            
 		
-			return;
 		}
+		response.sendRedirect("find_id.jsp");
 }
 }
 
