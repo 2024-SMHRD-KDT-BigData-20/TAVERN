@@ -24,7 +24,7 @@ public class Find_pw_con extends HttpServlet {
 		request.setAttribute("pw", pw);
 	
 		if (pw != null) {
-            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("find_pw.jsp");
             rd.forward(request, response);
         } else {
             // 비밀번호를 찾지 못했을 경우 login.jsp 페이지로 이동

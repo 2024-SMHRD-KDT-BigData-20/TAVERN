@@ -24,7 +24,7 @@ public class Find_id_con extends HttpServlet {
 		request.setAttribute("id", id);
 
 		if (id != null) {
-            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+            RequestDispatcher rd = request.getRequestDispatcher("find_id.jsp");
             rd.forward(request, response);
         } else {
             // 아이디를 찾지 못했을 경우 login.jsp 페이지로 이동

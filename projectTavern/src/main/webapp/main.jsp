@@ -1,4 +1,4 @@
-s<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,7 @@ s<%@ page language="java" contentType="text/html; charset=EUC-KR"
 					</c:when>
 					<c:otherwise>
 						<c:if test="${not empty loginMember.nick}">
-							<h1 class="welcome-message">${loginMember.nick}님 환영합니다</h1>
+							<h1 class="welcome-message">${loginMember.nick }님 환영합니다</h1>
 						</c:if>
 						<a href="mypage.jsp" class="my-page">마이페이지</a>
 						<a href="LogoutCon" class="logout">로그아웃</a>
