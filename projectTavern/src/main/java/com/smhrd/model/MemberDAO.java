@@ -50,6 +50,12 @@ public class MemberDAO {
 	}// 아이디 찾기 끝
         
 	// 비밀번호 찾기 구현
-	
+	public String pwsearch(String id) {
+        String pw = null;
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        pw = sqlSession.selectOne("com.smhrd.db.MemberMapper.pwsearch", id);
+        sqlSession.close();
+        return pw;
+	}// 비밀번호 찾기 끝
 
 }
