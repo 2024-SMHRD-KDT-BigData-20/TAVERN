@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
-<html l>
+<html>
 <head>
 <meta charset="utf-8">
 <title>회원가입</title>
