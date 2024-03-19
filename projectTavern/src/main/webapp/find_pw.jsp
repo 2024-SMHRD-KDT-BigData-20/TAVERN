@@ -13,11 +13,7 @@ id pw name nick birthdate gender email joined at
 <body>
 	<div id=find_id_container>
 		<form action="login_home.jsp">
-			<h2>비밀번호 찾기</h2>
-			<form action="find_pw.jsp" method="post">
-        		아이디 입력 : <input type="id" name="id" required><br>
-        		<input type="submit" value="비밀번호 찾기">
-    		</form>
+			<h2>비밀번호</h2>
 			<div>
 				<h4>
 					<!-- 비밀번호 찾은 페이지 보여주는 문단 -->
