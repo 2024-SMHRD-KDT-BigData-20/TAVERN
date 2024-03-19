@@ -31,8 +31,6 @@ public class JoinCon extends HttpServlet {
 		// 2. 묶어주기
 		MemberVO joinMember = new MemberVO(id, pw, name, nick, birthdate, gender, email);
 
-		System.out.println(joinMember.toString());
-
 		// 3.
 		MemberDAO dao = new MemberDAO();
 
