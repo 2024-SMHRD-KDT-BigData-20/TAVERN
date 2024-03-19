@@ -12,25 +12,19 @@
 			<div>
 				<h4>
 					<!-- 비밀번호 찾은 페이지 보여주는 문단 -->
-					<%
-				        String id = (String) request.getAttribute("id");
-				        String pw = (String) request.getAttribute("pw");
-				        
-				        if (pw != null) {
-				    %>
-				            <p><%= id %>님의 비밀번호 : <%= pw %></p>
-				    <%
-				        } else {
-				    %>
-				            <p><%= id %>님의 비밀번호가 없습니다!</p>
-				    <%
-				        }
-				    %>
+					<% 
+						String foundPw = (String) session.getAttribute("findp");
+						if (foundPw != null) {
+					   		 out.println("찾은 비밀번호: " + foundPw);
+						} else {
+					    	out.println("비밀번호를 찾을 수 없습니다.");
+						}
+					%>
 				</h4>
 			</div>
 			<div class="text-box">
-				<a>
-					<input type="submit" value="로그인화면으로가기">
+				<a href = "login.jsp">
+					로그인 화면으로 가기
 				</a>
 			</div>
 		</form>

@@ -54,9 +54,16 @@ public class MemberDAO {
 
 
 	// 비밀번호 찾기 구현
+     public MemberVO findIdById (String id) {
+     	MemberVO pwfind = null;
      
+     	SqlSession sqlSession = sqlSessionFactory.openSession(true);
+     	pwfind = sqlSession.selectOne("com.smhrd.db.MemberMapper.findIdById", id);
+     	sqlSession.close();
+     		
+     	return pwfind; 
          
-     // 비밀번호 찾기 끝
+     }// 비밀번호 찾기 끝
 
 
 
