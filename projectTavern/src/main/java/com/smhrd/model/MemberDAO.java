@@ -41,14 +41,17 @@ public class MemberDAO {
 	
 	// 아이디 찾기 구현
 	
-	public String idsearch(String email) {
-        String id = null;
-        SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        id = sqlSession.selectOne("com.smhrd.db.MemberMapper.idsearch", email);
-        sqlSession.close();
-        return id;
+
+     public int idfind(String email) {
+    	int cnt = 0;
+    	SqlSession sqlSession = sqlSessionFactory.openSession(true);
+    	cnt = sqlSession.delete("com.smhrd.db.MemberMapper.idfind", email);
+    	sqlSession.close();
+    		
+    	return cnt;
 	}// 아이디 찾기 끝
         
+     
 	// 비밀번호 찾기 구현
 	public String pwsearch(String id) {
         String pw = null;
@@ -57,5 +60,7 @@ public class MemberDAO {
         sqlSession.close();
         return pw;
 	}// 비밀번호 찾기 끝
+
+
 
 }
