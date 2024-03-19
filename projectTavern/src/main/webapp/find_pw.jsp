@@ -14,15 +14,15 @@
 					<!-- 비밀번호 찾은 페이지 보여주는 문단 -->
 					<%
 				        String id = (String) request.getAttribute("id");
-				        String password = (String) request.getAttribute("password");
+				        String pw = (String) request.getAttribute("pw");
 				        
-				        if (password != null) {
+				        if (pw != null) {
 				    %>
-				            <p><%= id %>님의 비밀번호 : <%= password %></p>
+				            <p><%= id %>님의 비밀번호 : <%= pw %></p>
 				    <%
 				        } else {
 				    %>
-				            <p>Password for <%= id %> is not found.</p>
+				            <p><%= id %>님의 비밀번호가 없습니다!</p>
 				    <%
 				        }
 				    %>
