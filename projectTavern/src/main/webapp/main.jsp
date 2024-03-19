@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="UTF-8" isELIgnored="false"%>
+s<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="UTF-8" isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,6 +25,10 @@
 				</c:choose>
 			</nav>
 		</header>
+		<!-- main -->
+		<div id="main"></div>
+		<!-- footer -->
+		<footer></footer>
 	</div>
 </body>
 </html>
