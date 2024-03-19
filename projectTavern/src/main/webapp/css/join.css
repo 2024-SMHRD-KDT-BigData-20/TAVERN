@@ -1,6 +1,36 @@
 @charset "UTF-8";
 
+#mypage_content {
+    margin-top: 50px; /* 헤더가 가려지지 않도록 여백 추가 */
+    padding: 20px;
+}
+
+#Update {
+    display: none; /* 초기에는 숨김 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#Update li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+#Update h5 {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* 에러 메시지 */
 .error_box {
-	display: none;
-	color: red;
+    display: none;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }

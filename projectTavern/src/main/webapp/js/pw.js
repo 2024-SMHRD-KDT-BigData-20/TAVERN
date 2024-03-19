@@ -24,8 +24,21 @@ document.addEventListener('DOMContentLoaded', function() {
 	// 생년월일 error 메시지 불러오기
 	let date_e = document.getElementById('date_error_box');
 
+	// 정보 수정 링크 불러오기
+	let updateLink = document.getElementById('updateLink');
 
+	// 정보 수정 폼 불러오기
+	let updateForm = document.getElementById('Update');
 
+	// 정보 수정 폼 토글 기능
+	updateLink.addEventListener('click', function() {
+		// 정보 수정 폼이 보이면 숨김, 숨겨져 있으면 보이게 함
+		if (updateForm.style.display === 'block') {
+			updateForm.style.display = 'none';
+		} else {
+			updateForm.style.display = 'block';
+		}
+	});
 
 	// 아이디 : 특수문자 제외
 	function i(str) {
@@ -38,10 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		} else {
 			id_e.style.display = 'block';
 		}
-
 	});
-
-
 
 	// 비밀번호 : 6글자 이상 입력
 	function pw(str) {
@@ -52,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	function repw(pw1, pw2) {
 		return pw1 === pw2;
 	}
-
 
 	// 비밀번호 입력 시 이벤트 처리
 	p1.addEventListener('keyup', function() {
@@ -71,11 +80,12 @@ document.addEventListener('DOMContentLoaded', function() {
 			r_p_e.style.display = 'block';
 		}
 	});
+
+	// 생년월일 입력 시 이벤트 처리
 	function dat(str) {
 		return /^\d{8}$/.test(str); // 8자의 숫자만 입력되었는지 확인
 	}
 
-	// 생년월일 입력 시 이벤트 처리
 	date.addEventListener('keyup', function() {
 		if (dat(date.value)) {
 			date_e.style.display = 'none'; // 유효한 값일 경우 에러 메시지 숨김

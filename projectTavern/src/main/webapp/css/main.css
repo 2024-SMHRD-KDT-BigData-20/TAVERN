@@ -1,2 +1,56 @@
 @charset "EUC-KR";
+body {
+    margin: 0;
+    padding: 0;
+}
 
+/* 상단 헤더 */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #e0973e, #fff); /* 그라데이션 배경색 */
+    padding: 10px 20px;
+    box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 너비 지정 */
+    z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+}
+
+/* 로고 */
+.logo {
+    float: left; /* 왼쪽에 배치 */
+    font-size: 24px; /* 로고 텍스트 크기 */
+    color: #333; /* 로고 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    margin-right: 20px; /* 로고 오른쪽 여백 */
+}
+
+/* 로그인 링크 */
+.login-link {
+    float: right; /* 오른쪽에 배치 */
+    font-size: 16px; /* 로그인 텍스트 크기 */
+    color: #333; /* 로그인 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+/* 로그인 폼을 화면 가운데로 배치 */
+#login {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+/* 로그인 폼 내부의 요소들을 가운데 정렬 */
+#login_con {
+    text-align: center;
+}
+
+/* 네비게이션 메뉴와 오버레이를 숨김 */
+#nav_overlay,#nav_menu {
+    display: none;
+}
