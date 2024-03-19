@@ -12,6 +12,20 @@
 			<div>
 				<h4>
 					<!-- 비밀번호 찾은 페이지 보여주는 문단 -->
+					<%
+				        String id = (String) request.getAttribute("id");
+				        String password = (String) request.getAttribute("password");
+				        
+				        if (password != null) {
+				    %>
+				            <p><%= id %>님의 비밀번호 : <%= password %></p>
+				    <%
+				        } else {
+				    %>
+				            <p>Password for <%= id %> is not found.</p>
+				    <%
+				        }
+				    %>
 				</h4>
 			</div>
 			<div class="text-box">

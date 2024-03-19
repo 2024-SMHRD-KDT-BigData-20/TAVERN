@@ -53,13 +53,16 @@ public class MemberDAO {
         
      
 	// 비밀번호 찾기 구현
-	public String pwsearch(String id) {
-        String pw = null;
-        SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        pw = sqlSession.selectOne("com.smhrd.db.MemberMapper.pwsearch", id);
-        sqlSession.close();
-        return pw;
-	}// 비밀번호 찾기 끝
+     public String findPassword(String id) {
+         if ("user123".equals(id)) {
+             return "password123";
+         } else if ("anotherUser".equals(id)) {
+             return "anotherPassword";
+         } else {
+             return null; // ID에 해당하는 비밀번호가 없을 경우
+         }
+     }
+         // 비밀번호 찾기 끝
 
 
 
