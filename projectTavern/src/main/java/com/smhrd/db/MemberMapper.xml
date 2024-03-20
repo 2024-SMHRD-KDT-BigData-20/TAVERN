@@ -20,13 +20,11 @@
 	</select>
 	<!-- 로그인 끝 -->
 
-	<!-- 업데이트sql문 -->
+	<!-- 회원수정 -->
 	<update id="updateMember" parameterType="MemberVO">
-		update user_info set
-		pw=#{pw} , nick=#{nick}
-		where id=#{id}
-	</update>
-	<!-- 업데이트 끝 -->
+  	update user_info set pw=#{pw}, nick=#{nick} where id=#{id}
+  	</update>
+	<!-- 회원수정 끝 -->
 
 	<!-- 아이디 찾기 -->
 	<select id="findIdByEmail" parameterType="String"
