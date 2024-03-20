@@ -38,9 +38,8 @@ public class MemberDAO {
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
 		cnt = sqlSession.update("com.smhrd.db.MemberMapper.updateMember", update);
 		sqlSession.close();
-
 		return cnt;
-	}// updateMember 끝
+	}// 회원정보수정 끝
 
 	// 아이디 찾기 구현
 
