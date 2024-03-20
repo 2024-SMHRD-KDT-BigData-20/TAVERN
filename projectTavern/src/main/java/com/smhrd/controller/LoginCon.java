@@ -24,7 +24,6 @@ public class LoginCon extends HttpServlet {
 
 		// 받아온 아이디와 패스워드를 MemberVO 객체로 묶어줍니다.
 		MemberVO login = new MemberVO(id, pw);
-		System.out.println(login.toString());
 
 		// MemberDAO 객체를 생성합니다.
 		MemberDAO dao = new MemberDAO();
