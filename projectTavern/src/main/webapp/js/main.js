@@ -7,4 +7,4 @@ document.querySelector('.login-link').addEventListener('click', function(event) 
 // X 버튼 클릭 시 로그인 폼 숨김
 document.querySelector('#login .close_btn').addEventListener('click', function() {
     document.getElementById('login').style.display = 'none'; // 로그인 폼 숨김
-});
+}); 
