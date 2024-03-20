@@ -1,87 +1,91 @@
 @charset "UTF-8";
+
 body {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* 상단 헤더 */
 #header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(to right, #e0973e, #fff); /* 그라데이션 배경색 */
-    padding: 10px 20px;
-    box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 너비 지정 */
-    z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(to right, #e0973e, #fff); /* 그라데이션 배경색 */
+	padding: 10px 20px;
+	box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 너비 지정 */
+	z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
 }
 
 /* 로고 */
 .logo {
-    float: left; /* 왼쪽에 배치 */
-    font-size: 24px; /* 로고 텍스트 크기 */
-    color: #333; /* 로고 텍스트 색상 */
-    text-decoration: none; /* 밑줄 제거 */
-    margin-right: 20px; /* 로고 오른쪽 여백 */
+	float: left; /* 왼쪽에 배치 */
+	font-size: 24px; /* 로고 텍스트 크기 */
+	color: #333; /* 로고 텍스트 색상 */
+	text-decoration: none; /* 밑줄 제거 */
+	margin-right: 20px; /* 로고 오른쪽 여백 */
 }
 
 /* 로그인, 로그아웃, 마이페이지 링크 */
 .link {
-    float: right; /* 오른쪽에 배치 */
-    font-size: 16px; /* 링크 텍스트 크기 */
-    color: #333; /* 링크 텍스트 색상 */
-    text-decoration: none; /* 밑줄 제거 */
+	float: right; /* 오른쪽에 배치 */
+	font-size: 16px; /* 링크 텍스트 크기 */
+	color: #333; /* 링크 텍스트 색상 */
+	text-decoration: none; /* 밑줄 제거 */
 }
 
 /* 로그인 폼 */
 #login {
-    display: none; /* 초기에는 숨김 */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
+	display: none; /* 초기에는 숨김 */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	background-color: white;
+	padding: 20px;
+	border: 1px solid #ccc;
 }
+
+
+
 
 /* 마이페이지 */
 #mypage {
-    display: none; /* 초기에는 숨김 */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1000;
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
+	display: none; /* 초기에는 숨김 */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+	background-color: white;
+	padding: 20px;
+	border: 1px solid #ccc;
 }
 
 /* 정보수정 */
 #Update {
-    display: none; /* 초기에는 숨김 */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	display: none; /* 초기에는 숨김 */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* 에러 메시지 */
 .error_box {
-    display: none;
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
+	display: none;
+	color: red;
+	font-size: 14px;
+	margin-top: 5px;
 }
 
 /* 컨테이너 */
 #container {
-    margin-top: 50px; /* 헤더가 가려지지 않도록 여백 추가 */
-    padding: 20px;
+	margin-top: 50px; /* 헤더가 가려지지 않도록 여백 추가 */
+	padding: 20px;
 }

@@ -34,7 +34,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		</header>
 
 		<!-- login -->
-		<nav id="login" class="login-form">
+		<nav id="login" class="login-form " >
 			<div id="login_con">
 				<span class="close_btn">×</span>
 				<!-- X 버튼 추가 -->
@@ -49,7 +49,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 						<div class="error_box"></div>
 					</div>
 					<input type="submit" value="로그인">
-					<c:if test="${not empty message}">
+ 					<c:if test="${not empty message}">
 					    <script>
 					        alert("${message}");
 					    </script>
@@ -144,7 +144,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 					.querySelector("#header nav a[href='LogoutCon']");
 			let mypageButton = document
 					.querySelector("#header nav a[href='mypage.html']");
-			let loginModal = document.getElementById('login'); // 로그인 모달 창
+			
 	<%-- 세션에서 로그인 정보 확인 --%>
 		
 	<%if (loginMember != null) {%>
@@ -156,23 +156,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			logoutButton.style.display = "none"; // 로그아웃 버튼 숨김
 			mypageButton.style.display = "none"; // 마이페이지 버튼 숨김
 	<%}%>
-	    // 로그인 버튼 클릭 시 로그인 모달 창 열기
-	    loginButton.addEventListener('click', function() {
-	        loginModal.style.display = 'block';
-	    });
-	
-	    // 모달 창 닫기 버튼 설정
-	    document.querySelectorAll('.close_btn').forEach(function(button) {
-	        button.addEventListener('click', function() {
-	            loginModal.style.display = 'none';
-	        });
-	    });
-	
-	    // 로그인 실패 시에도 모달 창 열기
-	    <%if (request.getAttribute("message") != null) {%>
-	        loginModal.style.display = 'block';
-	    <%}%>
-		};
+
 	</script>
 	<script src="js/main.js"></script>
 	<script src="js/pw.js"></script>
