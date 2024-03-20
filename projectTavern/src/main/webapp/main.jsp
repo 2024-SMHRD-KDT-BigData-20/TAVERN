@@ -83,7 +83,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 					<a href="#Update">정보수정</a>
 				</div>
 				<div>
-					<a href="DeleteCon">회원삭제</a>
+					<a href="DeleteCon?id=${loginMember.id }"><button>탈퇴하기</button></a>
 				</div>
 			</div>
 		</nav>

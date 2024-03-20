@@ -14,29 +14,23 @@ public class DeleteCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// 1. 쿼리스트링으로 넘어온 email 가져오기(파라미터 수집)
-		// email에 담겨있는 정보가 한글이라면 URLEncoder.encode(인코딩데이터,인코딩방식)식으로 보냄
-		// encode한값을 꺼내올때는 URLDecoder.decode(디코딩데이터,디코딩방식)
 		String id = request.getParameter("id");
-		System.out.println(id);
-				
-		// 2. MemberMapper.xml에 SQL문 작성--> parameterType="String"
-				
-				
-		// 3-1. DAO 메소드 구현(deleteMember)
-		// 3-2. DAO 객체 생성
-		MemberDAO dao = new MemberDAO();
-		// 3-3. DAO 메소드 호출 --> int 형으로 담아서 확인
-		int cnt = dao.deleteMember(id);
-				
-		if(cnt>0) {
-			System.out.println("회원삭제 성공~~");
+		
+		// 1. DAO에 delete 메소드 만들기 -> 리턴타입 : 정수
+		// 2. 리턴값이 0보다 크면 성공, 아니라면 실패
+		// 3. 성공시에는 Main.jsp로 이동 / 실패시 Delete.jsp
+		
+		int cnt = new MemberDAO().delete(id);
+		
+		if(cnt > 0) {
+			HttpSession session = request.getSession();
+			session.removeAttribute("loginMember");
+			response.sendRedirect("main.jsp");
 		}else {
-			System.out.println("회원삭제 실패ㅜㅜㅜ");
+			HttpSession session = request.getSession();
+			session.removeAttribute("loginMember");
+			response.sendRedirect("main.jsp");
 		}
-			
-		// 4. 모든일이 끝나면 select.jsp로 이동
-		response.sendRedirect("main.jsp");
 		
 		
 		

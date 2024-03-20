@@ -66,11 +66,10 @@ public class MemberDAO {
 	}// 비밀번호 찾기 끝
 	
 	// 회원탈퇴 구현
-	public int deleteMember(String id) {
-		int cnt = 0;
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		sqlSession.delete("com.smhrd.db.MemberMapper.deleteMember", id);
-		sqlSession.close();
+	public int delete(String id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		int cnt = session.delete("com.smhrd.db.MemberMapper.delete", id);
+		session.close();
 		return cnt;
 	}// 회원탈퇴 구현 끝
 	

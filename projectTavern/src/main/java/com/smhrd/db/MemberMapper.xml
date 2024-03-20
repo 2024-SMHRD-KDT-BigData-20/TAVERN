@@ -43,9 +43,9 @@
 	<!-- 비밀번호 찾기 끝 -->
 	
 	<!-- 회원탈퇴 시작 -->
-	<delete id="deleteMember" parameterType="String">
- 		delete from user_info where id=#{id}
- 	</delete>
+	<delete id="delete" parameterType="String">
+  	delete from user_info where id=#{id}
+  	</delete>
 	<!-- 회원탈퇴 끝 -->
 
 
