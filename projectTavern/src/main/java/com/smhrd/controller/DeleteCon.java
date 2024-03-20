@@ -14,25 +14,29 @@ public class DeleteCon extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// 세션을 얻어옵니다.
-        HttpSession session = request.getSession();
-        
-        // 세션에 저장된 회원 아이디를 가져옵니다.
-        String id = (String) session.getAttribute("id");
-
-        // 여기서 회원 탈퇴 로직을 수행합니다.
-        // 예를 들어, 데이터베이스에서 해당 사용자 정보를 삭제하는 등의 작업을 수행합니다.
-
-        // 세션을 무효화하여 로그아웃 처리합니다.
-        session.invalidate();
-
-        // 회원 탈퇴가 완료되었음을 알리는 페이지로 이동합니다.
-        response.sendRedirect("main.jsp");
-    	}
-
-	    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	        // GET 요청이 아닌 경우에도 같은 로직을 수행하도록 설정합니다.
-	        doGet(request, response);
+		// 1. 쿼리스트링으로 넘어온 email 가져오기(파라미터 수집)
+		// email에 담겨있는 정보가 한글이라면 URLEncoder.encode(인코딩데이터,인코딩방식)식으로 보냄
+		// encode한값을 꺼내올때는 URLDecoder.decode(디코딩데이터,디코딩방식)
+		String id = request.getParameter("id");
+		System.out.println(id);
+				
+		// 2. MemberMapper.xml에 SQL문 작성--> parameterType="String"
+				
+				
+		// 3-1. DAO 메소드 구현(deleteMember)
+		// 3-2. DAO 객체 생성
+		MemberDAO dao = new MemberDAO();
+		// 3-3. DAO 메소드 호출 --> int 형으로 담아서 확인
+		int cnt = dao.deleteMember(id);
+				
+		if(cnt>0) {
+			System.out.println("회원삭제 성공~~");
+		}else {
+			System.out.println("회원삭제 실패ㅜㅜㅜ");
+		}
+			
+		// 4. 모든일이 끝나면 select.jsp로 이동
+		response.sendRedirect("main.jsp");
 		
 		
 		
