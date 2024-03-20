@@ -13,7 +13,6 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="css/main.css" rel="stylesheet">
-<link href="css/join.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,18 +23,18 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<nav class="link">
 				<c:choose>
 					<c:when test="${empty loginMember }">
-						<a href="#menu">로그인</a>
+						<a href="#menu" class="login-link">로그인</a>
 					</c:when>
 					<c:otherwise>
-						<a href="LogoutCon">로그아웃</a>
-						<a href="#mypage">마이페이지</a>
+						<a href="LogoutCon" class="logout-link">로그아웃</a>
+						<a href="#mypage" class="mypage-link">마이페이지</a>
 					</c:otherwise>
 				</c:choose>
 			</nav>
 		</header>
 
 		<!-- login -->
-		<nav id="login">
+		<nav id="login" class="login-form">
 			<div id="login_con">
 				<span class="close_btn">×</span>
 				<!-- X 버튼 추가 -->
@@ -59,9 +58,9 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 				</div>
 			</div>
 		</nav>
-		
+
 		<!-- mypage -->
-		<nav id="mypage">
+		<nav id="mypage" class="mypage-form">
 			<div>
 				<h4>마이페이지</h4>
 				<div>id = ${loginMember.id}</div>
@@ -83,7 +82,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		</nav>
 
 		<!-- 정보수정 -->
-		<nav id="Update">
+		<nav id="Update" class="update-form">
 			<li>
 				<h5>회원정보수정</h5>
 			</li>
@@ -128,12 +127,6 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		<!-- footer -->
 		<footer></footer>
 	</div>
-	<!-- 네비게이션 메뉴 -->
-	<div id="nav_overlay"></div>
-	<div id="nav_menu">
-		<!-- 네비게이션 내용 생략 -->
-	</div>
-	<script src="js/pw.js"></script>
 	<script>
 		// 페이지 로드 시 실행되는 함수
 		window.onload = function() {
@@ -157,6 +150,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		};
 	</script>
 	<script src="js/main.js"></script>
+	<script src="js/pw.js"></script>
 </body>
 
 </html>
