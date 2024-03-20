@@ -23,7 +23,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<nav class="link">
 				<c:choose>
 					<c:when test="${empty loginMember }">
-						<a href="#menu" class="login-link">로그인</a>
+						<a href="#login" class="login-link">로그인</a>
 					</c:when>
 					<c:otherwise>
 						<a href="LogoutCon" class="logout-link">로그아웃</a>
@@ -61,6 +61,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 
 		<!-- mypage -->
 		<nav id="mypage" class="mypage-form">
+			<span class="close_btn">×</span>
 			<div>
 				<h4>마이페이지</h4>
 				<div>id = ${loginMember.id}</div>
@@ -83,6 +84,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 
 		<!-- 정보수정 -->
 		<nav id="Update" class="update-form">
+			<span class="close_btn">×</span>
 			<li>
 				<h5>회원정보수정</h5>
 			</li>
