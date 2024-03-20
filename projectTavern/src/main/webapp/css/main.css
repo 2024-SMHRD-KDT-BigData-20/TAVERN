@@ -26,7 +26,7 @@ body {
 }
 
 /* 로그인 링크 */
-.login-link {
+.link {
     float: right; /* 오른쪽에 배치 */
     font-size: 16px; /* 로그인 텍스트 크기 */
     color: #333; /* 로그인 텍스트 색상 */
