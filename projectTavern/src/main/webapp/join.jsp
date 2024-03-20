@@ -19,7 +19,7 @@
 					<label class="form_label">아이디</label>
 				</div>
 				<div>
-					<button type="button" onclick="checkIdValidity()">아이디 중복확인</button>
+					<button type="button" onclick="">아이디 중복확인</button>
 				</div>
 				<div class="id error_box" id="id_error">영문자 혹은 영문자와 숫자를 포함해서
 					만들어주세요</div>

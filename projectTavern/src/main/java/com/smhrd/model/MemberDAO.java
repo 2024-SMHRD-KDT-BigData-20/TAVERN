@@ -64,15 +64,4 @@ public class MemberDAO {
 		return pwfind;
 
 	}// 비밀번호 찾기 끝
-
-	// 아이디 유효성 검사 기능 구현
-	public List<MemberVO> checkID(String id){
-		List<MemberVO> idcheck = null;
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		idcheck = sqlSession.selectList("com.smhrd.db.MemberMapper.checkID", id);
-		sqlSession.close();
-		return idcheck;
-	}
-	// 검사 끝
-
 }
