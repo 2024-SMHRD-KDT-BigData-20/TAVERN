@@ -49,7 +49,13 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 						<div class="error_box"></div>
 					</div>
 					<input type="submit" value="로그인">
+					<c:if test="${not empty message}">
+					    <script>
+					        alert("${message}");
+					    </script>
+					</c:if>
 				</form>
+
 				<div id="join_btn">
 					<button onclick="location.href='join.jsp'">회원가입</button>
 				</div>
