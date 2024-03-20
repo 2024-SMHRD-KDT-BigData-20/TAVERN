@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="container">
-		<form id="joinForm" action="javascript:void(0)" method="post">
+		<form id="joinForm" action="JoinCon" method="post">
 			<!-- 회원정보 입력 타이틀 -->
 			<div class="title">회원가입</div>
 			<!-- 회원 아이디 입력 -->
@@ -83,15 +83,9 @@
 				<div class="error_box">이메일 양식에 맞게 해주세요</div>
 			</div>
 			<div>
-				<button type="button" onclick="submitForm()">가입</button>
+				<input type="submit" value="가입">
 			</div>
 		</form>
-		<!-- 로그인 가능 메시지 -->
-		<div id="loginMessage" style="display: none;">
-			<p>로그인 가능한 아이디입니다.</p>
-			<button type="button" onclick="resetLoginForm()">로그인 창으로
-				돌아가기</button>
-		</div>
 	</div>
 	<script src="js/pw.js"></script>
 </body>
