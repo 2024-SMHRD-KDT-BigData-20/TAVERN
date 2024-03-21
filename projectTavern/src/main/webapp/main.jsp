@@ -16,25 +16,11 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 </head>
 
 <body>
-	<div id="container">
+	<div id="maincontainer">
 		<!-- header -->
-		<header id="header" class="alt">
-			<a href="main.jsp" class="logo">로고</a>
-			<nav class="link">
-				<c:choose>
-					<c:when test="${empty loginMember }">
-						<a href="#login" class="login-link">로그인</a>
-					</c:when>
-					<c:otherwise>
-						<a href="LogoutCon" class="logout-link">로그아웃</a>
-						<a href="#mypage" class="mypage-link">마이페이지</a>
-					</c:otherwise>
-				</c:choose>
-			</nav>
-		</header>
-
+			<%@include file="header.jsp" %>
 		<!-- login -->
-		<nav id="login" class="login-form " >
+		<nav id="login" class="login-form ">
 			<div id="login_con">
 				<span class="close_btn">×</span>
 				<!-- X 버튼 추가 -->
@@ -49,8 +35,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 						<div class="error_box"></div>
 					</div>
 					<input type="submit" value="로그인">
- 					<c:if test="${not empty message}">
-					    <script>
+					<c:if test="${not empty message}">
+						<script>
 					        alert("${message}");
 					    </script>
 					</c:if>
@@ -83,7 +69,9 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 					<a href="#Update">정보수정</a>
 				</div>
 				<div>
-					<a href="DeleteCon?id=${loginMember.id }"><button>탈퇴하기</button></a>
+					<a href="DeleteCon?id=${loginMember.id }">
+						<button>탈퇴하기</button>
+					</a>
 				</div>
 			</div>
 		</nav>
@@ -131,7 +119,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 
 		<!-- main -->
 		<!-- main 내용 생략 -->
-
+		<div>메인</div>
 		<!-- footer -->
 		<footer></footer>
 	</div>
