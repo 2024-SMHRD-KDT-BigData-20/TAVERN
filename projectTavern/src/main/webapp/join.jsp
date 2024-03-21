@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
-<link rel="stylesheet" href="css/join.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 	<div id="container">
@@ -87,7 +87,7 @@
 			</div>
 		</form>
 	</div>
-	<script src="js/pw.js"></script>
 	<script src="js/member.js"></script>
+	<script src="js/pw.js"></script>
 </body>
 </html>
