@@ -43,6 +43,7 @@
 				<p>간단한 설명</p>
 			</div>
 		</div>
+		<%@include file="footer.jsp"%>s
 	</div>
 <script src="js/main.js"></script>
 </body>

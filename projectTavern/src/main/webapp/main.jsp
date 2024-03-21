@@ -121,7 +121,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		<!-- main 내용 생략 -->
 		<div>메인</div>
 		<!-- footer -->
-		<footer></footer>
+			<%@include file="footer.jsp" %>
+		
 	</div>
 	<script>
 		// 페이지 로드 시 실행되는 함수
