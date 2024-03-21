@@ -18,7 +18,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <body>
 	<div id="maincontainer">
 		<!-- header -->
-			<%@include file="header.jsp" %>
+		<%@include file="header.jsp"%>
 		<!-- login -->
 		<nav id="login" class="login-form ">
 			<div id="login_con">
