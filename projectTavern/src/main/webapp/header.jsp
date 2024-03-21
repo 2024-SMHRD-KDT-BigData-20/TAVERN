@@ -4,7 +4,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
-<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/header.css">
 </head>
 <body>
 	<div>
@@ -30,6 +30,5 @@
 			</div>
 		</header>
 	</div>
-	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
