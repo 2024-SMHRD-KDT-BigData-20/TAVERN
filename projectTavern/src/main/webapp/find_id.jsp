@@ -1,27 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 
 
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<div id=find_id_container>
-			<h2>¾ÆÀÌµğ</h2>
+			<h2>ì•„ì´ë””</h2>
 			<div>
 				
 				<h4>
 					
-					<!-- ¾ÆÀÌµğ Ã£Àº ÆäÀÌÁö º¸¿©ÁÖ´Â ¹®´Ü -->
+					<!-- ì•„ì´ë”” ì°¾ì€ í˜ì´ì§€ ë³´ì—¬ì£¼ëŠ” ë¬¸ë‹¨ -->
 					<% 
 						String foundId = (String) session.getAttribute("findi");
 						if (foundId != null) {
-					   		 out.println("Ã£Àº ¾ÆÀÌµğ: " + foundId);
+					   		 out.println("ì°¾ì€ ì•„ì´ë””: " + foundId);
 						} else {
-					    	out.println("¾ÆÀÌµğ¸¦ Ã£À» ¼ö ¾ø½À´Ï´Ù.");
+					    	out.println("ì•„ì´ë””ë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 						}
 					%>
 					
@@ -29,7 +29,7 @@
 			</div>
 			<div class="text-box">
 				<a href = "main.jsp">
-					·Î±×ÀÎ È­¸éÀ¸·Î °¡±â
+					ë¡œê·¸ì¸ í™”ë©´ìœ¼ë¡œ ê°€ê¸°
 				</a>
 			</div>
 		</form>

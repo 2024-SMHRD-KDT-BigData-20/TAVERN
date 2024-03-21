@@ -1,30 +1,30 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<div id=find_id_container>
 		<form action="Find_pw_con" method="post">
-			<h2>��й�ȣ</h2>
+			<h2>비밀번호</h2>
 			<div>
 				<h4>
-					<!-- ��й�ȣ ã�� ������ �����ִ� ���� -->
+					<!-- 비밀번호 찾은 페이지 보여주는 문단 -->
 					<% 
 						String foundPw = (String) session.getAttribute("findp");
 						if (foundPw != null) {
-					   		 out.println("ã�� ��й�ȣ: " + foundPw);
+					   		 out.println("찾은 비밀번호: " + foundPw);
 						} else {
-					    	out.println("��й�ȣ�� ã�� �� �����ϴ�.");
+					    	out.println("비밀번호를 찾을 수 없습니다.");
 						}
 					%>
 				</h4>
 			</div>
 			<div class="text-box">
 				<a href = "main.jsp">
-					�α��� ȭ������ ����
+					로그인 화면으로 가기
 				</a>
 			</div>
 		</form>

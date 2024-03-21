@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/header.css">
 </head>
@@ -10,20 +10,20 @@
 	<div>
 		<header id="header" class="alt">
 			<div class="header-content">
-				<a href="main.jsp" class="logo">�ΰ�</a>
+				<a href="main.jsp" class="logo">로고</a>
 				<nav class="nav-links">
-					<a href="lequor.html" class="lequor">�Ұ�</a>
-					<a href="post.jsp" class="post">�ҽ�</a>
-					<a href="community.jsp" class="comm">Ŀ�´�Ƽ</a>
+					<a href="lequor.html" class="lequor">소개</a>
+					<a href="post.jsp" class="post">소식</a>
+					<a href="community.jsp" class="comm">커뮤니티</a>
 				</nav>
 				<div class="link">
 					<c:choose>
 						<c:when test="${empty loginMember }">
-							<a href="#login" class="login-link">�α���</a>
+							<a href="#login" class="login-link">로그인</a>
 						</c:when>
 						<c:otherwise>
-							<a href="LogoutCon" class="logout-link">�α׾ƿ�</a>
-							<a href="#mypage" class="mypage-link">����������</a>
+							<a href="LogoutCon" class="logout-link">로그아웃</a>
+							<a href="#mypage" class="mypage-link">마이페이지</a>
 						</c:otherwise>
 					</c:choose>
 				</div>

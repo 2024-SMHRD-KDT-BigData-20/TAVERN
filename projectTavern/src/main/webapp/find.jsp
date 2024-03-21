@@ -1,30 +1,30 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<div id="find_container">
-		<!--Ã£±â ´©¸£¸é find_id_con.java·Î °¡¼­ ±â´É µ¹¸°ÈÄ find_id.jsp ÆäÀÌÁö·Î ÀÌµ¿ -->
+		<!--ì°¾ê¸° ëˆ„ë¥´ë©´ find_id_con.javaë¡œ ê°€ì„œ ê¸°ëŠ¥ ëŒë¦°í›„ find_id.jsp íŽ˜ì´ì§€ë¡œ ì´ë™ -->
 		<form action="Find_id_con" method="post">
-			<h1>¾ÆÀÌµð Ã£±â</h1>
+			<h1>ì•„ì´ë”” ì°¾ê¸°</h1>
 			<div class="text-box">
-				<input type="email" name="email" id="email" placeholder="ÀÌ¸ÞÀÏÀ» ÀÔ·ÂÇÏ¼¼¿ä"> <label for="email">ÀÌ¸ÞÀÏ</label>
+				<input type="email" name="email" id="email" placeholder="ì´ë©”ì¼ì„ ìž…ë ¥í•˜ì„¸ìš”"> <label for="email">ì´ë©”ì¼</label>
 			</div>
 			<div>
-				<input type="submit" value="Ã£±â">
+				<input type="submit" value="ì°¾ê¸°">
 			</div>
 		</form>
-		<!--Ã£±â ´©¸£¸é find_pw_con.java·Î °¡¼­ ±â´É µ¹¸°ÈÄ find_pw.jsp ÆäÀÌÁö·Î ÀÌµ¿ -->
+		<!--ì°¾ê¸° ëˆ„ë¥´ë©´ find_pw_con.javaë¡œ ê°€ì„œ ê¸°ëŠ¥ ëŒë¦°í›„ find_pw.jsp íŽ˜ì´ì§€ë¡œ ì´ë™ -->
 		<form action="Find_pw_con" method="post">
-			<h1>ºñ¹Ð¹øÈ£ Ã£±â</h1>
+			<h1>ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</h1>
 			<div class="text-box">
-				<input type="text" name="id" id=" id" placeholder="¾ÆÀÌµð¸¦ ÀÔ·ÂÇÏ¼¼¿ä"> <label for="id">¾ÆÀÌµð</label>
+				<input type="text" name="id" id=" id" placeholder="ì•„ì´ë””ë¥¼ ìž…ë ¥í•˜ì„¸ìš”"> <label for="id">ì•„ì´ë””</label>
 			</div>
 			<div>
-				<input type="submit" value="Ã£±â">
+				<input type="submit" value="ì°¾ê¸°">
 			</div>
 		</form>
 	</div>
