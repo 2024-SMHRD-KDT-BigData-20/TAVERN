@@ -13,13 +13,12 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="css/main.css" rel="stylesheet">
-<link href="css/header.css" rel="stylesheet">
 </head>
 
 <body>
 	<div id="maincontainer">
 		<!-- header -->
-		<%@include file="header.jsp"%>
+			<%@include file="header.jsp" %>
 		<!-- login -->
 		<nav id="login" class="login-form ">
 			<div id="login_con">
