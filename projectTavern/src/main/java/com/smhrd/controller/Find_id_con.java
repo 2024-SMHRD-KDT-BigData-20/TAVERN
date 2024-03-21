@@ -20,7 +20,7 @@ public class Find_id_con extends HttpServlet {
 		
 		request.setCharacterEncoding("UTF-8");
 		String email = request.getParameter("email");
-		
+		//
 		
 		MemberDAO dao = new MemberDAO();
 		MemberVO findi = dao.findIdByEmail(email);
