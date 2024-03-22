@@ -58,6 +58,8 @@ public class LiquorVO {
 		this.liq_type = liq_type;
 	}
 
-	
+	public LiquorVO(String liq_name) {
+	    this.liq_name = liq_name;
+	}
 
 }
