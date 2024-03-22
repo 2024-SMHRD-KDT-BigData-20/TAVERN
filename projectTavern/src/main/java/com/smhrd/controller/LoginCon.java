@@ -33,18 +33,21 @@ public class LoginCon extends HttpServlet {
 //      System.out.println(loginMember.toString());
 
       if (loginMember != null) { // 로그인에 성공했을 경우
-         // 세션을 생성하고 로그인한 멤버 정보를 세션에 저장합니다.
-         HttpSession session = request.getSession();
-         session.setAttribute("loginMember", loginMember);
-      } else {
-			// 실패
-          // 실패 메시지를 request에 설정
-			request.setAttribute("message", "로그인에 실패했습니다. 아이디 또는 비밀번호를 확인해주세요.");
-			request.getRequestDispatcher("main.jsp").forward(request, response);
-
-      }
-
-      // 메인 페이지로 리다이렉트합니다.
-      response.sendRedirect("main.jsp");
+    	    // 세션을 생성하고 로그인한 멤버 정보를 세션에 저장합니다.
+    	    HttpSession session = request.getSession();
+    	    session.setAttribute("loginMember", loginMember);
+    	    // 이전 페이지로 리다이렉트합니다.
+    	    String redirectURL = request.getParameter("redirectURL");
+    	    if (redirectURL != null && !redirectURL.isEmpty()) {
+    	        response.sendRedirect(redirectURL);
+    	    } else {
+    	        response.sendRedirect("main.jsp"); // 이전 페이지가 없을 경우 기본값으로 main.jsp로 이동
+    	    }
+    	} else {
+    	    // 실패
+    	    // 실패 메시지를 request에 설정
+    	    request.setAttribute("message", "로그인에 실패했습니다. 아이디 또는 비밀번호를 확인해주세요.");
+    	    request.getRequestDispatcher("main.jsp").forward(request, response);
+    	}
    }
 }
