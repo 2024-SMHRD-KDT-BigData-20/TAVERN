@@ -11,7 +11,6 @@
     overflow-y: auto; /* 내용이 넘칠 경우 스크롤바 표시 */
 }
 
-/* 메인 콘텐츠 */
 #main {
 	margin-top: 100px;
     margin-left: 300px; /* 좌측 네비게이션의 너비만큼 오른쪽으로 밀어줌 */
