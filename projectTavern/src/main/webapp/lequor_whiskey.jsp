@@ -17,9 +17,9 @@
 </style>
 </head>
 <body>
-	<div>
-        <%@include file="main.jsp"%>
-    	<%@include file="left_nav.jsp" %>
+   <div>
+        <%@include file="layout/header.jsp"%>
+       <%@include file="left_nav.jsp" %>
         <!-- 메인 -->
         <div id="main">
             <!-- 주제 -->
@@ -58,7 +58,7 @@
                 </div>
             </section>
         </div>
-        <%@include file="footer.jsp"%>
+        <%@include file="layout/footer.jsp"%>
     </div>
     <script>
         function showMore() {

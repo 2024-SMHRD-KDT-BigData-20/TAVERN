@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div id="lequor_container">
-		<%@include file="main.jsp"%>
+		<%@include file="layout/header.jsp"%>
 		<!-- 좌측 네비 -->
 		<%@include file="left_nav.jsp" %>
 
@@ -24,7 +24,7 @@
 				<p>간단한 설명</p>
 			</div>
 		</div>
-		<%@include file="footer.jsp"%>s
+		<%@include file="layout/footer.jsp"%>s
 	</div>
 	<script src="js/main.js"></script>
 </body>
