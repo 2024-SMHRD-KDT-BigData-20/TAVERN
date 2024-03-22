@@ -11,9 +11,7 @@
 		<!-- 메인 -->
 		<div id="main">
 			<!-- 주제 -->
-			<section>
-				위스키
-			</section>
+			<section>위스키</section>
 			<!-- 내용 -->
 			<section>
 				<div>
@@ -33,6 +31,8 @@
 		</div>
 		<%@include file="footer.jsp"%>
 	</div>
-	<script src="js/function_js/plus.js">></script>
+	<script src="js/function_js/plus.js">
+		>
+	</script>
 </body>
 </html>

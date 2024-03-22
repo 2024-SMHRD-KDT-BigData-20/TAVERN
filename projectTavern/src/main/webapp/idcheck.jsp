@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -10,8 +9,7 @@
 <body>
 	<h2>아이디 중복확인</h2>
 	<form action="idcheck" method="get" name="frm">
-		아이디 <input type=text name="userid" value="${id}"> <input type=submit
-			value="중복 체크"> <br>
+		아이디 <input type=text name="userid" value="${id}"> <input type=submit value="중복 체크"> <br>
 		<c:if test="${result == 1}">
 			<script type="text/javascript">
 				opener.document.frm.id.value = "";

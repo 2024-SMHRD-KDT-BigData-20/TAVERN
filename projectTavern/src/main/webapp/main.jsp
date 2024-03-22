@@ -1,5 +1,5 @@
 <%@page import="com.smhrd.model.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 
@@ -18,7 +18,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <body>
 	<div id="maincontainer">
 		<!-- header -->
-			<%@include file="header.jsp" %>
+		<%@include file="header.jsp"%>
 		<!-- login -->
 		<nav id="login" class="login-form ">
 			<div id="login_con">
@@ -121,8 +121,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		<!-- main 내용 생략 -->
 		<div>메인</div>
 		<!-- footer -->
-			<%@include file="footer.jsp" %>
-		
+		<%@include file="footer.jsp"%>
+
 	</div>
 	<script>
 		// 페이지 로드 시 실행되는 함수

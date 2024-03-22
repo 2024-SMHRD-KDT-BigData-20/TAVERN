@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.model.MemberDAO;
 import com.smhrd.model.MemberVO;
 
-@WebServlet("/idcheck")
 public class idcheck extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
