@@ -30,10 +30,10 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 				<div class="link">
 					<c:choose>
 						<c:when test="${empty loginMember }">
-							<a href="LoginCon?redirectURL=<%= request.getRequestURI() %>" class="login-link">로그인</a>
+							<a href="#login" class="login-link">로그인</a>
 						</c:when>
 						<c:otherwise>
-							<a href="LogoutCon" class="logout-link">로그아웃</a>
+							<a href="LogoutCon?redirectURL=<%= request.getRequestURI() %>" class="logout-link">로그아웃</a>
 							<a href="#mypage" class="mypage-link">마이페이지</a>
 						</c:otherwise>
 					</c:choose>
@@ -46,7 +46,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 				<span class="close_btn">×</span>
 				<!-- X 버튼 추가 -->
 				<h1>로그인</h1>
-				<form action="LoginCon" method="post">
+				<form action="LoginCon?redirectURL=<%= request.getRequestURI() %>" method="post">
 					<div class="text_box">
 						<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요"> <label class="form_lavel">아이디</label>
 						<div class="error_box"></div>
