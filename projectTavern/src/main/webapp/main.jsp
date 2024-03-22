@@ -12,13 +12,34 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/main.css" rel="stylesheet">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 	<div id="maincontainer">
 		<!-- header -->
-		<%@include file="header.jsp"%>
+		<header id="header" class="alt">
+			<div class="header-content">
+				<a href="main.jsp" class="logo">로고</a>
+				<nav class="nav-links">
+					<a href="lequor.html" class="lequor">소개</a>
+					<a href="post.jsp" class="post">소식</a>
+					<a href="community.jsp" class="comm">커뮤니티</a>
+				</nav>
+				<div class="link">
+					<c:choose>
+						<c:when test="${empty loginMember }">
+							<a href="#login" class="login-link">로그인</a>
+						</c:when>
+						<c:otherwise>
+							<a href="LogoutCon" class="logout-link">로그아웃</a>
+							<a href="#mypage" class="mypage-link">마이페이지</a>
+						</c:otherwise>
+					</c:choose>
+				</div>
+			</div>
+		</header>
 		<!-- login -->
 		<nav id="login" class="login-form ">
 			<div id="login_con">
@@ -116,12 +137,6 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 				</div>
 			</form>
 		</nav>
-
-		<!-- main -->
-		<!-- main 내용 생략 -->
-		<div>메인</div>
-		<!-- footer -->
-		<%@include file="footer.jsp"%>
 
 	</div>
 	<script>

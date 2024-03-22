@@ -5,10 +5,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="css/lequor.css" rel="stylesheet">
+
 </head>
 <body>
 	<div id="lequor_container">
-		<%@include file="header.jsp"%>
+		<%@include file="main.jsp"%>
 		<!-- 좌측 네비 -->
 		<nav id="left_nav">
 			<div>
