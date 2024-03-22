@@ -4,34 +4,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/nav.css" rel="stylesheet">
+<link href="css/lequor.css" rel="stylesheet">
 
 </head>
 <body>
 	<div id="lequor_container">
 		<%@include file="main.jsp"%>
 		<!-- 좌측 네비 -->
-		<nav id="left_nav">
-			<div>
-				<div>
-					<h3>전체</h3>
-					<br>
-				</div>
-				<ul>
-					<li><a href="lequor_whiskey.jsp">위스키</a></li>
-					<br>
-					<li><a href="#">럼</a></li>
-					<br>
-					<li><a href="#">꼬냑</a></li>
-					<br>
-					<li><a href="#">보드카</a></li>
-					<br>
-					<li><a href="#">데킬라</a></li>
-					<br>
-					<li><a href="#">꼬냑</a></li>
-				</ul>
-			</div>
-		</nav>
+		<%@include file="left_nav.jsp" %>
 
 		<!-- 메인문 -->
 		<div id="main">
