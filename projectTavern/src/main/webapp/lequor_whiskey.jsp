@@ -6,11 +6,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<<<<<<< HEAD
 <title>위스키 목록</title>
 <link href="css/nav.css" rel="stylesheet">
 <link href="css/leqour.css" rel="stylesheet">
+=======
+<title>Insert title here</title>
+<link href="css/nav.css" rel="stylesheet">
+<link href="css/leqour.css" rel ="stylesheet">
+
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN.git
 </head>
 <body>
+<<<<<<< HEAD
 <div>
     <%@include file="main.jsp"%>
     <!-- 메인 -->
@@ -45,6 +58,50 @@
                 <button id="moreButton">더보기</button>
             </div>
         </section>
+=======
+   <div>
+        <%@include file="layout/header.jsp"%>
+       <%@include file="left_nav.jsp" %>
+        <!-- 메인 -->
+        <div id="main">
+            <!-- 주제 -->
+            <section>위스키</section>
+            <!-- 내용 -->
+            <section>
+                <div>
+                    <ul id="linkList">
+                        <%
+                            LiquorDAO liquorDAO = new LiquorDAO(); // LiquorDAO 클래스의 인스턴스 생성
+                            // 위스키 이름 목록 받아오기
+                            List<LiquorVO> whiskeyList = liquorDAO.liqName("위스키");
+                            // 위스키 이름 목록 출력하기
+                            int count = 0;
+                            for (LiquorVO liquor : whiskeyList) {
+                                count++;
+                                if (count <= 6) { // 처음 6개만 보이도록 함
+                        %>
+                        <li class="item<%=liquor.getLiq_idx()%>"><%=liquor.getLiq_name()%></li>
+                        <%
+                                }
+                            }
+                        %>
+                    </ul>
+                    <!-- 더보기 버튼 -->
+                    <button id="moreButton" onclick="showMore()">더보기</button>
+                    <ul id="moreList" class="hidden">
+                        <%
+                            for (int i = 6; i < whiskeyList.size(); i++) {
+                        %>
+                        <li class="item<%=whiskeyList.get(i).getLiq_idx()%> hidden"><%=whiskeyList.get(i).getLiq_name()%></li>
+                        <%
+                            }
+                        %>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <%@include file="layout/footer.jsp"%>
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN.git
     </div>
     <%@include file="footer.jsp"%>
 </div>
