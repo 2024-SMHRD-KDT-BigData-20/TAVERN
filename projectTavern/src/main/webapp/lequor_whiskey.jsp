@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 <link href="css/nav.css" rel="stylesheet">
 <link href="css/leqour.css" rel ="stylesheet">
+
 <style>
     .hidden {
         display: none;
@@ -16,9 +17,9 @@
 </style>
 </head>
 <body>
-    <div>
+	<div>
         <%@include file="main.jsp"%>
-    	<%@include file="letf_nav.jsp" %>
+    	<%@include file="left_nav.jsp" %>
         <!-- 메인 -->
         <div id="main">
             <!-- 주제 -->
