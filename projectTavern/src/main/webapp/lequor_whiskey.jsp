@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div>
-		<%@include file="header.jsp"%>
+		<%@include file="main.jsp"%>
 		<!-- 메인 -->
 		<div id="main">
 			<!-- 주제 -->
