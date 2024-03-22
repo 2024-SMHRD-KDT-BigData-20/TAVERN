@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,16 +9,16 @@
 <body>
 
 
-<footer id="footer">
+	<footer id="footer">
 
 
-    <div class="foo_div1">
+		<div class="foo_div1">
 
-        <p>(주)TAVERN</p>
-        <p>Copyright 2024 All ⓒ rights reserved by TAVERN</p>
-        
-    </div>
-</footer>
+			<p>(주)TAVERN</p>
+			<p>Copyright 2024 All ⓒ rights reserved by TAVERN</p>
+
+		</div>
+	</footer>
 
 
 
