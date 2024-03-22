@@ -4,10 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="css/nav.css" rel="stylesheet">
+
 </head>
 <body>
 	<div>
 		<%@include file="main.jsp"%>
+	
 		<!-- 메인 -->
 		<div id="main">
 			<!-- 주제 -->

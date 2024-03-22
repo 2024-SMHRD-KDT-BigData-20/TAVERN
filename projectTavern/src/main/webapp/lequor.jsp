@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/lequor.css" rel="stylesheet">
+<link href="css/nav.css" rel="stylesheet">
 
 </head>
 <body>
