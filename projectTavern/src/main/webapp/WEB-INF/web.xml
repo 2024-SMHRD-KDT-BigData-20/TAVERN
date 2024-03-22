@@ -58,6 +58,7 @@
 		<servlet-class>com.smhrd.controller.Check_id</servlet-class>
 	</servlet>
 
+
 	<servlet-mapping>
 		<servlet-name>JoinCon</servlet-name>
 		<url-pattern>/JoinCon</url-pattern>
@@ -94,6 +95,7 @@
 		<servlet-name>Check_id</servlet-name>
 		<url-pattern>/Check_id</url-pattern>
 	</servlet-mapping>
+
 	<session-config>
 		<session-timeout>30</session-timeout> <!-- 세션 유효 시간을 5분으로 설정 -->
 	</session-config>
