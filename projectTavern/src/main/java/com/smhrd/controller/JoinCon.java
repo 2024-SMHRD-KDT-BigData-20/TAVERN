@@ -39,7 +39,7 @@ public class JoinCon extends HttpServlet {
 
 		// 5. 명령 후 처리
 		if (cnt > 0) {
-			RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher(request.getRequestURI());
 			request.setAttribute("joinnick", nick);
 			rd.forward(request, response);
 
