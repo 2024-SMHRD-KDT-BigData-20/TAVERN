@@ -8,8 +8,11 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="css/nav.css" rel="stylesheet">
+<<<<<<< HEAD
 <link href="css/leqour.css" rel ="stylesheet">
 
+=======
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN.git
 <style>
     .hidden {
         display: none;
@@ -17,7 +20,11 @@
 </style>
 </head>
 <body>
+<<<<<<< HEAD
 	<div>
+=======
+    <div>
+>>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN.git
         <%@include file="main.jsp"%>
     
         <!-- 메인 -->
