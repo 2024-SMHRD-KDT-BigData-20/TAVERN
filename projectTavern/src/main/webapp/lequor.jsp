@@ -4,33 +4,33 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/main.css" rel="stylesheet">
+<link href="css/lequor.css" rel="stylesheet">
 </head>
 <body>
 	<div id="lequor_container">
 		<%@include file="header.jsp"%>
 		<!-- 좌측 네비 -->
-		<nav id="left_nav">
-			<div>
+			<nav id="left_nav">
 				<div>
-					<h3>전체</h3>
-					<br>
+					<div>
+						<h3>전체</h3>
+						<br>
+					</div>
+					<ul>
+						<li><a href="#">위스키</a></li>
+						<br>
+						<li><a href="#">럼</a></li>
+						<br>
+						<li><a href="#">꼬냑</a></li>
+						<br>
+						<li><a href="#">보드카</a></li>
+						<br>
+						<li><a href="#">데킬라</a></li>
+						<br>
+						<li><a href="#">꼬냑</a></li>
+					</ul>
 				</div>
-				<ul>
-					<li><a href="#">위스키</a></li>
-					<br>
-					<li><a href="#">럼</a></li>
-					<br>
-					<li><a href="#">꼬냑</a></li>
-					<br>
-					<li><a href="#">보드카</a></li>
-					<br>
-					<li><a href="#">데킬라</a></li>
-					<br>
-					<li><a href="#">꼬냑</a></li>
-				</ul>
-			</div>
-		</nav>
+			</nav>
 
 		<!-- 메인문 -->
 		<div id="main">
@@ -43,6 +43,7 @@
 				<p>간단한 설명</p>
 			</div>
 		</div>
+		<%@include file="footer.jsp"%>s
 	</div>
 <script src="js/main.js"></script>
 </body>
