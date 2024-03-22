@@ -8,7 +8,7 @@
 </head>
 <body>
 	<div id="lequor_container">
-		<%@include file="header.jsp"%>
+		<%@include file="main.jsp"%>
 		<!-- 좌측 네비 -->
 		<nav id="left_nav">
 			<div>
