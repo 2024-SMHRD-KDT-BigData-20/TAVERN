@@ -5,6 +5,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="css/lequor.css" rel="stylesheet">
+
 </head>
 <body>
 	<div id="lequor_container">

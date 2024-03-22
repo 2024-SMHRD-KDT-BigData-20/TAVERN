@@ -12,7 +12,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/main.css" rel="stylesheet">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
