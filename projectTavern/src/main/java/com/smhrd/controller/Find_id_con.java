@@ -15,27 +15,21 @@ import com.smhrd.model.MemberVO;
 public class Find_id_con extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
 		request.setCharacterEncoding("UTF-8");
 		String email = request.getParameter("email");
-		//
-		
+
 		MemberDAO dao = new MemberDAO();
 		MemberVO findi = dao.findIdByEmail(email);
-		
-		
+
 //		String cnt = dao.findid(email);
 
-		if(findi!=null) {
+		if (findi != null) {
 			HttpSession session = request.getSession();
-            session.setAttribute("findi", findi.getId());
-			
-            
-		
+			session.setAttribute("findi", findi.getId());
 		}
 		response.sendRedirect("find_id.jsp");
+	}
 }
-}
-
