@@ -73,7 +73,22 @@ public class MemberDAO {
 		return cnt;
 	}// 회원탈퇴 구현 끝
 	
-	
-	
+	// ID중복확인
+	public boolean checkid(String id) {
+        boolean idcheck = false;
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        try {
+            // MemberMapper.xml에 정의된 쿼리를 실행하여 ID 중복 여부 확인
+            int count = sqlSession.selectOne("com.smhrd.db.MemberMapper.checkid", id);
+            // 중복되는 ID가 존재하는 경우
+            if (count > 0) {
+                idcheck = true;
+            }
+        } finally {
+            sqlSession.close();
+        }
+        return idcheck;
+    }
+	// ID중복확인 끝
 	
 }
