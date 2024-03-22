@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body {
+#container {
     margin: 0;
     position: relative; /* 페이지 전체를 기준으로 footer를 배치하기 위해 body를 relative로 설정 */
     padding-bottom: 80px; /* footer의 높이만큼 body의 하단에 여백을 추가 */
@@ -8,6 +8,7 @@ body {
 
 #footer {
     position: fixed; /* 화면 하단에 고정 */
+    left: 0;
     bottom: 0; /* body의 하단에 고정 */
     background: linear-gradient(to right, #e0973e, #fff);
     width: 100%;

@@ -11,7 +11,6 @@
 	<%@include file="layout/header.jsp"%>
 	
 	<!-- main -->
-	<div></div>
 	<!-- footer -->
 	<%@include file="layout/footer.jsp"%>
 	</div>

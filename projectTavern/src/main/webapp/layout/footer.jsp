@@ -7,11 +7,13 @@
 <link rel="stylesheet" href="css/layout/footer.css">
 </head>
 <body>
-	<footer id="footer">
-		<div class="foo_div1">
-			<p>(주)TAVERN</p>
-			<p>Copyright 2024 All ⓒ rights reserved by TAVERN</p>
-		</div>
-	</footer>
+	<div id="container">
+		<footer id="footer">
+			<div class="foo_div1">
+				<p>(주)TAVERN</p>
+				<p>Copyright 2024 All ⓒ rights reserved by TAVERN</p>
+			</div>
+		</footer>
+	</div>
 </body>
 </html>
