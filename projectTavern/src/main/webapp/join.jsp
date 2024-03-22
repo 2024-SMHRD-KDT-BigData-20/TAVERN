@@ -17,7 +17,7 @@
 					<input type="text" id="user_id" name="id" placeholder="아이디"> <label class="form_label">아이디</label>
 				</div>
 				<div>
-					<input type="button" onclick="idCheck(frm)" value="아이디 중복확인">
+					<input type="button" onclick="idCheck()" value="아이디 중복확인">
 				</div>
 				<div class="id error_box" id="id_error">영문자 혹은 영문자와 숫자를 포함해서 만들어주세요</div>
 			</div>
