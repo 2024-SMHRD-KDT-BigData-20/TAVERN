@@ -6,11 +6,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<<<<<<< HEAD
+
 <title>위스키 목록</title>
 <link href="css/nav.css" rel="stylesheet">
 <link href="css/leqour.css" rel="stylesheet">
-=======
+
 <title>Insert title here</title>
 <link href="css/nav.css" rel="stylesheet">
 <link href="css/leqour.css" rel ="stylesheet">
@@ -20,10 +20,10 @@
         display: none;
     }
 </style>
->>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN.git
+
 </head>
 <body>
-<<<<<<< HEAD
+
 <div>
     <%@include file="main.jsp"%>
     <!-- 메인 -->
@@ -58,7 +58,7 @@
                 <button id="moreButton">더보기</button>
             </div>
         </section>
-=======
+
    <div>
         <%@include file="layout/header.jsp"%>
        <%@include file="left_nav.jsp" %>
@@ -101,7 +101,7 @@
             </section>
         </div>
         <%@include file="layout/footer.jsp"%>
->>>>>>> branch 'master' of https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN.git
+
     </div>
     <%@include file="footer.jsp"%>
 </div>
