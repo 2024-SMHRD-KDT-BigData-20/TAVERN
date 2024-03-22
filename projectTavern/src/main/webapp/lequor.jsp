@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,27 +10,27 @@
 	<div id="lequor_container">
 		<%@include file="header.jsp"%>
 		<!-- 좌측 네비 -->
-			<nav id="left_nav">
+		<nav id="left_nav">
+			<div>
 				<div>
-					<div>
-						<h3>전체</h3>
-						<br>
-					</div>
-					<ul>
-						<li><a href="#">위스키</a></li>
-						<br>
-						<li><a href="#">럼</a></li>
-						<br>
-						<li><a href="#">꼬냑</a></li>
-						<br>
-						<li><a href="#">보드카</a></li>
-						<br>
-						<li><a href="#">데킬라</a></li>
-						<br>
-						<li><a href="#">꼬냑</a></li>
-					</ul>
+					<h3>전체</h3>
+					<br>
 				</div>
-			</nav>
+				<ul>
+					<li><a href="#">위스키</a></li>
+					<br>
+					<li><a href="#">럼</a></li>
+					<br>
+					<li><a href="#">꼬냑</a></li>
+					<br>
+					<li><a href="#">보드카</a></li>
+					<br>
+					<li><a href="#">데킬라</a></li>
+					<br>
+					<li><a href="#">꼬냑</a></li>
+				</ul>
+			</div>
+		</nav>
 
 		<!-- 메인문 -->
 		<div id="main">
@@ -45,6 +45,6 @@
 		</div>
 		<%@include file="footer.jsp"%>s
 	</div>
-<script src="js/main.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
