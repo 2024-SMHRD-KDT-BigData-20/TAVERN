@@ -22,7 +22,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<div class="header-content">
 				<a href="main.jsp" class="logo">로고</a>
 				<nav class="nav-links">
-					<a href="lequor.jsp" class="lequor">소개</a>
+					<a href="liquor.jsp" class="lequor">소개</a>
 					<a href="post.jsp" class="post">소식</a>
 					<a href="community.jsp" class="comm">커뮤니티</a>
 				</nav>
