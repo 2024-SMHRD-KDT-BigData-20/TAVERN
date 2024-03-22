@@ -12,7 +12,7 @@
 </head>
 <body>
 <div>
-    <%@include file="main.jsp"%>
+    <%@include file="layout/header.jsp"%>
     <!-- 메인 -->
     <div id="main">
         <!-- 주제 -->
