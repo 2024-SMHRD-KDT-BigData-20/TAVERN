@@ -13,7 +13,7 @@
 
 #main {
 	margin-top: 100px;
-    margin-left: 300px; /* 좌측 네비게이션의 너비만큼 오른쪽으로 밀어줌 */
-    padding: 20px; /* 내부 간격 설정 */
-    box-sizing: border-box;
+	margin-left: 300px; /* 좌측 네비게이션의 너비만큼 오른쪽으로 밀어줌 */
+	padding: 20px; /* 내부 간격 설정 */
+	box-sizing: border-box;
 }
