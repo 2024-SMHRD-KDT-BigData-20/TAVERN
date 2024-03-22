@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
-<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/join.css">
 </head>
 <body>
 	<div id="container">
