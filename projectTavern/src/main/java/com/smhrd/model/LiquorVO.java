@@ -11,6 +11,8 @@ public class LiquorVO {
 	private String sugar;
 	private String food;
 	private String liq_type;
+	
+
 
 	public String getLiq_idx() {
 		return liq_idx;
