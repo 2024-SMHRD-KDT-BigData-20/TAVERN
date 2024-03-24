@@ -1,6 +1,5 @@
 <%@page import="com.smhrd.model.LiquorVO"%>
 <%@page import="java.util.List"%>
-<%@page import="com.smhrd.model.LiquorDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,25 +20,20 @@
         <section>
             <div>
                 <ul id="linkList">
-                    <!-- DAO를 통해 가져온 술 이름 목록을 출력 -->
+                    <!-- 세션에서 술 이름 목록을 가져와서 출력 -->
                     <% 
-                        LiquorDAO liquorDAO = new LiquorDAO();
-                        List<LiquorVO> whiskeyList = liquorDAO.liqName("위스키");
-                        // 처음 6개의 술 이름만 보여줍니다.
-                        for (int i = 0; i < Math.min(6, whiskeyList.size()); i++) {
-                            LiquorVO liquor = whiskeyList.get(i);
+                        List<LiquorVO> whiskeyList = (List<LiquorVO>) session.getAttribute("whiskeyList");
+                        System.out.println("Whiskey List from session: " + whiskeyList); // 추가된 로그
+                        if (whiskeyList != null) {
+                            for (LiquorVO liquor : whiskeyList) {
                     %>
-                    <li class="item<%=i+1%>">
-                        <a href="#">
-                            <div>
-<%--                                 <img src="<%=liquor.getImageUrl()%>" alt="<%=liquor.getLiq_name()%>"> --%>
-                            </div>
-                            <div>
-                                <p><%=liquor.getLiq_name()%></p>
-                            </div>
-                        </a>
-                    </li>
-                    <% } %>
+                    <li class="item"><%= liquor.getLiq_name() %></li>
+                    <% 
+                            }
+                        } else {
+                            System.out.println("Whiskey List is null."); // 추가된 로그
+                        }
+                    %>
                 </ul>
                 <!-- 더보기 버튼 -->
                 <button id="moreButton">더보기</button>

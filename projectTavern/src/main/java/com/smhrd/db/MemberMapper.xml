@@ -48,8 +48,11 @@
   	</delete>
 	<!-- 회원탈퇴 끝 -->
 
-
-
+	<!-- ID중복확인 -->
+	<select id="checkid" parameterType="String" resultType="int">
+        SELECT COUNT(*) FROM user_info WHERE id = #{id}
+    </select>
+	<!-- ID중복확인 끝 -->
 
 
 
