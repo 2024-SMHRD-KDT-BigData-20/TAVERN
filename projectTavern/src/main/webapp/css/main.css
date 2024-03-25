@@ -4,6 +4,10 @@
 	margin: 0px;
 }
 
+a{
+	text-decoration: none;
+}
+
 /* 컨테이너 */
 #container {
 	float: left;

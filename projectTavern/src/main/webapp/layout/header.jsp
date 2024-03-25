@@ -19,8 +19,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 	<header id="header" class="alt">
 		<div class="header-content">
 			<a href="main.jsp" class="logo">
-				<img src="">
-				로고
+				<img src="../img/Tarvernlogo.jpg" alt="Tarvern">
+				<h4>Tarvern</h4>
 			</a>
 			<nav class="nav-links">
 				<a href="liquor.jsp" class="lequor">소개</a>
@@ -48,11 +48,13 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<h1>로그인</h1>
 			<form action="LoginCon?redirectURL=<%=request.getRequestURI()%>" method="post">
 				<div class="text_box">
-					<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요"> <label class="form_lavel">아이디</label>
+					<label class="form_lavel">아이디</label>
+					<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요">
 					<div class="error_box"></div>
 				</div>
 				<div class="text_box">
-					<input type="password" name="pw" placeholder="비밀번호를 입력하세요"> <label class="form_lavel">비밀번호</label>
+					<label class="form_lavel">비밀번호</label>
+					<input type="password" name="pw" placeholder="비밀번호를 입력하세요">
 				</div>
 				<input type="submit" value="로그인">
 			</form>
@@ -109,14 +111,16 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<!-- 비밀번호 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="password" id="user_pw" name="pw" placeholder="비밀번호"> <label class="form_label">새로운 비밀번호</label>
+					<label class="form_label">새로운 비밀번호</label>
+					<input type="password" id="user_pw" name="pw" placeholder="비밀번호">
 				</div>
 				<div class="pw error_box" id="pw_error">6글자 이상 입력해주세요</div>
 			</div>
 			<!-- 비밀번호 확인 -->
 			<div>
 				<div class="text_box">
-					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인"> <label class="form_label">비밀번호 재입력</label>
+					<label class="form_label">비밀번호 재입력</label>
+					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인">
 				</div>
 				<div class="re_pw error_box" id="re_pw_error">비밀번호가 일치하지 않습니다</div>
 			</div>
@@ -124,7 +128,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<!-- 닉네임 변경 -->
 			<div>
 				<div class="text_box">
-					<input type="text" id="user_nick" name="nick" placeholder="새로운 닉네임을 입력하세요"> <label class="form_label">새로운 닉네임</label>
+					<input type="text" id="user_nick" name="nick" placeholder="새로운 닉네임을 입력하세요">
+					<label class="form_label">새로운 닉네임</label>
 				</div>
 				<div class="error_box"></div>
 			</div>

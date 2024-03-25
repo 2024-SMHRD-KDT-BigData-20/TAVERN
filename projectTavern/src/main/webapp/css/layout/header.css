@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+/*fonts.css*/
+@font-face {
+	font-family: 'logofont'; /*font 이름*/
+	font-style: 'normal'; /* font 스타일 정의 (기울임, 일반) */
+	src: url("../font/volkhov/Volkhov-Bold.ttf") format("truetype");
+}
+
 /* header */
 #header {
 	position: fixed;
@@ -30,6 +37,14 @@
 	margin-right: auto; /* 나머지 공간을 네비게이션에 맡김 */
 }
 
+.logo>img {
+	
+}
+
+.logo>h4 {
+	font-family: 'logofont';
+}
+
 /* 네비게이션 링크 */
 .nav-links {
 	display: flex;
@@ -58,30 +73,31 @@
 	margin-left: 20px; /* 링크 간격 */
 }
 
-/* 로그인 폼 */
 #login {
-	display: none; /* 초기에는 숨김 */
+	display: none;
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1000;
-	background-color: white;
+	top: 0; /* 상단에 고정 */
+	right: 0; /* 오른쪽에 고정 */
+	width: 300px; /* 폼의 너비 */
+	height: 100%; /* 전체 높이 */
+	background-color: rgba(255, 255, 255, 0.5); /* 불투명 배경 */
 	padding: 20px;
-	border: 1px solid #ccc;
+	z-index: 1001; /* 헤더보다 높은 z-index */
 }
 
 /* 마이페이지 */
 #mypage {
 	display: none; /* 초기에는 숨김 */
 	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1000;
-	background-color: white;
+	top: 0%;
+	right: 0%;
+	width: 300px;
+	height: 100%;
+	z-index: 1001;
+	background-color: rgba(255, 255, 255, 0.5); /* 불투명 배경 */
 	padding: 20px;
 	border: 1px solid #ccc;
+	z-index: 1001;
 }
 
 /* 정보수정 */

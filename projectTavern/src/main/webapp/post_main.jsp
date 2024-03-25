@@ -44,7 +44,6 @@
 				</ul>
 			</div>
 		</section>
-
 	</div>
 	<!-- main -->
 	<div id="main">
