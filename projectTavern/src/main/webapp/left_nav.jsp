@@ -14,7 +14,7 @@
 				<br>
 			</div>
 			<ul>
-				<li><a href="liquor_whiskey.jsp">위스키</a></li>
+				<li><a href="liquor_list.jsp">위스키</a></li>
 				<br>
 				<li><a href="#">럼</a></li>
 				<br>

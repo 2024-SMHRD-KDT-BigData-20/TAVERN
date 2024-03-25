@@ -1,14 +1,13 @@
+
 // 더보기 버튼 클릭 시 실행되는 함수
 document.getElementById('moreButton').onclick = function() {
     // 추가적인 태그들을 생성하여 추가합니다.
-    addMoreListItems();
+    addMoreListItems(3); // 3개의 아이템을 추가
 };
 
 // 추가적인 태그들을 생성하여 추가하는 함수
-function addMoreListItems() {
+function addMoreListItems(numberOfItemsToAdd) {
     var linkList = document.getElementById('linkList');
-    // 추가할 태그의 수
-    var numberOfItemsToAdd = 3;
     // 현재 총 <li> 태그의 개수
     var currentItemCount = document.querySelectorAll('#linkList li').length;
 
@@ -19,7 +18,8 @@ function addMoreListItems() {
 
         // 새로운 아이템 내용 생성
         var linkWrapper = document.createElement('a');
-        linkWrapper.href = '#';
+        var page_number = currentItemCount + i + 1;
+        linkWrapper.href = 'liquor_list_' + page_number + '.jsp'; // 페이지 번호에 따라 주소 생성
 
         var div1 = document.createElement('div');
         var img = document.createElement('img');
@@ -29,7 +29,7 @@ function addMoreListItems() {
 
         var div2 = document.createElement('div');
         var p = document.createElement('p');
-        p.textContent = (currentItemCount + i + 1) + '번째 아이템';
+        p.textContent = page_number + '번째 아이템';
         div2.appendChild(p);
 
         linkWrapper.appendChild(div1);

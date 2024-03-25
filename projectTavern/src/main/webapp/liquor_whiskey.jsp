@@ -42,6 +42,6 @@
     </div>
     <%@include file="layout/footer.jsp"%>
 </div>
-<script src="js/function_js/plus.js"></script>
+<script src="js/function/plus.js"></script>
 </body>
 </html>

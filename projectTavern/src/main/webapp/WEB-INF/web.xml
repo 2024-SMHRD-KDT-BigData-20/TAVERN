@@ -63,6 +63,12 @@
 		<description></description>
 		<servlet-class>com.smhrd.controller.liquorCon</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>LiquorlistCon</servlet-name>
+		<display-name>LiquorlistCon</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.LiquorlistCon</servlet-class>
+	</servlet>
 
 
 	<servlet-mapping>
@@ -104,6 +110,10 @@
 	<servlet-mapping>
 		<servlet-name>liquorCon</servlet-name>
 		<url-pattern>/liquorCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LiquorlistCon</servlet-name>
+		<url-pattern>/LiquorlistCon</url-pattern>
 	</servlet-mapping>
 
 	<session-config>
