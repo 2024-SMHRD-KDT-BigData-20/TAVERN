@@ -17,11 +17,13 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <body>
 	<!-- header -->
 	<header id="header" class="alt">
-		<div class="header-content">
-			<a href="main.jsp" class="logo">
-				<img src="../img/Tarvernlogo.jpg" alt="Tarvern">
+		<div class="logo">
+			<a href="main.jsp">
+				<img src="../img/Tarvernlogo.jpg" alt="Tarvern" id="logoimg">
 				<h4>Tarvern</h4>
 			</a>
+		</div>
+		<div class="header-content">
 			<nav class="nav-links">
 				<a href="liquor.jsp" class="lequor">소개</a>
 				<a href="event.jsp" class="event">소식</a>

@@ -8,10 +8,10 @@
 
 </head>
 <body>
+	<%@include file="layout/header.jsp"%>
+	<%@include file="layout/left_nav.jsp"%>
 	<div id="lequor_container">
-		<%@include file="layout/header.jsp"%>
 		<!-- 좌측 네비 -->
-		<%@include file="layout/left_nav.jsp" %>
 
 		<!-- 메인문 -->
 		<div id="main">
