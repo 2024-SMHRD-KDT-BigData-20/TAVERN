@@ -1,6 +1,7 @@
 <%@page import="com.smhrd.model.LiquorVO"%>
 <%@page import="java.util.List"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +29,9 @@
 							if (count < 6) { // 처음 6개의 항목만 처리
 					%>
 					<div class="liquor-item">
-						<img src="images/<%=liquor.getLiq_name()%>.jpg" alt="<%=liquor.getLiq_name()%>" style="width: 100px; height: auto;">
+						<img src="images/<%=liquor.getLiq_name()%>.jpg"
+							alt="<%=liquor.getLiq_name()%>"
+							style="width: 100px; height: auto;">
 						<!-- 이미지 -->
 						<h3>
 							<a href="javascript:void(0);"><%=liquor.getLiq_name()%></a>

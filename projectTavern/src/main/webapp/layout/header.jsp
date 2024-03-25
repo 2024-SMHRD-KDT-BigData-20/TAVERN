@@ -1,5 +1,6 @@
 <%@page import="com.smhrd.model.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!-- 주석 -->
@@ -32,7 +33,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 						<a href="#login" class="login-link">로그인</a>
 					</c:when>
 					<c:otherwise>
-						<a href="LogoutCon?redirectURL=<%=request.getRequestURI()%>" class="logout-link">로그아웃</a>
+						<a href="LogoutCon?redirectURL=<%=request.getRequestURI()%>"
+							class="logout-link">로그아웃</a>
 						<a href="#mypage" class="mypage-link">마이페이지</a>
 					</c:otherwise>
 				</c:choose>
@@ -41,49 +43,24 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		<div class="header-content">
 			<nav id="topNav">
 				<ul id="topMenu">
-					<li>
-						<a href="liquor.jsp">
-							정보<span>🔻</span>
-						</a>
+					<li><a href="liquor.jsp"> 정보<span>🔻</span>
+					</a>
 						<ul>
-							<li>
-								<a href="liquor_list.jsp">위스키</a>
-							</li>
-							<li>
-								<a href="#">럼</a>
-							</li>
-							<li>
-								<a href="#">보드카</a>
-							</li>
-							<li>
-								<a href="#">리큐르</a>
-							</li>
-							<li>
-								<a href="#">꼬냑</a>
-							</li>
-							<li>
-								<a href="#">데킬라</a>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="post_main.jsp">
-							커뮤니티<span>🔻</span>
-						</a>
+							<li><a href="liquor_list.jsp">위스키</a></li>
+							<li><a href="#">럼</a></li>
+							<li><a href="#">보드카</a></li>
+							<li><a href="#">리큐르</a></li>
+							<li><a href="#">꼬냑</a></li>
+							<li><a href="#">데킬라</a></li>
+						</ul></li>
+					<li><a href="post_main.jsp"> 커뮤니티<span>🔻</span>
+					</a>
 						<ul>
-							<li>
-								<a href="post_list_1.jsp">리뷰</a>
-							</li>
-							<li>
-								<a href="post_free.jsp">자유</a>
-							</li>
+							<li><a href="post_list_1.jsp">리뷰</a></li>
+							<li><a href="post_free.jsp">자유</a></li>
 						</ul>
-					<li>
-						<a href="event.jsp">소식</a>
-					</li>
-					<li>
-						<a href="inquiry.jsp">문의하기</a>
-					</li>
+					<li><a href="event.jsp">소식</a></li>
+					<li><a href="inquiry.jsp">문의하기</a></li>
 					</li>
 				</ul>
 
@@ -96,15 +73,16 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<span class="close_btn">×</span>
 			<!-- X 버튼 추가 -->
 			<h1>로그인</h1>
-			<form action="LoginCon?redirectURL=<%=request.getRequestURI()%>" method="post">
+			<form action="LoginCon?redirectURL=<%=request.getRequestURI()%>"
+				method="post">
 				<div class="text_box">
-					<label class="form_lavel">아이디</label>
-					<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요">
+					<label class="form_lavel">아이디</label> <input type="text"
+						id="user_id" name="id" placeholder="아이디를 입력하세요">
 					<div class="error_box"></div>
 				</div>
 				<div class="text_box">
-					<label class="form_lavel">비밀번호</label>
-					<input type="password" name="pw" placeholder="비밀번호를 입력하세요">
+					<label class="form_lavel">비밀번호</label> <input type="password"
+						name="pw" placeholder="비밀번호를 입력하세요">
 				</div>
 				<input type="submit" value="로그인">
 			</form>
@@ -159,16 +137,16 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<!-- 비밀번호 입력 -->
 			<div>
 				<div class="text_box">
-					<label class="form_label">새로운 비밀번호</label>
-					<input type="password" id="user_pw" name="pw" placeholder="비밀번호">
+					<label class="form_label">새로운 비밀번호</label> <input type="password"
+						id="user_pw" name="pw" placeholder="비밀번호">
 				</div>
 				<div class="pw error_box" id="pw_error">6글자 이상 입력해주세요</div>
 			</div>
 			<!-- 비밀번호 확인 -->
 			<div>
 				<div class="text_box">
-					<label class="form_label">비밀번호 재입력</label>
-					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인">
+					<label class="form_label">비밀번호 재입력</label> <input type="password"
+						id="user_re_pw" name="re_pw" placeholder="비밀번호 확인">
 				</div>
 				<div class="re_pw error_box" id="re_pw_error">비밀번호가 일치하지 않습니다</div>
 			</div>
@@ -176,8 +154,9 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<!-- 닉네임 변경 -->
 			<div>
 				<div class="text_box">
-					<input type="text" id="user_nick" name="nick" placeholder="새로운 닉네임을 입력하세요">
-					<label class="form_label">새로운 닉네임</label>
+					<input type="text" id="user_nick" name="nick"
+						placeholder="새로운 닉네임을 입력하세요"> <label class="form_label">새로운
+						닉네임</label>
 				</div>
 				<div class="error_box"></div>
 			</div>
@@ -214,6 +193,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 	<%}%>
 		
 	</script>
+
 	<script src="js/header.js"></script>
 	<script src="js/pw.js"></script>
 
