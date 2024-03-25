@@ -8,10 +8,9 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 %>
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>헤더</title>
 <link rel="stylesheet" href="css/layout/header.css">
 </head>
 
@@ -19,7 +18,10 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 	<!-- header -->
 	<header id="header" class="alt">
 		<div class="header-content">
-			<a href="main.jsp" class="logo">로고</a>
+			<a href="main.jsp" class="logo">
+				<img src="">
+				로고
+			</a>
 			<nav class="nav-links">
 				<a href="liquor.jsp" class="lequor">소개</a>
 				<a href="event.jsp" class="event">소식</a>

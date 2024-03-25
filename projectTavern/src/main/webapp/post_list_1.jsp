@@ -4,6 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>커뮤니티</title>
+<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 	<%@include file="layout/header.jsp"%>

@@ -4,15 +4,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
+	<!-- header -->
+	<%@include file="layout/header.jsp"%>
 	<div id=container>
-		<!-- header -->
-		<%@include file="layout/header.jsp"%>
 
 		<!-- main -->
-		<!-- footer -->
-		<%@include file="layout/footer.jsp"%>
 	</div>
+	<!-- footer -->
+	<%@include file="layout/footer.jsp"%>
 </body>
 </html>

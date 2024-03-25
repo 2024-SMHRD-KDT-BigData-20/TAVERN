@@ -4,10 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="css/layout/footer.css">
+<link href="css/layout/footer.css" rel="stylesheet">
 </head>
 <body>
-	<div id="container">
+	<div id="ft_container">
 		<footer id="footer">
 			<div class="foo_div1">
 				<p>(주)TAVERN</p>
@@ -15,6 +15,6 @@
 			</div>
 		</footer>
 	</div>
-	<script type="footer.js"></script>
+	<script type="../footer.js"></script>
 </body>
 </html>
