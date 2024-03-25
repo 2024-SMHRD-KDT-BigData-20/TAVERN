@@ -1,8 +1,4 @@
-// 초기 페이지 로드 시 실행되는 함수
-window.onload = function() {
-    // 초기 페이지 아이템 생성
-    addMoreListItems(6); // 초기 아이템 6개 생성
-};
+
 
 // 더보기 버튼 클릭 시 실행되는 함수
 document.getElementById('moreButton').onclick = function() {
