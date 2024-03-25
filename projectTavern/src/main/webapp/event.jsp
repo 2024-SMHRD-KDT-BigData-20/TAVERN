@@ -7,9 +7,7 @@
 <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-	<%@include file="css/layout/footer.css"%>
-	<%@include file="css/layout/header.css"%>
-
+<div><%@include file="layout/header.jsp" %></div>
 	<!-- main -->
 	<div id="main">
 		<div>
