@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		loginButton.addEventListener('click', function(event) {
 			event.preventDefault(); // 링크의 기본 동작 방지
 			document.getElementById('login').style.display = 'block'; // 로그인 폼 표시
+			document.querySelector('.login').style.display = 'block';
 		});
 	}
 

@@ -6,9 +6,10 @@
 <title>Insert title here</title>
 <link href="css/main.css" rel="stylesheet">
 <link href="css/nav.css" rel="stylesheet">
+<link href="css/liquor.css" rel="stylesheet">
 </head>
 <body>
-	<%@include file="layout/header.jsp"%>
+	<%@include file="../layout/header.jsp"%>
 	<div>커뮤니티</div>
 	<div id="left_nav">
 		<section id="user_info">
@@ -44,7 +45,6 @@
 				</ul>
 			</div>
 		</section>
-
 	</div>
 	<!-- main -->
 	<div id="main">
@@ -148,7 +148,7 @@
 			</a>
 		</div>
 		<!-- footer -->
-		<footer><%@include file="layout/footer.jsp"%></footer>
+		<footer><%@include file="../layout/footer.jsp"%></footer>
 	</div>
 	<script>
 		

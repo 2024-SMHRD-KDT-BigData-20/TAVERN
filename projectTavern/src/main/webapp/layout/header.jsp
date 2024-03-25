@@ -12,21 +12,20 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <meta charset="UTF-8">
 <title>헤더</title>
 <link rel="stylesheet" href="css/layout/header.css">
+<link rel="stylesheet" href="css/form/login.css">
+<link rel="stylesheet" href="css/form/mypage.css">
 </head>
 
 <body>
 	<!-- header -->
 	<header id="header" class="alt">
-		<div class="header-content">
-			<a href="main.jsp" class="logo">
-				<img src="">
-				로고
+		<div>
+			<a href="main.jsp">
+				<div class="logo">
+					<img src="../img/Tarvernl33ogo.jpg" alt="Tarvern" id="logoimg">
+					<h4>Tarvern</h4>
+				</div>
 			</a>
-			<nav class="nav-links">
-				<a href="liquor.jsp" class="lequor">소개</a>
-				<a href="event.jsp" class="event">소식</a>
-				<a href="post_main.jsp" class="post" onclick="checkLogin()">커뮤니티</a>
-			</nav>
 			<div class="link">
 				<c:choose>
 					<c:when test="${empty loginMember }">
@@ -39,6 +38,57 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 				</c:choose>
 			</div>
 		</div>
+		<div class="header-content">
+			<nav id="topNav">
+				<ul id="topMenu">
+					<li>
+						<a href="liquor.jsp">
+							정보<span>🔻</span>
+						</a>
+						<ul>
+							<li>
+								<a href="liquor_list.jsp">위스키</a>
+							</li>
+							<li>
+								<a href="#">럼</a>
+							</li>
+							<li>
+								<a href="#">보드카</a>
+							</li>
+							<li>
+								<a href="#">리큐르</a>
+							</li>
+							<li>
+								<a href="#">꼬냑</a>
+							</li>
+							<li>
+								<a href="#">데킬라</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="post_main.jsp">
+							커뮤니티<span>🔻</span>
+						</a>
+						<ul>
+							<li>
+								<a href="post_list_1.jsp">리뷰</a>
+							</li>
+							<li>
+								<a href="#">자유</a>
+							</li>
+						</ul>
+					<li>
+						<a href="#">소식</a>
+					</li>
+					<li>
+						<a href="#">문의하기</a>
+					</li>
+					</li>
+				</ul>
+
+			</nav>
+		</div>
 	</header>
 	<!-- login -->
 	<nav id="login" class="login-form ">
@@ -48,11 +98,13 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<h1>로그인</h1>
 			<form action="LoginCon?redirectURL=<%=request.getRequestURI()%>" method="post">
 				<div class="text_box">
-					<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요"> <label class="form_lavel">아이디</label>
+					<label class="form_lavel">아이디</label>
+					<input type="text" id="user_id" name="id" placeholder="아이디를 입력하세요">
 					<div class="error_box"></div>
 				</div>
 				<div class="text_box">
-					<input type="password" name="pw" placeholder="비밀번호를 입력하세요"> <label class="form_lavel">비밀번호</label>
+					<label class="form_lavel">비밀번호</label>
+					<input type="password" name="pw" placeholder="비밀번호를 입력하세요">
 				</div>
 				<input type="submit" value="로그인">
 			</form>
@@ -91,9 +143,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 				<a href="#Update">정보수정</a>
 			</div>
 			<div>
-				<a href="DeleteCon?id=${loginMember.id }">
-					<button>탈퇴하기</button>
-				</a>
+				<a href="DeleteCon?id=${loginMember.id }">탈퇴하기 </a>
 			</div>
 		</div>
 	</nav>
@@ -109,14 +159,16 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<!-- 비밀번호 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="password" id="user_pw" name="pw" placeholder="비밀번호"> <label class="form_label">새로운 비밀번호</label>
+					<label class="form_label">새로운 비밀번호</label>
+					<input type="password" id="user_pw" name="pw" placeholder="비밀번호">
 				</div>
 				<div class="pw error_box" id="pw_error">6글자 이상 입력해주세요</div>
 			</div>
 			<!-- 비밀번호 확인 -->
 			<div>
 				<div class="text_box">
-					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인"> <label class="form_label">비밀번호 재입력</label>
+					<label class="form_label">비밀번호 재입력</label>
+					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인">
 				</div>
 				<div class="re_pw error_box" id="re_pw_error">비밀번호가 일치하지 않습니다</div>
 			</div>
@@ -124,7 +176,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<!-- 닉네임 변경 -->
 			<div>
 				<div class="text_box">
-					<input type="text" id="user_nick" name="nick" placeholder="새로운 닉네임을 입력하세요"> <label class="form_label">새로운 닉네임</label>
+					<input type="text" id="user_nick" name="nick" placeholder="새로운 닉네임을 입력하세요">
+					<label class="form_label">새로운 닉네임</label>
 				</div>
 				<div class="error_box"></div>
 			</div>

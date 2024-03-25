@@ -1,5 +1,3 @@
-
-
 // 더보기 버튼 클릭 시 실행되는 함수
 document.getElementById('moreButton').onclick = function() {
     // 추가적인 태그들을 생성하여 추가합니다.
@@ -9,36 +7,35 @@ document.getElementById('moreButton').onclick = function() {
 // 추가적인 태그들을 생성하여 추가하는 함수
 function addMoreListItems(numberOfItemsToAdd) {
     var linkList = document.getElementById('linkList');
-    // 현재 총 <li> 태그의 개수
-    var currentItemCount = document.querySelectorAll('#linkList li').length;
+    // 현재 총 아이템의 개수
+    var currentItemCount = document.querySelectorAll('#linkList .liquor-item').length;
 
     for (var i = 0; i < numberOfItemsToAdd; i++) {
-        // 새로운 <li> 태그 생성
-        var newItem = document.createElement('li');
-        newItem.className = 'item' + (currentItemCount + i + 1);
+        // 새로운 .liquor-item div 생성
+        var newItem = document.createElement('div');
+        newItem.className = 'liquor-item'; // 이전에 설정한 CSS 클래스를 사용
 
         // 새로운 아이템 내용 생성
-        var linkWrapper = document.createElement('a');
-        var page_number = currentItemCount + i + 1;
-        linkWrapper.href = 'liquor_list_' + page_number + '.jsp'; // 페이지 번호에 따라 주소 생성
-
-        var div1 = document.createElement('div');
         var img = document.createElement('img');
         // 이미지 설정 (필요하다면 소스 경로를 설정하세요)
-        img.src = '이미지_경로.jpg';
-        div1.appendChild(img);
+        img.src = 'images/placeholder.jpg'; // 'placeholder.jpg'를 적절한 이미지 경로로 변경하세요
+        img.alt = 'Liquor Image'; // 대체 텍스트 설정
+        img.style.width = '100px'; // 이미지 크기 설정
+        img.style.height = 'auto';
 
-        var div2 = document.createElement('div');
-        var p = document.createElement('p');
-        p.textContent = page_number + '번째 아이템';
-        div2.appendChild(p);
+        var h3 = document.createElement('h3');
+        var linkWrapper = document.createElement('a');
+        linkWrapper.href = 'javascript:void(0);'; // 클릭해도 아무 일도 일어나지 않도록 설정
+        var page_number = currentItemCount + i + 1;
+        linkWrapper.textContent = page_number + '번째 아이템';
+        
+        h3.appendChild(linkWrapper);
 
-        linkWrapper.appendChild(div1);
-        linkWrapper.appendChild(div2);
+        // 각 요소를 newItem에 추가
+        newItem.appendChild(img);
+        newItem.appendChild(h3);
 
-        newItem.appendChild(linkWrapper);
-
-        // linkList에 새로운 <li> 태그 추가
+        // linkList에 새로운 .liquor-item 추가
         linkList.appendChild(newItem);
     }
 }

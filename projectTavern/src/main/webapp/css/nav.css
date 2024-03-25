@@ -3,17 +3,10 @@
 /* 좌측 네비게이션 */
 #left_nav {
     position: fixed;
-    top: 100px; /* 헤더의 높이만큼 아래에 위치 */
+    top: 165px; /* 헤더의 높이만큼 아래에 위치 */
     left: 0;
     width: 300px; /* 네비게이션의 너비 */
     height: 100%; /* 높이를 전체 높이에서 헤더의 높이를 뺀 값으로 설정 */
     background-color: #f2f2f2;
     overflow-y: auto; /* 내용이 넘칠 경우 스크롤바 표시 */
-}
-
-#main {
-	margin-top: 100px;
-	margin-left: 300px; /* 좌측 네비게이션의 너비만큼 오른쪽으로 밀어줌 */
-	padding: 20px; /* 내부 간격 설정 */
-	box-sizing: border-box;
 }
