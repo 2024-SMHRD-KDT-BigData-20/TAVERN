@@ -7,12 +7,12 @@
 </head>
 <body>
 	<div id=container>
-	<!-- header -->
-	<%@include file="layout/header.jsp"%>
-	
-	<!-- main -->
-	<!-- footer -->
-	<%@include file="layout/footer.jsp"%>
+		<!-- header -->
+		<%@include file="layout/header.jsp"%>
+
+		<!-- main -->
+		<!-- footer -->
+		<%@include file="layout/footer.jsp"%>
 	</div>
 </body>
 </html>
