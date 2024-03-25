@@ -15,5 +15,6 @@
 			</div>
 		</footer>
 	</div>
+	<script type="footer.js"></script>
 </body>
 </html>

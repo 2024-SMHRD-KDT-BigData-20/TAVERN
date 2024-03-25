@@ -11,7 +11,7 @@
 	<div id="lequor_container">
 		<%@include file="layout/header.jsp"%>
 		<!-- 좌측 네비 -->
-		<%@include file="left_nav.jsp" %>
+		<%@include file="layout/left_nav.jsp" %>
 
 		<!-- 메인문 -->
 		<div id="main">

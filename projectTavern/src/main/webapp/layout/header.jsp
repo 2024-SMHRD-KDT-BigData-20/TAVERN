@@ -24,7 +24,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 				<nav class="nav-links">
 					<a href="liquor.jsp" class="lequor">소개</a>
 					<a href="post.jsp" class="post">소식</a>
-					<a href="community.jsp" class="comm">커뮤니티</a>
+					<a href="board_main.jsp" class="comm" onclick="checkLogin()">커뮤니티</a>
 				</nav>
 				<div class="link">
 					<c:choose>

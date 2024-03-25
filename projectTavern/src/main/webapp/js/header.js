@@ -51,4 +51,18 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.getElementById('Update').style.display = 'block'; // 정보수정 폼 표시
 		});
 	}
+
 });
+function checkLogin() {
+	// 세션에서 로그인 정보를 확인
+	let loginMember = '<%= session.getAttribute("loginMember") %>';
+	if (loginMember === 'null') {
+		// 세션이 없을 때
+		alert('커뮤니티를 이용하려면 먼저 로그인해주세요.');
+		return false; // 링크 클릭 이벤트 취소
+	} else {
+		// 세션이 있을 때
+		return true; // 링크 이동
+	}
+}
+
