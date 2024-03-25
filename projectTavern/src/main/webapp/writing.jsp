@@ -37,7 +37,7 @@ request.setCharacterEncoding("UTF-8");
 					<td colspan="2">
 					<!-- 버튼 입력시 데베로 저장되는 코드 생성 -->
 						<button type="submit">저장</button>
-						<button type="button" onclick="location.href='post_list.jsp'">목록으로</button>
+						<button type="button" onclick="location.href='post_list_1.jsp'">목록으로</button>
 						<button type="reset">초기화</button>
 					</td>
 				</tr>

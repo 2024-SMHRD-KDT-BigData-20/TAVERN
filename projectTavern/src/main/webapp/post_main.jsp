@@ -25,24 +25,22 @@
 					<li>
 						리뷰
 						<ol>
-							<a href="post_list.jsp">위스키</a>
-						</ol>
-						<ol>
-							<a href="#">럼</a>
-						</ol>
-						<ol>
-							<a href="#">보드카</a>
-						</ol>
-						<ol>
-							<a href="#">브랜디</a>
-						</ol>
-						<ol>
-							<a href="#">리큐르</a>
+							<%
+							for (int i = 0; i < 6; i++) {
+							%>
+							<li>
+								<a href="post_list_<%=i+1%>.jsp">
+									위스키
+									<%=i + 1%></a>
+							</li>
+							<%
+							}
+							%>
 						</ol>
 					</li>
 					<li>자유</li>
 				</ul>
-			</div>
+			</div>s
 		</section>
 		<!-- main -->
 		<div id="main">
