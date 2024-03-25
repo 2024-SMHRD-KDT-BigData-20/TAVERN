@@ -37,7 +37,7 @@
 	align-items: center; /* 세로 가운데 정렬 */
 }
 
-.lequor, .post, .comm {
+.lequor, .event, .post {
 	font-size: 18px; /* 링크 텍스트 크기 */
 	color: #333; /* 링크 텍스트 색상 */
 	text-decoration: none; /* 밑줄 제거 */

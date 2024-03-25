@@ -4,17 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" href="css/layout/footer.css">
+<link href="../css/layout/footer.css" rel="stylesheet">
 </head>
 <body>
-	<div id="container">
-		<footer id="footer">
-			<div class="foo_div1">
-				<p>(주)TAVERN</p>
-				<p>Copyright 2024 All ⓒ rights reserved by TAVERN</p>
-			</div>
-		</footer>
-	</div>
+	<footer id="footer">
+		<div class="foo_div1">
+			<p>(주)TAVERN</p>
+			<p>Copyright 2024 All ⓒ rights reserved by TAVERN</p>
+		</div>
+	</footer>
 	<script type="footer.js"></script>
 </body>
 </html>
