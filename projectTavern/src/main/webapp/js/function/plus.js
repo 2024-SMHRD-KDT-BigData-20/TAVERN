@@ -12,28 +12,28 @@ document.getElementById('moreButton').onclick = function() {
 
 // 추가적인 태그들을 생성하여 추가하는 함수
 function addMoreListItems(numberOfItemsToAdd) {
-    let linkList = document.getElementById('linkList');
+    var linkList = document.getElementById('linkList');
     // 현재 총 <li> 태그의 개수
-    let currentItemCount = document.querySelectorAll('#linkList li').length;
+    var currentItemCount = document.querySelectorAll('#linkList li').length;
 
-    for (let i = 0; i < numberOfItemsToAdd; i++) {
+    for (var i = 0; i < numberOfItemsToAdd; i++) {
         // 새로운 <li> 태그 생성
-        let newItem = document.createElement('li');
+        var newItem = document.createElement('li');
         newItem.className = 'item' + (currentItemCount + i + 1);
 
         // 새로운 아이템 내용 생성
-        let linkWrapper = document.createElement('a');
-        let page_number = currentItemCount + i + 1;
+        var linkWrapper = document.createElement('a');
+        var page_number = currentItemCount + i + 1;
         linkWrapper.href = 'liquor_list_' + page_number + '.jsp'; // 페이지 번호에 따라 주소 생성
 
-        let div1 = document.createElement('div');
-        let img = document.createElement('img');
+        var div1 = document.createElement('div');
+        var img = document.createElement('img');
         // 이미지 설정 (필요하다면 소스 경로를 설정하세요)
         img.src = '이미지_경로.jpg';
         div1.appendChild(img);
 
-        let div2 = document.createElement('div');
-        let p = document.createElement('p');
+        var div2 = document.createElement('div');
+        var p = document.createElement('p');
         p.textContent = page_number + '번째 아이템';
         div2.appendChild(p);
 

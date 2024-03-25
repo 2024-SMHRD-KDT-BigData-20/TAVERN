@@ -14,7 +14,7 @@
 				<br>
 			</div>
 			<ul>
-				<li><a href="liquor_list.jsp">위스키</a></li>
+				<li><a href="LiquorCon">위스키</a></li>
 				<br>
 				<li><a href="#">럼</a></li>
 				<br>
@@ -24,7 +24,7 @@
 				<br>
 				<li><a href="#">데킬라</a></li>
 				<br>
-				<li><a href="#">꼬냑</a></li>
+				<li><a href="#">리큐르</a></li>
 			</ul>
 		</div>
 	</nav>
