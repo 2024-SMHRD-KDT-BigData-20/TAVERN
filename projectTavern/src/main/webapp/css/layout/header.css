@@ -104,9 +104,3 @@
 	font-size: 14px;
 	margin-top: 5px;
 }
-
-/* 컨테이너 */
-#container {
-	margin-top: 80px; /* 헤더가 가려지지 않도록 여백 추가 */
-	padding: 20px;
-}
