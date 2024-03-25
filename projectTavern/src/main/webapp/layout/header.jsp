@@ -12,23 +12,20 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <meta charset="UTF-8">
 <title>헤더</title>
 <link rel="stylesheet" href="css/layout/header.css">
+<link rel="stylesheet" href="css/form/login.css">
+<link rel="stylesheet" href="css/form/mypage.css">
 </head>
 
 <body>
 	<!-- header -->
 	<header id="header" class="alt">
-		<div class="logo">
+		<div>
 			<a href="main.jsp">
-				<img src="../img/Tarvernlogo.jpg" alt="Tarvern" id="logoimg">
-				<h4>Tarvern</h4>
+				<div class="logo">
+					<img src="../img/Tarvernl33ogo.jpg" alt="Tarvern" id="logoimg">
+					<h4>Tarvern</h4>
+				</div>
 			</a>
-		</div>
-		<div class="header-content">
-			<nav class="nav-links">
-				<a href="liquor.jsp" class="lequor">소개</a>
-				<a href="event.jsp" class="event">소식</a>
-				<a href="post_main.jsp" class="post" onclick="checkLogin()">커뮤니티</a>
-			</nav>
 			<div class="link">
 				<c:choose>
 					<c:when test="${empty loginMember }">
@@ -40,6 +37,57 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 					</c:otherwise>
 				</c:choose>
 			</div>
+		</div>
+		<div class="header-content">
+			<nav id="topNav">
+				<ul id="topMenu">
+					<li>
+						<a href="liquor.jsp">
+							정보<span>🔻</span>
+						</a>
+						<ul>
+							<li>
+								<a href="liquor_list.jsp">위스키</a>
+							</li>
+							<li>
+								<a href="#">럼</a>
+							</li>
+							<li>
+								<a href="#">보드카</a>
+							</li>
+							<li>
+								<a href="#">리큐르</a>
+							</li>
+							<li>
+								<a href="#">꼬냑</a>
+							</li>
+							<li>
+								<a href="#">데킬라</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="post_main.jsp">
+							커뮤니티<span>🔻</span>
+						</a>
+						<ul>
+							<li>
+								<a href="post_list_1.jsp">리뷰</a>
+							</li>
+							<li>
+								<a href="#">자유</a>
+							</li>
+						</ul>
+					<li>
+						<a href="#">소식</a>
+					</li>
+					<li>
+						<a href="#">문의하기</a>
+					</li>
+					</li>
+				</ul>
+
+			</nav>
 		</div>
 	</header>
 	<!-- login -->
@@ -95,9 +143,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 				<a href="#Update">정보수정</a>
 			</div>
 			<div>
-				<a href="DeleteCon?id=${loginMember.id }">
-					<button>탈퇴하기</button>
-				</a>
+				<a href="DeleteCon?id=${loginMember.id }">탈퇴하기 </a>
 			</div>
 		</div>
 	</nav>

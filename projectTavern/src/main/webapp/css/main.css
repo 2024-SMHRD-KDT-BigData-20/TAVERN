@@ -9,10 +9,10 @@ a{
 }
 
 /* 컨테이너 */
-#container {
+#main {
 	float: left;
-	margin-top: 80px; /* 헤더가 가려지지 않도록 여백 추가 */
-	padding: 30px;
+	padding: 20px; /* 내부 간격 설정 */
+	box-sizing: border-box;
 }
 
 ul, li, ol {

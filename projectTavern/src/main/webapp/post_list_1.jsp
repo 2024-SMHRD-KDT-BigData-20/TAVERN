@@ -7,7 +7,7 @@
 <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-	<%@include file="layout/header.jsp"%>
+	<%@include file="../layout/header.jsp"%>
 	<div id="container">
 		<h4>
 			<!-- 여기에 위스키나 제목 입력 DB로 가져오기 -->
