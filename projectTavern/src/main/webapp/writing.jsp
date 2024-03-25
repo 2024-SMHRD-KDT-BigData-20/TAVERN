@@ -8,6 +8,7 @@ request.setCharacterEncoding("UTF-8");
 <head>
 <meta charset="UTF-8">
 <title>JSP 게시판 웹 사이트</title>
+<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 <%@include file="layout/header.jsp" %>
