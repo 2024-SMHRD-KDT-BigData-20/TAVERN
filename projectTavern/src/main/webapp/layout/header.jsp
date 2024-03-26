@@ -11,7 +11,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <head>
 <meta charset="UTF-8">
 <title>헤더</title>
-<link rel="stylesheet" type="text/css" href="css/layout/header.css">
+<link rel="stylesheet" type="text/css" href="css/layout/headr.css">
 <link rel="stylesheet" type="text/css" href="css/form/login.css">
 <link rel="stylesheet" type="text/css" href="css/form/mypage.css">
 <link rel="stylesheet" type="text/css" href="css/form/join.css">
