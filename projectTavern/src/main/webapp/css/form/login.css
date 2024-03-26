@@ -20,7 +20,7 @@
 	position: fixed;
 	top: 0; /* 상단에 고정 */
 	right: 0px; /* 오른쪽에 고정 */
-	width: 300px; /* 폼의 너비 */
+	width: 600px; /* 폼의 너비 */
 	height: 100%; /* 전체 높이 */
 	background-color: rgba(255, 255, 255, 0.5); /* 불투명 배경 */
 	padding: 20px;

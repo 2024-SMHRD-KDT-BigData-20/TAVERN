@@ -11,23 +11,16 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <head>
 <meta charset="UTF-8">
 <title>헤더</title>
-<link rel="stylesheet" type="text/css" href="css/layout/header.css">
-<link rel="stylesheet" type="text/css" href="css/form/login.css">
-<link rel="stylesheet" type="text/css" href="css/form/mypage.css">
-<link rel="stylesheet" type="text/css" href="css/form/join.css">
+<link rel="stylesheet" type="text/css" href="css/layout/header.css?ver=1">
+<link rel="stylesheet" type="text/css" href="css/form/login.css?ver=1">
+<link rel="stylesheet" type="text/css" href="css/form/mypage.css?ver=1">
+<link rel="stylesheet" type="text/css" href="css/form/join.css?ver=1">
 </head>
 
 <body>
 	<!-- header -->
 	<div class="header alt">
 		<div class="left-icon">
-			<!-- 메뉴 아이콘 -->
-			<div class="menu_icon">
-				<a class="menu-icon" href="#">
-					<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="40px" height="40px">
-				<path d="M0,3.5c0-.83,.67-1.5,1.5-1.5H17.5c.83,0,1.5,.67,1.5,1.5s-.67,1.5-1.5,1.5H1.5c-.83,0-1.5-.67-1.5-1.5Zm17.5,14.5H1.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H17.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Zm5-8H6.5c-.83,0-1.5,.67-1.5,1.5s.67,1.5,1.5,1.5H22.5c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5Z" /></svg>
-				</a>
-			</div>
 			<!-- 로고 아이콘 -->
 			<div class="logo">
 				<a href="main.jsp">

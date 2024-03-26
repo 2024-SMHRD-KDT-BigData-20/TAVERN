@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* CSS 파일이 UTF-8 인코딩을 사용함을 명시 */
 @font-face {
 	font-family: 'vk';
@@ -55,7 +56,8 @@ ul, li, ol {
 }
 
 .header {
-	margin-top: 10px; display : flex;
+	margin-top: 10px;
+	display: flex;
 	align-items: center;
 	flex-shrink: 0;
 	font-weight: 600;
@@ -63,19 +65,11 @@ ul, li, ol {
 	position: sticky;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 98%;
 	height: 100px;
 	background-color: lightgray;
 	margin-left: 20px;
-	padding-right: 20px;
 	border-bottom: 1px solid rgba(44, 45, 42, 0.25);
-	display: flex;
-}
-
-.menu-icon {
-	display: flex;
-	align-items: center;
-	margin-right: 20px;
 }
 
 .header-icon {
@@ -138,21 +132,14 @@ ul, li, ol {
 }
 
 /* 좌측 헤더 스타일링 */
-.menu_icon {
+.logo {
 	display: flex; /* 아이콘들을 가로로 배열합니다 */
 	align-items: center; /* 아이콘들을 세로로 중앙에 정렬합니다 */
 	margin-right: 20px; /* 아이콘 간의 오른쪽 여백 설정 */
 	float: left;
 }
 
-.menu-icon>svg {
-	margin-top: 10px;
-}
-
-.logo {
-	float: right;
-}
-.logo a p{
+.logo a p {
 	font-family: 'vk';
 }
 /* 헤더 메뉴 스타일링 */
