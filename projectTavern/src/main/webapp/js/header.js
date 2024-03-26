@@ -23,6 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.getElementById('mypage').style.display = 'block'
 		});
 	}
+	
+	// X버튼 클릭시 회원가입 폼 닫기
+	let joinCloseBtn = document.querySelector("#Update .close_btn");
+	if (joinCloseBtn) {
+		joinCloseBtn.addEventListener('click', function() {
+			document.getElementById('Join').style.display = 'none';
+			document.getElementById('mypage').style.display = 'block'
+		});
+	}
+	
 
 	// 로그인 버튼 클릭 시 로그인 폼 표시
 	let loginButton = document.querySelector(".login-link");
@@ -30,7 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
 		loginButton.addEventListener('click', function(event) {
 			event.preventDefault(); // 링크의 기본 동작 방지
 			document.getElementById('login').style.display = 'block'; // 로그인 폼 표시
-			document.querySelector('.login').style.display = 'block';
+		});
+	}
+	
+	// 회원가입 버튼 클릭시 회원가입 폼 표시
+	let joinButton = document.querySelector(".join-link");
+	if (joinButton) {
+		joinButton.addEventListener('click', function() {
+			event.preventDefault();
+			document.getElementById('Join').style.display = 'block';
+			document.getElementById('login').style.display = 'none';
 		});
 	}
 

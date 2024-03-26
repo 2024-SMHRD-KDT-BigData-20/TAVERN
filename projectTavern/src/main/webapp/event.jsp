@@ -9,12 +9,5 @@
 <body>
 <div><%@include file="layout/header.jsp" %></div>
 	<!-- main -->
-	<div id="main">
-		<div>
-			<h3>문의</h3>
-		</div>
-		<div><a href="writin">문의 글쓰기</a></div>
-		
-	</div>
 </body>
 </html>

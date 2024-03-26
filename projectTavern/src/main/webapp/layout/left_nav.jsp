@@ -4,30 +4,45 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/nav.css" rel="stylesheet">
+<link href="css/left_nav.css" rel="stylesheet">
 </head>
 <body>
-	<nav id="left_nav">
-		<div>
-			<div>
-				<h3>전체</h3>
-				<br>
+
+	<div class="left_nav">
+		<section id="user_info">
+			<div class="My_img">
+				<img alt="프로필사진" src="img/gohom.jpg">
 			</div>
+			<div>${loginMember.nick }님</div>
+			<div class="m_link">
+				<a href="#mypage">마이페이지</a>
+				/
+				<a href="LogoutCon">로그아웃</a>
+			</div>
+		</section>
+		<div class="s">
 			<ul>
-				<li><a href="LiquorCon">위스키</a></li>
-				<br>
-				<li><a href="#">럼</a></li>
-				<br>
-				<li><a href="#">꼬냑</a></li>
-				<br>
-				<li><a href="#">보드카</a></li>
-				<br>
-				<li><a href="#">데킬라</a></li>
-				<br>
-				<li><a href="#">리큐르</a></li>
+				<li>
+					<div>리뷰</div>
+					<ol>
+						<%
+						for (int i = 0; i < 6; i++) {
+						%>
+						<li>
+							<a href="post_list_<%=i + 1%>.jsp">
+								위스키
+								<%=i + 1%></a>
+						</li>
+						<%
+						}
+						%>
+					</ol>
+					<br>
+					<div><a href="#">자유</a></div>
+				</li>
 			</ul>
 		</div>
-	</nav>
+	</div>
 
 </body>
 </html>

@@ -4,11 +4,13 @@
 <head>
 <meta charset="UTF-8">
 <title>커뮤니티</title>
-<link href="css/main.css" rel="stylesheet">
+<link href="css/lequor.css" rel="stylesheet">
 </head>
 <body>
-	<%@include file="../layout/header.jsp"%>
-	<div id="container">
+	<div>
+		<%@include file="../layout/header.jsp"%>
+	</div>
+	<div class="main">
 		<h4>
 			<!-- 여기에 위스키나 제목 입력 DB로 가져오기 -->
 		</h4>

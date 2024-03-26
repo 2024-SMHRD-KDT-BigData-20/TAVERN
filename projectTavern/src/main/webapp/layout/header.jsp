@@ -1,6 +1,5 @@
 <%@page import="com.smhrd.model.MemberVO"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!-- 주석 -->
@@ -49,7 +48,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 						</a>
 						<ul>
 							<li>
-								<a href="liquor_list.jsp">위스키</a>
+								<a href="LiquorCon">위스키</a>
 							</li>
 							<li>
 								<a href="#">럼</a>
@@ -80,7 +79,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 								<a href="post_free.jsp">자유</a>
 							</li>
 						</ul>
-						<li>
+					<li>
 						<a href="event.jsp">소식</a>
 					</li>
 					<li>
@@ -96,7 +95,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<c:choose>
 				<c:when test="${empty loginMember }">
 					<a href="#login" class="login-link">
-						<svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="40px" height="40px">
+						<svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="25px" height="25px">
 								<path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z" />
 								<path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z" /></svg>
 					</a>
@@ -112,6 +111,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 								<path d="M487.06,195.669l-82.752-82.752c-8.475-8.185-21.98-7.95-30.165,0.525c-7.985,8.267-7.985,21.374,0,29.641l82.752,82.752   c2.459,2.507,4.607,5.301,6.4,8.32c-0.32,0-0.576-0.171-0.896-0.171l0,0l-334.592,0.683c-11.782,0-21.333,9.551-21.333,21.333   c0,11.782,9.551,21.333,21.333,21.333l0,0l334.464-0.683c0.597,0,1.088-0.299,1.664-0.341c-1.892,3.609-4.292,6.928-7.125,9.856   l-82.752,82.752c-8.475,8.185-8.71,21.69-0.525,30.165c8.185,8.475,21.69,8.71,30.165,0.525c0.178-0.172,0.353-0.347,0.525-0.525   l82.752-82.752c33.313-33.323,33.313-87.339,0-120.661L487.06,195.669z" />
 								<path d="M149.374,469.333h-42.667c-35.346,0-64-28.654-64-64V106.667c0-35.346,28.654-64,64-64h42.667   c11.782,0,21.333-9.551,21.333-21.333S161.157,0,149.374,0h-42.667C47.827,0.071,0.112,47.786,0.041,106.667v298.667   C0.112,464.214,47.827,511.93,106.708,512h42.667c11.782,0,21.333-9.551,21.333-21.333   C170.708,478.885,161.157,469.333,149.374,469.333z" />
 						
+					
 					
 					
 					
@@ -324,9 +324,9 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 	<%}%>
 		
 	</script>
-						<script src="js/header.js"></script>
+	<script src="js/header.js"></script>
 	<script src="js/pw.js"></script>
 
-					</body>
+</body>
 
 </html>

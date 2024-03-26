@@ -11,9 +11,11 @@ request.setCharacterEncoding("UTF-8");
 <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-<%@include file="layout/header.jsp" %>
-	<div id=container>
-		<h1>신규 게시글 작성</h1>
+	<div>
+		<%@include file="layout/header.jsp"%>
+	</div>
+	<div class="main">
+		<div class="title">신규 게시글 작성</div>
 		<form action="#" method="post">
 			<table>
 				<tr>
@@ -36,7 +38,7 @@ request.setCharacterEncoding("UTF-8");
 				</tr>
 				<tr>
 					<td colspan="2">
-					<!-- 버튼 입력시 데베로 저장되는 코드 생성 -->
+						<!-- 버튼 입력시 데베로 저장되는 코드 생성 -->
 						<button type="submit">저장</button>
 						<button type="button" onclick="location.href='post_list_1.jsp'">목록으로</button>
 						<button type="reset">초기화</button>

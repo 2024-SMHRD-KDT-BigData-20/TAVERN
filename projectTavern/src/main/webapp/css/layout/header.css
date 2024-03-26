@@ -1,166 +1,100 @@
 @charset "UTF-8";
 /* CSS 파일이 UTF-8 인코딩을 사용함을 명시 */
+@font-face {
+	font-family: 'vk';
+	font-style: 'nomarl';
+	src:
+		url('/projectTavern/src/main/webapp/font/volkhov/Volkhov-BoldItalic.ttf');
+}
 
 @font-face {
-	font-family: 'Protest Guerrilla';
-	font-style: 'nomarl';
-	src: url('/projectTavern/src/main/webapp/font/volkhov/Volkhov-BoldItalic.ttf');
+	font-family: 'tk';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimKossuyeomR.woff2')
+		format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 * {
-	/* 모든 요소의 margin(외부 여백)값을 0으로 초기화 */
 	margin: 0;
-	/* 모든 요소의 padding(내부 여백)값을 0으로 초기화 */
 	padding: 0;
-	/* 모든 요소의 box-sizing을 border-box로 설정해 너비와 높이가 테두리와 padding을 포함 */
 	box-sizing: border-box;
+	background-color: lightgray;
+	font-family: tk;
 }
 
 a {
-	/* 모든 링크의 밑줄을 없앰 */
 	text-decoration: none;
+	color: black;
 }
 
-ul {
-	/* 모든 목록의 스타일을 없앰 (기본적으로 제공되는 점 등) */
+/* 컨테이너 */
+.main {
+	float: left;
+	padding: 20px; /* 내부 간격 설정 */
+	margin-left: 250px;
+	box-sizing: border-box;
+}
+
+ul, li, ol {
 	list-style: none;
 }
 
 #container {
-	/* #container 요소를 화면 중앙에 배치 */
 	margin: 0 auto;
-	/* 너비를 1200px로 설정 */
-	width: 1200px;
-}
-/* 헤더 영역 스타일링 */
-header {
-	/* 너비를 부모 요소인 #container의 100%로 설정 */
 	width: 100%;
-	/* 높이를 100px로 설정 */
-	height: 100px;
-	/* 배경색을 lightgray로 설정 */
-	background-color: lightgray;
-}
-/* 로고 영역 스타일링 */
-#logo {
-	/* 왼쪽으로 플로팅하여 다른 요소들과 나란히 배치 */
-	float: left;
-	width: 250px;
-	height: 100px;
-	/* 높이가 100px인 요소 내에서 텍스트의 라인 높이를 100px로 설정하여 수직 중앙 정렬 */
-	line-height: 100px;
-	/* 왼쪽 내부 여백을 20px로 설정 */
-	padding-left: 20px;
-}
-
-#logo h1 {
-	/* 글꼴 가족 설정 */
-	font-family: "Protest Guerrilla", sans-serif;
-	/* 글꼴 두께 설정 (여기서는 오타로 보임. font-weight 속성은 단위 없이 숫자로 표현) */
-	font-weight: 800;
-	/* 글꼴 크기 설정 */
-	font-size: 40px;
-	/* 텍스트에 그림자 효과 추가 */
-	text-shadow: 0 -1px 0 #000000;
-}
-/* 네비게이션 영역 스타일링 */
-#topNav {
-	/* 오른쪽으로 플로팅 */
-	float: right;
-	width: 100%;
-	height: 100px;
-	/* 상단 내부 여백을 40px로 설정 */
-	padding-top: 40px;
-}
-
-#topMenu {
-	height: 60px;
-	background-color: lightgray;
-}
-
-#topMenu>li {
-	/* 메뉴 항목을 왼쪽으로 플로팅 */
-	float: left;
-	/* 서브메뉴를 절대 위치로 설정하기 위해 부모 요소를 상대 위치로 설정 */
+	display: flex;
+	flex-direction: column;
+	scroll-behavior: smooth;
+	background-color: #e6decf;
+	padding: 0 30px;
+	overflow-y: auto;
+	overflow-x: hidden;
 	position: relative;
 }
 
-#topMenu>li>a {
-	display: block;
-	color: black;
+.header {
+	margin-top: 10px; display : flex;
+	align-items: center;
+	flex-shrink: 0;
 	font-weight: 600;
-	padding: 20px 60px;
+	font-size: 15px;
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background-color: lightgray;
+	margin-left: 20px;
+	padding-right: 20px;
+	border-bottom: 1px solid rgba(44, 45, 42, 0.25);
+	display: flex;
 }
 
-#topMenu>li>a>span {
-	/* 글꼴 크기 조정 */
-	font-size: 0.5em;
+.menu-icon {
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
 }
 
-#topMenu>li>a:hover {
-	color: #000;
+.header-icon {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
 }
 
-#topMenu>li>ul {
-	/* 서브메뉴 기본적으로 숨김 */
-	display: none;
-	/* 서브메뉴 위치 절대 위치로 설정 */
-	position: absolute;
-	width: 160px;
-	/* 배경색 투명도 설정 */
-	background-color: rgba(255, 255, 255, 0.6);
-	left: 20px;
-	margin: 0;
-}
-
-#topMenu>li>ul>li {
-	padding: 10px 10px 10px 30px;
-}
-
-#topMenu>li>ul>li>a {
-	font-size: 14px;
-	padding: 10px;
-	color: #000;
-}
-
-#topMenu>li:hover>ul {
-	/* 메인 메뉴 항목 위로 호버하면 서브메뉴 표시 */
-	display: block;
-	/* 슬라이드 쇼에 가리지 않게 조절 */
-	z-index: 10;
-}
-/* 탭 메뉴 영역 */
-#tabMenu {
-	/* 왼쪽으로 플로팅 */
-	float: left;
-	width: 600px;
-	height: 100%;
-}
-
-#tabMenu input[type="radio"] {
-	/* 라디오 버튼 감춤 */
-	display: none;
-}
-
-#tabMenu label {
-	display: inline-block;
-	margin: 0 0;
-	padding: 15px 25px;
-	font-weight: 600;
-	text-align: center;
-	color: #aaa;
-	border: 1px solid transparent;
-}
-
-#tabMenu label:hover {
-	color: #222;
-	cursor: pointer;
-}
-
-#tabMenu input:checked+label {
-	color: #b00;
-	border: 1px solid #ddd;
-	background-color: #eee;
+#Join {
+	display: none; /* 초기에는 숨김 */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	z-index: 1001;
 }
 
 /* 정보수정 */
@@ -182,4 +116,78 @@ header {
 	color: red;
 	font-size: 14px;
 	margin-top: 5px;
+}
+
+/* 헤더 영역 스타일링 */
+.header.alt {
+	display: flex; /* 요소들을 가로로 배열합니다 */
+	justify-content: space-between; /* 좌우로 간격을 벌려서 요소들을 배치합니다 */
+	align-items: center; /* 요소들을 세로로 중앙에 정렬합니다 */
+}
+
+.left-icons {
+	display: flex; /* 요소들을 가로로 배열합니다 */
+	align-items: center; /* 요소들을 세로로 중앙에 정렬합니다 */
+	width: 25px;
+	height: 25px;
+}
+
+.header-menu {
+	flex-grow: 1; /* 헤더 메뉴가 공간을 차지하도록 확장합니다 */
+	text-align: center; /* 헤더 메뉴를 가운데 정렬합니다 */
+}
+
+/* 좌측 헤더 스타일링 */
+.menu_icon {
+	display: flex; /* 아이콘들을 가로로 배열합니다 */
+	align-items: center; /* 아이콘들을 세로로 중앙에 정렬합니다 */
+	margin-right: 20px; /* 아이콘 간의 오른쪽 여백 설정 */
+	float: left;
+}
+
+.menu-icon>svg {
+	margin-top: 10px;
+}
+
+.logo {
+	float: right;
+}
+.logo a p{
+	font-family: 'vk';
+}
+/* 헤더 메뉴 스타일링 */
+#topMenu {
+	display: flex; /* 메뉴들을 가로로 배열합니다 */
+	justify-content: center; /* 가운데 정렬합니다 */
+}
+
+#topMenu>li {
+	margin: 0 10px; /* 메뉴 간 간격을 조절합니다 */
+}
+
+#topMenu a {
+	padding: 10px; /* 메뉴의 여백을 추가합니다 */
+	color: black; /* 메뉴의 글자 색상을 설정합니다 */
+	text-decoration: none; /* 링크의 밑줄을 제거합니다 */
+}
+
+#topMenu a:hover {
+	color: gray; /* 마우스를 올렸을 때의 글자 색상을 변경합니다 */
+}
+
+#topMenu ul {
+	display: none; /* 서브 메뉴는 초기에는 숨깁니다 */
+	position: absolute; /* 절대 위치로 설정하여 부모 요소에 상대적으로 배치합니다 */
+	background-color: lightgray; /* 서브 메뉴의 배경색을 설정합니다 */
+	padding: 10px; /* 서브 메뉴의 여백을 추가합니다 */
+}
+
+#topMenu li:hover>ul {
+	display: block; /* 메인 메뉴에 마우스를 올리면 서브 메뉴가 나타나게 합니다 */
+	width: auto; /* 서브 메뉴의 너비를 자동으로 설정합니다 */
+}
+
+#topMenu ul li {
+	display: block; /* 서브 메뉴의 항목들을 세로로 배열합니다 */
+	margin: 5px 0; /* 서브 메뉴의 각 항목 간의 간격을 설정합니다 */
 }
