@@ -13,8 +13,8 @@
 	
 	<!-- 게시글 저장 -->
 	<insert id="insertpost" parameterType="PostVO">
-    	INSERT INTO post_info (post_title, post_content)
-    	VALUES (#{post_title}, #{post_content})
+    	INSERT INTO post_info(post_title, post_content, post_file, created_at, post_views, post_likes, id)
+		VALUES ('post_title 1', 'post_content 1', 'post_file 1', sysdate, 1, 1, 'id 1');
 	</insert>
 	<!-- 게시판 저장 끝 -->
 
