@@ -64,40 +64,6 @@ public class LiquorVO {
 	    this.liq_name = liq_name;
 	}
 
-	public void setLiq_name(String liq_name) {
-		this.liq_name = liq_name;
-	}
 
-	public void setLiq_category(String liq_category) {
-		this.liq_category = liq_category;
-	}
-
-	public void setLiq_alcohol(String liq_alcohol) {
-		this.liq_alcohol = liq_alcohol;
-	}
-
-	public void setTasty(String tasty) {
-		this.tasty = tasty;
-	}
-
-	public void setSmell(String smell) {
-		this.smell = smell;
-	}
-
-	public void setBody(String body) {
-		this.body = body;
-	}
-
-	public void setSugar(String sugar) {
-		this.sugar = sugar;
-	}
-
-	public void setFood(String food) {
-		this.food = food;
-	}
-
-	public void setLiq_type(String liq_type) {
-		this.liq_type = liq_type;
-	}
 
 }
