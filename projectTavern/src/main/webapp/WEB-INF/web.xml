@@ -58,16 +58,22 @@
 		<servlet-class>com.smhrd.controller.Check_id</servlet-class>
 	</servlet>
 	<servlet>
-		<servlet-name>liquorCon</servlet-name>
-		<display-name>liquorCon</display-name>
+		<servlet-name>LiquorCon</servlet-name>
+		<display-name>LiquorCon</display-name>
 		<description></description>
-		<servlet-class>com.smhrd.controller.liquorCon</servlet-class>
+		<servlet-class>com.smhrd.controller.LiquorCon</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>LiquorlistCon</servlet-name>
 		<display-name>LiquorlistCon</display-name>
 		<description></description>
 		<servlet-class>com.smhrd.controller.LiquorlistCon</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>LiquorButton</servlet-name>
+		<display-name>LiquorButton</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.LiquorButton</servlet-class>
 	</servlet>
 
 
@@ -108,12 +114,16 @@
 		<url-pattern>/Check_id</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-		<servlet-name>liquorCon</servlet-name>
-		<url-pattern>/liquorCon</url-pattern>
+		<servlet-name>LiquorCon</servlet-name>
+		<url-pattern>/LiquorCon</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>LiquorlistCon</servlet-name>
 		<url-pattern>/LiquorlistCon</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>LiquorButton</servlet-name>
+		<url-pattern>/LiquorButton</url-pattern>
 	</servlet-mapping>
 
 	<session-config>

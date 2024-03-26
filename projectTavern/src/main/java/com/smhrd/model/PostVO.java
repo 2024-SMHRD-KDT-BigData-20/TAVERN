@@ -71,6 +71,12 @@ public class PostVO {
 		this.post_likes = post_likes;
 		this.id = id;
 	}
+	@Override
+	public String toString() {
+		return "PostVO [post_idx=" + post_idx + ", post_title=" + post_title + ", post_content=" + post_content
+				+ ", post_File=" + post_File + ", created_at=" + created_at + ", post_views=" + post_views
+				+ ", post_likes=" + post_likes + ", id=" + id + "]";
+	}
     
     
     
