@@ -170,30 +170,6 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			</div>
 		</form>
 	</nav>
-	<script>
-		// 페이지 로드 시 실행되는 함수
-		window.onload = function() {
-			let loginButton = document
-					.querySelector("#header nav a[href='#menu']");
-			let logoutButton = document
-					.querySelector("#header nav a[href='LogoutCon']");
-			let mypageButton = document
-					.querySelector("#header nav a[href='mypage.html']");
-		}
-	<%-- 세션에서 로그인 정보 확인 --%>
-		
-	<%if (loginMember != null) {%>
-		loginButton.style.display = "none"; // 로그인 버튼 숨김
-		logoutButton.style.display = "inline"; // 로그아웃 버튼 표시
-		mypageButton.style.display = "inline"; // 마이페이지 버튼 표시
-	<%} else {%>
-		loginButton.style.display = "inline"; // 로그인 버튼 표시
-		logoutButton.style.display = "none"; // 로그아웃 버튼 숨김
-		mypageButton.style.display = "none"; // 마이페이지 버튼 숨김
-	<%}%>
-		
-	</script>
-
 	<script src="js/header.js"></script>
 	<script src="js/pw.js"></script>
 
