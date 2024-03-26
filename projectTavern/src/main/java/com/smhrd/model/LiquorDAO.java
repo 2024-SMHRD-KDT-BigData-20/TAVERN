@@ -10,8 +10,7 @@ import com.smhrd.db.SqlSessionManager;
 public class LiquorDAO {
 	// DB에서 연결고리를 만들어 놓고 가져다 쓸 수 있게 sqlSession생성
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
-	
-	
+
 	// 위스키
 
 	public List<LiquorVO> liqName(String liq_type) {
@@ -23,21 +22,16 @@ public class LiquorDAO {
 
 		return liqname;
 	}// 위스키 끝
-	
-	// 술 상세 정보 가져오기
-    public List<LiquorVO> liqAll(String liq_name) {
-    	List<LiquorVO> details = null;
-    	
-        SqlSession sqlSession = sqlSessionFactory.openSession(true);
-        details = sqlSession.selectList("com.smhrd.db.LiquorMapper.liqAll", liq_name);
-        sqlSession.close();
-        return details;
-    }
-	
-	
-	
-	
-	
-	
-	
+
+	// 술정보 찾기
+	public LiquorVO getLiquorDetails(String liqName) {
+		LiquorVO liquorDetails = null;
+
+		SqlSession sqlSession = sqlSessionFactory.openSession(true);
+		liquorDetails = sqlSession.selectOne("com.smhrd.db.LiquorMapper.liqAll", liqName);
+		sqlSession.close();
+
+		return liquorDetails;
+	}
+
 }

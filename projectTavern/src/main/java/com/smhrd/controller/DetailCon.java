@@ -20,17 +20,20 @@ public class DetailCon extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("[DetailCon]");
-		// 술 이름을 가져오기 위한 DAO 객체 생성
-		LiquorDAO liquorDAO = new LiquorDAO();
-		// 술 이름 목록 가져오기 (여기서는 위스키만 가져오도록 했습니다)
-		HttpSession session = request.getSession();
-		List<LiquorVO> whiskeyList = liquorDAO.getWhiskeyList();
 
-		// 세션에 술 이름 목록을 저장
-		if (whiskeyList != null && !whiskeyList.isEmpty()) {
-		    session.setAttribute("whiskeyList", whiskeyList);
-		}
-		// 상세 정보 페이지로 리다이렉트
-		response.sendRedirect("liquor_list_1.jsp");
+		HttpSession session = request.getSession();
+		String liqName = ((List<LiquorVO>) session.getAttribute("whiskeyList")).get(0).getLiq_name(); // 여기서는 첫 번째 술을
+																										// 가져왔습니다.
+
+		// 술 이름을 기반으로 상세 정보 조회
+		LiquorDAO liquorDAO = new LiquorDAO();
+		LiquorVO liquor = liquorDAO.getLiquorDetails(liqName);
+		System.out.println(liquor.toString());
+
+		// 조회한 술 정보를 세션에 저장
+		session.setAttribute("liquorDetails", liquor);
+
+		// 상세 페이지로 리다이렉트
+		response.sendRedirect("detail_page.jsp");
 	}
 }

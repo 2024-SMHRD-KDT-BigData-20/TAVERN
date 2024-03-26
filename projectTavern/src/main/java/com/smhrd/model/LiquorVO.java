@@ -11,8 +11,6 @@ public class LiquorVO {
 	private String sugar;
 	private String food;
 	private String liq_type;
-	
-
 
 	public String getLiq_idx() {
 		return liq_idx;
@@ -61,9 +59,29 @@ public class LiquorVO {
 	}
 
 	public LiquorVO(String liq_name) {
-	    this.liq_name = liq_name;
+		this.liq_name = liq_name;
 	}
 
+	public LiquorVO(String liq_name, String liq_category, String liq_alcohol, String tasty,
+			String smell, String body, String sugar, String food, String liq_type) {
+		this.liq_name = liq_name;
+		this.liq_category = liq_category;
+		this.liq_alcohol = liq_alcohol;
+		this.tasty = tasty;
+		this.smell = smell;
+		this.body = body;
+		this.sugar = sugar;
+		this.food = food;
+		this.liq_type = liq_type;
+	}
 
+	@Override
+	public String toString() {
+		return "LiquorVO [liq_idx=" + liq_idx + ", liq_name=" + liq_name + ", liq_category=" + liq_category
+				+ ", liq_alcohol=" + liq_alcohol + ", tasty=" + tasty + ", smell=" + smell + ", body=" + body
+				+ ", sugar=" + sugar + ", food=" + food + ", liq_type=" + liq_type + "]";
+	}
+	
+	
 
 }
