@@ -75,6 +75,18 @@
 		<description></description>
 		<servlet-class>com.smhrd.controller.LiquorButton</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>Post_list_Con</servlet-name>
+		<display-name>Post_list_Con</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.Post_list_Con</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Post_in_Con</servlet-name>
+		<display-name>Post_in_Con</display-name>
+		<description></description>
+		<servlet-class>com.smhrd.controller.Post_in_Con</servlet-class>
+	</servlet>
 
 
 	<servlet-mapping>
@@ -124,6 +136,14 @@
 	<servlet-mapping>
 		<servlet-name>LiquorButton</servlet-name>
 		<url-pattern>/LiquorButton</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Post_list_Con</servlet-name>
+		<url-pattern>/Post_list_Con</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Post_in_Con</servlet-name>
+		<url-pattern>/Post_in_Con</url-pattern>
 	</servlet-mapping>
 
 	<session-config>
