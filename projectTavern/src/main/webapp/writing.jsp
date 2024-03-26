@@ -16,7 +16,7 @@ request.setCharacterEncoding("UTF-8");
 	</div>
 	<div class="main">
 		<div class="title">신규 게시글 작성</div>
-		<form action="#" method="post">
+		<form action="Post_in_Con" method="post">
 			<table>
 				<tr>
 					<td>작성자</td>
