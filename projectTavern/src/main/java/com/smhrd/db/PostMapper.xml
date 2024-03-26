@@ -5,28 +5,17 @@
   
 <mapper namespace="com.smhrd.db.PostMapper">
 
-	<!-- 게시판 글 -->
+	<!-- 게시판 리스트 -->
+	<select id="postlist" resultType="PostVO">
+		select * from post_info
+	</select>
+	<!-- 게시판 리스트 끝 -->
 	
-	<!-- 게시판 글 끝 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<!-- 게시글 저장 -->
+	<insert id="insertpost" parameterType="PostVO">
+    	INSERT INTO post_info (post_title, post_content)
+    	VALUES (#{post_title}, #{post_content})
+	</insert>
+	<!-- 게시판 저장 끝 -->
 
 </mapper>
