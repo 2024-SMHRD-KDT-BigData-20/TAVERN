@@ -52,11 +52,105 @@
 					</ul>
 					<!-- 더보기 버튼 -->
 					<button id="moreButton">더보기</button>
+					<% 
+					for(int i=6; i<whiskeyList.size(); i++) { %>
+					<div class="liquor-item hidden" style="display: none">
+						<img src="images/<%=whiskeyList.get(i).getLiq_name()%>.jpg"
+							alt="<%= whiskeyList.get(i).getLiq_name()%>"
+							style="width: 100px; height: auto;">
+						<!-- 이미지 -->
+						<h3>
+							<a href="javascript:void(0);"><%=whiskeyList.get(i).getLiq_name()%></a>
+						</h3>
+						<!-- 술의 이름 -->
+					</div>
+					<%} %>
+
 				</div>
 			</section>
 		</div>
 	</div>
 	<%@include file="../layout/footer.jsp"%>
-	<script src="js/function/plus.js"></script>
+<!-- 	<script src="js/function/plus.js"></script> -->
+
+<script>
+/* var btn= document.getElementById('moreButton');
+btn.click(function(){
+	document.queryselectorAll('#hidden').show();
+}); */
+
+/* var btn = document.getElementById('moreButton');
+btn.addEventListener('click', function() {
+    var hiddenItems = document.querySelectorAll('.hidden'); // '.hidden' 클래스를 가진 모든 요소 선택
+    for (var i = 0; i < hiddenItems.length; i++) {
+        hiddenItems[i].style.display = 'block'; // 숨겨진 요소들을 보이게 설정
+    }
+});
+ */
+
+/*  var currentIndex = 6; // 이미 6개의 요소가 보여지고 있으므로, 다음 보여질 요소의 인덱스는 6부터 시작
+
+ var btn = document.getElementById('moreButton');
+ btn.addEventListener('click', function() {
+     var hiddenItems = document.querySelectorAll('.hidden'); // '.hidden' 클래스를 가진 모든 요소 선택
+     var maxIndex = currentIndex + 3; // 최대 3개의 추가 요소를 보여주기
+     for (var i = currentIndex; i < maxIndex && i < hiddenItems.length; i++) {
+         hiddenItems[i].style.display = 'block'; // 숨겨진 요소들을 보이게 설정
+         hiddenItems[i].classList.remove('hidden'); // 보여준 요소는 'hidden' 클래스 제거
+     }
+     currentIndex = i; // 다음 번 "더보기" 클릭 시 시작할 인덱스 업데이트
+
+     // 모든 숨겨진 요소를 보여줬다면, "더보기" 버튼 숨기기
+     if (currentIndex >= hiddenItems.length) {
+         btn.style.display = 'none';
+     }
+ }); */
+ 
+ 
+/*  var currentIndex = 0; // 처음부터 숨겨진 요소들을 보여주기 시작하므로 0으로 설정
+
+ var btn = document.getElementById('moreButton');
+ btn.addEventListener('click', function() {
+     var hiddenItems = document.querySelectorAll('.hidden'); // '.hidden' 클래스를 가진 모든 요소 선택
+     var maxIndex = currentIndex + 3; // 최대 3개의 추가 요소를 보여주기
+     for (var i = currentIndex; i < maxIndex && i < hiddenItems.length; i++) {
+         hiddenItems[i].style.display = 'block'; // 숨겨진 요소들을 보이게 설정
+     }
+     currentIndex += 3; // 다음 번 "더보기" 클릭 시 시작할 인덱스 업데이트
+
+     // 모든 숨겨진 요소를 보여줬다면, "더보기" 버튼 숨기기
+     if (currentIndex >= hiddenItems.length) {
+         btn.style.display = 'none';
+     }
+ }); */
+ 
+ 
+ 
+ var currentIndex = 0;
+
+ var btn = document.getElementById('moreButton');
+ btn.addEventListener('click', function() {
+     var hiddenItems = document.querySelectorAll('.hidden'); // '.hidden' 클래스를 가진 모든 요소 선택
+     var maxIndex = currentIndex + 3; // 최대 3개의 추가 요소를 보여주기
+     for (var i = currentIndex; i < maxIndex && i < hiddenItems.length; i++) {
+         hiddenItems[i].style.display = 'block'; // 숨겨진 요소들을 보이게 설정
+     }
+     currentIndex += 3; // 다음 번 "더보기" 클릭 시 시작할 인덱스 업데이트
+
+     // "더보기" 버튼을 리스트의 마지막으로 이동
+     if (hiddenItems.length > 0 && currentIndex < hiddenItems.length) {
+         hiddenItems[i-1].after(btn); // 마지막으로 보여준 요소 바로 뒤에 버튼을 위치시킴
+     }
+     
+     // 모든 숨겨진 요소를 보여줬다면, "더보기" 버튼 숨기기
+     if (currentIndex >= hiddenItems.length) {
+         btn.style.display = 'none';
+     }
+ });
+ 
+ 
+ 
+
+</script>
 </body>
 </html>

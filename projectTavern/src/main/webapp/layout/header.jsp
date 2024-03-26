@@ -46,7 +46,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 					<li><a href="liquor.jsp"> 정보<span>🔻</span>
 					</a>
 						<ul>
-							<li><a href="liquor_list.jsp">위스키</a></li>
+							<li><a href="LiquorCon">위스키</a></li>
 							<li><a href="#">럼</a></li>
 							<li><a href="#">보드카</a></li>
 							<li><a href="#">리큐르</a></li>
