@@ -35,7 +35,7 @@
 								style="width: 100px; height: auto;">
 							<!-- 이미지 -->
 							<h3>
-								<a href="javascript:void(0);"><%=liquor.getLiq_name()%></a>
+								<a href="liquor_list_1.jsp"><%=liquor.getLiq_name()%></a>
 							</h3>
 							<!-- 술의 이름 -->
 						</div>

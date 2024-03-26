@@ -24,7 +24,15 @@ public class LiquorDAO {
 		return liqname;
 	}// 위스키 끝
 	
-	
+	// 술 상세 정보 가져오기
+    public List<LiquorVO> liqAll(String liq_type) {
+    	List<LiquorVO> details = null;
+    	
+        SqlSession sqlSession = sqlSessionFactory.openSession(true);
+        details = sqlSession.selectList("com.smhrd.db.LiquorMapper.liqAll", liq_type);
+        sqlSession.close();
+        return details;
+    }
 	
 	
 	
