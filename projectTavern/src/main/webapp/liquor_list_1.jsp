@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page import="java.util.List"%>
 <%@ page import="com.smhrd.model.LiquorVO"%>
@@ -9,7 +8,7 @@
 <meta charset="UTF-8">
 <title>상세페이지</title>
 <link href="css/main.css" rel="stylesheet">
-<link href="css/lequor.css" rel="stylesheet">
+<link href="css/lequor.css?ver=1" rel="stylesheet">
 </head>
 <body>
 	<%@include file="../layout/header.jsp"%>
@@ -22,10 +21,9 @@
 				if (liquorDetails != null && !liquorDetails.isEmpty()) {
 					LiquorVO liquor = liquorDetails.get(0); // 리스트의 첫 번째 객체를 가져옴
 				%>
- 				<div class="left-side">
+				<div class="left-side">
 					<!-- 이미지 표시 (여기서는 이미지 URL이 LiquorVO에 없으므로 생략) -->
-					<img src="images/<%=liquor.getLiq_name()%>.jpg"
-						alt="<%=liquor.getLiq_name()%>" style="width: 100%;">
+					<img src="images/<%=liquor.getLiq_name()%>.jpg" alt="<%=liquor.getLiq_name()%>" style="width: 100%;">
 				</div>
 				<div class="right-side">
 					<!-- 술 정보 표시 -->

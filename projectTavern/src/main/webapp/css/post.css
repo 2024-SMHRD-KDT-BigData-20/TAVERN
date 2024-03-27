@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/* 네비가 존재경우 새겨질 경우 main */
+.main {
+	top: 110px;
+	height: 1000px;
+	padding: 20px; /* 내부 간격 설정 */
+	padding-left: 250px;
+}
+.card {
+	border-radius: 10px;
+	border: solid 1px rgb(45, 45, 42, 0.25);
+	padding: 10px;
+}

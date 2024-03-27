@@ -2,20 +2,21 @@
 
 /* 네비가 존재경우 새겨질 경우 main */
 .main {
-	top:110px;
+	top: 110px;
 	height: 1000px;
 	padding: 20px; /* 내부 간격 설정 */
 	padding-left: 250px;
 }
 /* 좌측네비 크기 */
 .left_nav {
+	position: absolute;
 	margin-left: 20px;
-	left: 0px;
-	top: 110px;
+	left: 0px; top : 110px;
 	width: 200px;
-	height: auto;
+	height: 100%;
 	border: solid 1px rgb(45, 45, 42, 0.25);
 	border-radius: 0.1%;
+	top: 110px;
 }
 
 #user_info {

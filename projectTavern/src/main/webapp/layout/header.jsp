@@ -109,6 +109,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 					
 					
 					
+					
 					</a>
 				</c:otherwise>
 			</c:choose>
@@ -229,9 +230,6 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 					<input type="text" id="user_id" name="id" placeholder="아이디">
 					<label class="form_label">아이디</label>
 				</div>
-				<div>
-					<input type="button" onclick="idCheck()" value="아이디 중복확인">
-				</div>
 				<div class="id error_box" id="id_error">영문자 혹은 영문자와 숫자를 포함해서 만들어주세요</div>
 			</div>
 			<!-- 비밀번호 입력 -->
@@ -317,8 +315,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 	<%}%>
 		
 	</script>
-	<script src="js/header.js"></script>
-	<script src="js/pw.js"></script>
+	<script src="js/header.js" type="text/javascript"></script>
+	<script src="js/pw.js" type="text/javascript"></script>
 
 </body>
 
