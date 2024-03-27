@@ -41,22 +41,22 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 						</a>
 						<ul>
 							<li>
-								<a href="LiquorCon">위스키</a>
+								<a href="LiquorCon?liq_type=<%="위스키"%>">위스키</a>
 							</li>
 							<li>
-								<a href="#">럼</a>
+								<a href="LiquorCon?liq_type=<%="럼"%>">럼</a>
 							</li>
 							<li>
-								<a href="#">보드카</a>
+								<a href="LiquorCon?liq_type=<%="보드카"%>">보드카</a>
 							</li>
 							<li>
-								<a href="#">리큐르</a>
+								<a href="LiquorCon?liq_type=<%="리큐르"%>">리큐르</a>
 							</li>
 							<li>
-								<a href="#">꼬냑</a>
+								<a href="LiquorCon?liq_type=<%="꼬냑"%>">꼬냑</a>
 							</li>
 							<li>
-								<a href="#">데킬라</a>
+								<a href="LiquorCon?liq_type=<%="데킬라"%>">데킬라</a>
 							</li>
 						</ul>
 					</li>

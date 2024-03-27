@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>위스키 목록</title>
 <link href="css/main.css" rel="stylesheet">
-<link href="css/liquor3.css?ver=1" rel="stylesheet">
+<link href="css/lequor.css?ver=1" rel="stylesheet">
 </head>
 <body>
    <div>
@@ -24,17 +24,17 @@
                <ul id="linkList">
                   <!-- 세션에서 술 이름 목록을 가져와서 출력 -->
                   <%
-                  List<LiquorVO> whiskeyList = (List<LiquorVO>) session.getAttribute("whiskeyList");
-                  if (whiskeyList != null) {
+                  List<LiquorVO> liquorList = (List<LiquorVO>) session.getAttribute("liquorList");
+                  if (liquorList != null) {
                      int count = 0; // 술의 이름을 6개만 나오게 하기 위한 카운터
-                     for (LiquorVO liquor : whiskeyList) {
+                     for (LiquorVO liquor : liquorList) {
                         if (count < 6) { // 처음 6개의 항목만 처리
                   %>
                   <div class="liquor-item">
                      <img src="images/<%=liquor.getLiq_name()%>.jpg" alt="<%=liquor.getLiq_name()%>" style="width: 100px; height: auto;">
                      <!-- 이미지 -->
                      <h3>
-                        <a href="DetailCon"><%=liquor.getLiq_name()%></a>
+                        <a href="DetailCon?liq_name=<%=liquor.getLiq_name()%>"><%=liquor.getLiq_name()%></a>
                      </h3>
                      <!-- 술의 이름 -->
                   </div>
@@ -52,13 +52,13 @@
                <!-- 더보기 버튼 -->
                <button id="moreButton">더보기</button>
                <%
-               for (int i = 6; i < whiskeyList.size(); i++) {
+               for (int i = 6; i < liquorList.size(); i++) {
                %>
                <div class="liquor-item hidden" style="display: none">
-                  <img src="images/<%=whiskeyList.get(i).getLiq_name()%>.jpg" alt="<%=whiskeyList.get(i).getLiq_name()%>" style="width: 100px; height: auto;">
+                  <img src="images/<%=liquorList.get(i).getLiq_name()%>.jpg" alt="<%=liquorList.get(i).getLiq_name()%>" style="width: 100px; height: auto;">
                   <!-- 이미지 -->
                   <h3>
-                     <a href="javascript:void(0);"><%=whiskeyList.get(i).getLiq_name()%></a>
+                     <a href="javascript:void(0);"><%=liquorList.get(i).getLiq_name()%></a>
                   </h3>
                   <!-- 술의 이름 -->
                </div>
@@ -132,6 +132,8 @@
                for (var i = currentIndex; i < maxIndex
                      && i < hiddenItems.length; i++) {
                   hiddenItems[i].style.display = 'block'; // 숨겨진 요소들을 보이게 설정
+                  var liquorName = hiddenItems[i].querySelector('a').innerText; // 각 술의 이름 가져오기
+                  hiddenItems[i].querySelector('a').href = "DetailCon?liq_name=" + encodeURIComponent(liquorName); // 해당 술의 이름을 파라미터로 추가하여 href 속성 설정
                }
                currentIndex += 3; // 다음 번 "더보기" 클릭 시 시작할 인덱스 업데이트
 
