@@ -16,7 +16,7 @@
 
 	<!-- 메인문 -->
 	<div class="main">
-		<div class="card">
+		<div class="card"> 
 			<div>
 				<h4>양주</h4>
 			</div>
