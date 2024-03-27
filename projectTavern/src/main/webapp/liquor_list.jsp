@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>위스키 목록</title>
 <link href="css/main.css" rel="stylesheet">
-<link href="css/liquor3.css?ver=1" rel="stylesheet">
+<link href="css/lequor.css?ver=1" rel="stylesheet">
 </head>
 <body>
    <div>
