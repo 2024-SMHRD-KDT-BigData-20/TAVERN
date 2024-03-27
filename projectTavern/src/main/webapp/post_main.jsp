@@ -20,7 +20,7 @@
 		<!-- 카드 -->
 		<div class="card">
 			<h3>
-				<a href="#">위스키</a>
+				<a href="#">술카테고리</a>
 			</h3>
 			<a class="list">
 				<p></p>
@@ -33,8 +33,8 @@
 			</a>
 		</div>
 
-		<%@include file="layout/footer.jsp"%>
 		<!-- footer -->
 	</div>
+	<%@include file="layout/footer.jsp"%>
 </body>
 </html>

@@ -3,5 +3,6 @@
 #ft_container {
 	bottom: 0;
 	text-align: center;
-	margin: 50px;
+	padding: 50px;
+	border-top: solid 1px rgb(45, 45, 42, 0.25);
 }

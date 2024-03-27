@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>회원가입</title>
 <link rel="stylesheet" href="css/join.css">
-</head>
+</head>4
 <body>
 	<div id="container">
 		<form id="joinForm" action="JoinCon" method="post" name="frm">

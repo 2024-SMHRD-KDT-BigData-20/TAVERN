@@ -22,26 +22,24 @@
 		</section>
 		<div class="s">
 			<ul>
-				<li>
-					<div>리뷰</div>
-					<ol>
-						<%
-						for (int i = 0; i < 6; i++) {
-						%>
-						<li>
-							<a href="post_list_<%=i + 1%>.jsp">
-								위스키
-								<%=i + 1%></a>
-						</li>
-						<%
-						}
-						%>
-					</ol>
-					<br>
-					<div>
-						<a href="#">자유</a>
-					</div>
-				</li>
+				<div>리뷰</div>
+				<ol>
+					<%
+					for (int i = 0; i < 6; i++) {
+					%>
+					<li>
+						<a href="post_list_<%=i + 1%>.jsp">
+							위스키
+							<%=i + 1%></a>
+					</li>
+					<%
+					}
+					%>
+				</ol>
+				<br>
+				<div>
+					<a href="#">자유</a>
+				</div>
 			</ul>
 		</div>
 	</div>
