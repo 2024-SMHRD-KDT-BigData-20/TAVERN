@@ -1,28 +1,7 @@
 @charset "UTF-8";
 
 #ft_container {
-    margin: 0;
-    position: relative; /* 페이지 전체를 기준으로 footer를 배치하기 위해 body를 relative로 설정 */
-    padding-bottom: 80px; /* footer의 높이만큼 body의 하단에 여백을 추가 */
-}
-
-#footer {
-    position: fixed; /* 화면 하단에 고정 */
-    left: 0;
-    bottom: 0; /* body의 하단에 고정 */
-    background: linear-gradient(to right, #e0973e, #fff);
-    width: 100%;
-    height: 25px;
-    padding: 5px 20px;
-    box-sizing: border-box;
-    font-size: 10px;
-    line-height: 6px;
-}
-.foo_div1 {
-    text-align: center;
-}
-
-.foo_div1 p {
-    margin-bottom: 1px;
-    color: black;
+	bottom: 0;
+	text-align: center;
+	margin: 50px;
 }

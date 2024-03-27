@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+.main {
+	float: left;
+	padding: 20px; /* 내부 간격 설정 */
+	margin-left: 250px;
+	box-sizing: border-box;
+}
+
 /* 좌측 네비게이션 */
 .left_nav {
 	position: fixed;

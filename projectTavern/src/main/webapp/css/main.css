@@ -1,14 +1,85 @@
 @charset "UTF-8";
 
+* {
+	margin: 0;
+	padding: 0;
+}
+.main{
+	width: 100%;
+	height: auto;
+}
 /* 컨테이너 */
-.main {
-	float: left;
-	padding: 20px; /* 내부 간격 설정 */
-	margin-left: 250px;
-	box-sizing: border-box;
+#lequor {
+	margin: 0 0 0 20px;
+	width: 98%;
+	height: 100%;
+	bottom: 10px;
+	background: none;
+	border-bottom: solid 1px rgb(45, 45, 42, 0.25);
 }
 
+#lequor div {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	border-top: solid 1px rgb(45, 45, 42, 0.25);
+	border-bottom: solid 1px rgb(45, 45, 42, 0.25);
+}
 
-ul, li, ol {
-	list-style: none;
+#lequor div h4 {
+	padding: 10px 0 10px 0;
+}
+
+#slideShow {
+	/* 플로팅 해제 */
+	margin: 60px;
+	border-radius: 10px;
+	clear: both;
+	width: 92%;
+	height: 500px;
+	/* 영역 넘치면 감춤 */
+	overflow: hidden;
+	position: relative;
+}
+
+#slides {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+#slides>img {
+	width: 100%;
+	height: 100%;
+}
+
+button {
+	position: absolute;
+	/* 이미지 높이에 맞추기 */
+	height: 100%;
+	top: 0;
+	border: none;
+	padding: 20px;
+	background-color: transparent;
+	color: rgb(0, 0, 0, 0);
+	font-weight: 800;
+	font-size: 24px;
+	opacity: 0.5;
+}
+
+#prev {
+	left: 0;
+}
+
+#next {
+	right: 0;
+}
+
+button:hover {
+	background-color: #222;
+	opacity: 0.6;
+	cursor: pointer;
+}
+
+button:focus {
+	outline: 0;
 }
