@@ -31,11 +31,11 @@ public class Post_in_Con extends HttpServlet {
 	    }
 
 	    // 3. PostVO 객체 생성
-	    PostVO newPost = new PostVO(post_title, post_content);
+	    PostVO postin = new PostVO(post_title, post_content);
 
 	    // 4. PostDAO 객체 생성 및 게시글 작성 시도
 	    PostDAO postDAO = new PostDAO();
-	    int result = postDAO.insertpost(newPost);
+	    int result = postDAO.insertpost(postin);
 
 	    if (result > 0) {
 	        // 성공 시 post_main.jsp로 이동
