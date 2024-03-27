@@ -28,6 +28,7 @@ public class LiquorCon extends HttpServlet {
         if (liquorList != null) {
             HttpSession session = request.getSession();
             session.setAttribute("liquorList", liquorList);
+            session.setAttribute("liq_type", liq_type);
         }
         // 리다이렉션: 새로운 URL로 클라이언트에게 이동 요청
         response.sendRedirect("liquor_list.jsp");

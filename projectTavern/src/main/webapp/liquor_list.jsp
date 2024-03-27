@@ -15,8 +15,30 @@
    </div>
    <!-- 메인 -->
    <div class="main">
-      <!-- 주제 -->
-      <div class="title">위스키</div>
+	<%
+	// 세션에서 술의 유형 가져오기
+	String liqType = (String) session.getAttribute("liq_type");
+	%>
+	<!-- 주제 -->
+	<div class="title">
+	    <%-- 술의 유형에 따라 다른 주제 설정 --%>
+	    <% if (liqType != null) {
+	        if (liqType.equals("위스키")) { %>
+	            위스키
+	        <% } else if (liqType.equals("럼")) { %>
+	            럼
+	        <% } else if (liqType.equals("보드카")) { %>
+	            보드카
+	        <% } else if (liqType.equals("리큐르")) { %>
+	            리큐르
+	        <% } else if (liqType.equals("꼬냑")) { %>
+	            꼬냑
+	        <% } else if (liqType.equals("데킬라")) { %>
+	            데킬라
+	        <% } else { %>
+	            기타 주제
+	    <% }} %>
+	</div>
       <!-- 내용 -->
       <div>
          <section>
