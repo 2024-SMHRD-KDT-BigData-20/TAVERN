@@ -11,10 +11,17 @@
 		<%@include file="../layout/header.jsp"%>
 	</div>
 	<div class="main">
-		<h4>
-			<!-- 여기에 위스키나 제목 입력 DB로 가져오기 -->
-		</h4>
-		<a href="writing.jsp">글쓰기</a>
+		<div>
+			<%@include file="layout/left_nav.jsp"%>
+		</div>
+		<div>
+			<h4>
+				<!-- 여기에 위스키나 제목 입력 DB로 가져오기 -->
+			</h4>
+		</div>
+		<div class="writing">
+			<a href="writing.jsp">글쓰기</a>
+		</div>
 		<a href="#">
 			<%
 
@@ -33,5 +40,6 @@
 			</div>
 		</a>
 	</div>
+	<%@include file="layout/footer.jsp"%>
 </body>
 </html>
