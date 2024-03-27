@@ -1,5 +1,7 @@
 package com.smhrd.model;
 
+import java.util.Locale.Category;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -40,6 +42,8 @@ public class PostVO {
     // 글 작성자 
     private String ID;
     
+    // 글 카테고리
+    private Category POST_CATEGORY;
     
     
 }

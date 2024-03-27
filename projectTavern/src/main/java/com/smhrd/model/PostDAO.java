@@ -29,7 +29,18 @@ public class PostDAO {
 			sqlSession.close();
 			return postlist;
 		}// 게시글리스트 끝
-	
+		
+		// 카테고리
+
+		public List<PostVO> postcate(String post_category) {
+			List<PostVO> postcate = null;
+
+			SqlSession sqlSession = sqlSessionFactory.openSession(true);
+			postcate = sqlSession.selectList("com.smhrd.db.PostMapper.postcate", post_category);
+			sqlSession.close();
+
+			return postcate;
+		}// 카테고리 끝
 	
 	
 	

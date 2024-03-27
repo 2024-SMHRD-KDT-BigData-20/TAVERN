@@ -17,5 +17,18 @@
         VALUES (#{POST_TITLE}, #{POST_CONTENT})
     </insert>
     <!-- 게시글 저장 끝 -->
+    
+    
+	<!-- 글 카테고리 -->
+	<select id="postcate" parameterType="String"
+		resultType="PostVO">
+		select post_category from post_info
+	</select>
+	<!-- 글 카테고리 끝 -->    
+    
+    
+    
+    
+    
 
 </mapper>
