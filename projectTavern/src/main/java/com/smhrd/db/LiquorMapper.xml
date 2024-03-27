@@ -7,7 +7,7 @@
 	<!-- 술 이름 -->
 	<select id="liqName" parameterType="String"
 		resultType="LiquorVO">
-		select liq_name as liqName from liquor_info where
+		select liq_name from liquor_info where
 		liq_type=#{liq_type}
 	</select>
 	<!-- 술 이름 -->
@@ -16,7 +16,7 @@
 	<select id="liqAll" parameterType="String" resultType="LiquorVO">
 		select
 		liq_name, liq_category, liq_alcohol, tasty, smell, body, sugar, food,
-		liq_type from liquor_info where liq_name=#{liq_name}
+		liq_type from liquor_info where liq_type=#{liq_type}
 	</select>
 	<!-- 술 상세페이지 -->
 

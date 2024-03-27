@@ -23,15 +23,16 @@ public class LiquorDAO {
 		return liqname;
 	}// 위스키 끝
 
-	// 술정보 찾기
-	public LiquorVO getLiquorDetails(String liqName) {
-		LiquorVO liquorDetails = null;
+	// 술정보
+
+	public List<LiquorVO> liqAll(String liq_type) {
+		List<LiquorVO> liqname = null;
 
 		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		liquorDetails = sqlSession.selectOne("com.smhrd.db.LiquorMapper.liqAll", liqName);
+		liqname = sqlSession.selectList("com.smhrd.db.LiquorMapper.liqAll", liq_type);
 		sqlSession.close();
 
-		return liquorDetails;
-	}
+		return liqname;
+	}// 술정보 끝
 
 }

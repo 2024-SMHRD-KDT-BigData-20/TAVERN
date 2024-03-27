@@ -22,7 +22,7 @@
 				if (liquorDetails != null && !liquorDetails.isEmpty()) {
 					LiquorVO liquor = liquorDetails.get(0); // 리스트의 첫 번째 객체를 가져옴
 				%>
-				<div class="left-side">
+ 				<div class="left-side">
 					<!-- 이미지 표시 (여기서는 이미지 URL이 LiquorVO에 없으므로 생략) -->
 					<img src="images/<%=liquor.getLiq_name()%>.jpg"
 						alt="<%=liquor.getLiq_name()%>" style="width: 100%;">
