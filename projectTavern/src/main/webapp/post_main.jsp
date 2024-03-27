@@ -4,8 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/lequor.css" rel="stylesheet">
-<link href="css/main.css?ver=1" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
 	<div>
@@ -13,8 +12,8 @@
 	</div>
 	<!-- left nav -->
 	<div>
-		<%@include file="layout/left_nav.jsp" %>
-	</div>
+		<%@include file="layout/left_nav.jsp"%>
+	</div>	
 	<!-- main -->
 	<div class="main">
 		<!-- 카드 -->
@@ -116,10 +115,8 @@
 				<p></p>
 			</a>
 		</div>
+		<%@include file="layout/footer.jsp" %>
 		<!-- footer -->
 	</div>
-	<script>
-		
-	</script>
 </body>
 </html>

@@ -4,10 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/left_nav.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<link href="css/left_nav.css?ver=1" rel="stylesheet">
 </head>
 <body>
-
 	<div class="left_nav">
 		<section id="user_info">
 			<div class="My_img">
@@ -38,7 +38,9 @@
 						%>
 					</ol>
 					<br>
-					<div><a href="#">자유</a></div>
+					<div>
+						<a href="#">자유</a>
+					</div>
 				</li>
 			</ul>
 		</div>
