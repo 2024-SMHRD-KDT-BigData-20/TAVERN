@@ -8,13 +8,16 @@
 <meta charset="UTF-8">
 <title>상세페이지</title>
 <link href="css/main.css" rel="stylesheet">
-<link href="css/lequor.css?ver=1" rel="stylesheet">
+<link href="css/liquor.css?ver=1" rel="stylesheet">
 </head>
 <body>
-	<%@include file="../layout/header.jsp"%>
+	<div>
+		<%@include file="../layout/header.jsp"%>
+	</div>
+
 	<!-- 메인 -->
 	<div class="main">
-		<section>
+		<section id="sc">
 			<div class="container">
 				<%
 				List<LiquorVO> liquorDetails = (List<LiquorVO>) session.getAttribute("liquorDetails");
@@ -23,7 +26,7 @@
 				%>
 				<div class="left-side">
 					<!-- 이미지 표시 (여기서는 이미지 URL이 LiquorVO에 없으므로 생략) -->
-					<img src="images/<%=liquor.getLiq_name()%>.jpg" alt="<%=liquor.getLiq_name()%>" style="width: 100%;">
+					<img src="images/<%=liquor.getLiq_name()%>.jpg">
 				</div>
 				<div class="right-side">
 					<!-- 술 정보 표시 -->
@@ -60,12 +63,14 @@
 				}
 				%>
 			</div>
-			<!-- 리뷰 페이지 링크 -->
-			<div class="review">
-				<a href="reviewPage.jsp">리뷰 페이지로 이동</a>
-			</div>
 		</section>
+		<!-- 리뷰 페이지 링크 -->
+		<div class="review">
+			<a href="reviewPage.jsp">리뷰 페이지로 이동</a>
+		</div>
 	</div>
-	<%@include file="../layout/footer.jsp"%>
+	<div>
+		<%@include file="layout/footer.jsp"%>
+	</div>
 </body>
 </html>

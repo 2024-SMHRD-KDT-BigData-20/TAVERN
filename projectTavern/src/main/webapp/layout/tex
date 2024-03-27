@@ -1,59 +1,79 @@
-@charset "UTF-8";
+ alt="<%=liquor.getLiq_name()%>"
+ 
+ 
+ alt="<%=liquorList.get(i).getLiq_name()%>
+ 
+ 
+ 
+ <a href="DetailCon?liq_name=<%=liquor.getLiq_name()%>" class="liquor-item">
+							<div>
+								<img src="images/<%=liquor.getLiq_name()%>.jpg">
+								<!-- 이미지 -->
+								<h3>
+									<%=liquor.getLiq_name()%>
+								</h3>
+								<!-- 술의 이름 -->
+							</div>
+						</a>
+						<%
+						count++; // 카운터 증가
+						} else {
+						break; // 6개를 초과하면 반복문 종료
+						}
+						}
+						} else {
+						System.out.println("Liquor List is null.");
+						}
+						%>
+					</ul>
+					<!-- 더보기 버튼 -->
+					<button id="moreButton">더보기</button>
+					<%
+					for (int i = 6; i < liquorList.size(); i++) {
+					%>
+					<a href="javascript:void(0);" class="liquor-item">
+						<div class="liquor-item hidden" style="display: none">
+							<img src="images/<%=liquorList.get(i).getLiq_name()%>.jpg">
+							<!-- 이미지 -->
+							<h3>
+							<%=liquorList.get(i).getLiq_name()%>
+							</h3>
+							<!-- 술의 이름 -->
+						</div>
+					</a>
+					<%
+					}
+					%>
+					
+					var currentIndex = 0;
 
-.main {
-	float: left;
-	padding: 20px; /* 내부 간격 설정 */
-	margin-left: 250px;
-	box-sizing: border-box;
-}
+		var btn = document.getElementById('moreButton');
+		btn
+				.addEventListener(
+						'click',
+						function() {
+							var hiddenItems = document
+									.querySelectorAll('.hidden'); // '.hidden' 클래스를 가진 모든 요소 선택
+							var maxIndex = currentIndex + 3; // 최대 3개의 추가 요소를 보여주기
+							for (var i = currentIndex; i < maxIndex
+									&& i < hiddenItems.length; i++) {
+								hiddenItems[i].style.display = 'block'; // 숨겨진 요소들을 보이게 설정
+								var liquorName = hiddenItems[i]
+										.querySelector('a').innerText; // 각 술의 이름 가져오기
+								hiddenItems[i].querySelector('a').href = "DetailCon?liq_name="
+										+ encodeURIComponent(liquorName); // 해당 술의 이름을 파라미터로 추가하여 href 속성 설정
+							}
+							currentIndex += 3; // 다음 번 "더보기" 클릭 시 시작할 인덱스 업데이트
 
-/* 좌측 네비게이션 */
-.left_nav {
-	position: fixed;
-	top: 110px; /* 헤더의 높이만큼 아래에 위치 */
-	left: 0;
-	width: 210px; /* 네비게이션의 너비 */
-	height: 100%; /* 높이를 전체 높이에서 헤더의 높이를 뺀 값으로 설정 */
-	overflow-y: auto; /* 내용이 넘칠 경우 스크롤바 표시 */
-	margin-left: 20px;
-	padding: 10px;
-	border: 1px solid gray;
-	border-radius: 0.1%;
-}
+							// "더보기" 버튼을 리스트의 마지막으로 이동
+							if (hiddenItems.length > 0
+									&& currentIndex < hiddenItems.length) {
+								hiddenItems[i - 1].after(btn); // 마지막으로 보여준 요소 바로 뒤에 버튼을 위치시킴
+							}
 
-.My_img>img {
-	border-radius: 50%;
-	width: 150px;
-	height: 150px;
-}
-
-#user_info {
-	position: static;
-	align-items: center;
-	border-bottom: 1px solid gray;
-	padding-bottom: 10px;
-	text-align: center;
-}
-
-.m_link {
-	padding-top: 10px;
-	font-size: 15px;
-}
-
-.s {
-	padding-top: 20px;
-	padding-left: 10px;
-}
-
-.s div {
-	font-size: 20px;
-	padding-bottom: 5px;
-}
-
-.s ol {
-	padding-left: 10px;
-	font-size: 15px;
-}
-.s ol li {
-	margin-top: 10px;
-}
+							// 모든 숨겨진 요소를 보여줬다면, "더보기" 버튼 숨기기
+							if (currentIndex >= hiddenItems.length) {
+								btn.style.display = 'none';
+							}
+						});
+ 
