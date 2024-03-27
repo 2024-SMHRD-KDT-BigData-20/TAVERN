@@ -23,15 +23,24 @@
 			<ul>
 				<div>리뷰</div>
 				<ol>
-					<%
-					for (int i = 0; i < 6; i++) {
-					%>
 					<li>
-						<a href="post_review.jsp"> 위스키 </a>
+						<a href="LiquorCon?liq_type=<%="위스키"%>">위스키</a>
 					</li>
-					<%
-					}
-					%>
+					<li>
+						<a href="LiquorCon?liq_type=<%="럼"%>">럼</a>
+					</li>
+					<li>
+						<a href="LiquorCon?liq_type=<%="보드카"%>">보드카</a>
+					</li>
+					<li>
+						<a href="LiquorCon?liq_type=<%="리큐르"%>">리큐르</a>
+					</li>
+					<li>
+						<a href="LiquorCon?liq_type=<%="꼬냑"%>">꼬냑</a>
+					</li>
+					<li>
+						<a href="LiquorCon?liq_type=<%="데킬라"%>">데킬라</a>
+					</li>
 				</ol>
 				<br>
 				<div>
