@@ -13,9 +13,9 @@
 	
 	<!-- 게시글 저장 -->
 	<insert id="insertpost" parameterType="PostVO">
-    	INSERT INTO post_info(post_title, post_content, post_file, created_at, post_views, post_likes, id)
-		VALUES ('post_title 1', 'post_content 1', 'post_file 1', sysdate, 1, 1, 'id 1');
+	    INSERT INTO post_info (POST_TITLE, POST_CONTENT, POST_FILE, CREATED_AT, ID)
+	    VALUES (#{POST_TITLE}, #{POST_CONTENT}, #{POST_FILE}, sysdate, #{ID})
 	</insert>
-	<!-- 게시판 저장 끝 -->
+	<!-- 게시글 저장 끝 -->
 
 </mapper>
