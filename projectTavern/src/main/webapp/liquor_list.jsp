@@ -34,7 +34,7 @@
                      <img src="images/<%=liquor.getLiq_name()%>.jpg" alt="<%=liquor.getLiq_name()%>" style="width: 100px; height: auto;">
                      <!-- 이미지 -->
                      <h3>
-                        <a href="DetailCon"><%=liquor.getLiq_name()%></a>
+                        <a href="DetailCon?liq_name=<%=liquor.getLiq_name()%>"><%=liquor.getLiq_name()%></a>
                      </h3>
                      <!-- 술의 이름 -->
                   </div>
@@ -132,6 +132,8 @@
                for (var i = currentIndex; i < maxIndex
                      && i < hiddenItems.length; i++) {
                   hiddenItems[i].style.display = 'block'; // 숨겨진 요소들을 보이게 설정
+                  var liquorName = hiddenItems[i].querySelector('a').innerText; // 각 술의 이름 가져오기
+                  hiddenItems[i].querySelector('a').href = "DetailCon?liq_name=" + encodeURIComponent(liquorName); // 해당 술의 이름을 파라미터로 추가하여 href 속성 설정
                }
                currentIndex += 3; // 다음 번 "더보기" 클릭 시 시작할 인덱스 업데이트
 
