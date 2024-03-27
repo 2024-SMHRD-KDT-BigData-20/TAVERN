@@ -39,7 +39,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 
 	});
-
+	function idCheck() {
+		let url = "idcheck.jsp?id=" + document.frm.id.value;
+		window.open(url, "_blank_1", "toolbar=no, menubar=no, scrollbars=yes, resizable=no, width=450, height=200");
+	}
 
 
 	// 비밀번호 : 6글자 이상 입력

@@ -83,6 +83,6 @@
 		</form>
 	</div>
 	<script src="js/member.js"></script>
-	<script src="js/pw.js"></script>
+	<script src="js/pw.js" type="text/javascript"></script>
 </body>
 </html>

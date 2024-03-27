@@ -20,16 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
 	if (updateCloseBtn) {
 		updateCloseBtn.addEventListener('click', function() {
 			document.getElementById('Update').style.display = 'none';
-			document.getElementById('mypage').style.display = 'block'
+			document.getElementById('mypage').style.display = 'block';
 		});
 	}
 	
 	// X버튼 클릭시 회원가입 폼 닫기
-	let joinCloseBtn = document.querySelector("#Update .close_btn");
+	let joinCloseBtn = document.querySelector("#Join .close_btn");
 	if (joinCloseBtn) {
 		joinCloseBtn.addEventListener('click', function() {
 			document.getElementById('Join').style.display = 'none';
-			document.getElementById('mypage').style.display = 'block'
 		});
 	}
 	
