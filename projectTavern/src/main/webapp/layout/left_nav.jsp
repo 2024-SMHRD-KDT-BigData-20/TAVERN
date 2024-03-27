@@ -4,7 +4,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="css/main.css" rel="stylesheet">
 <link href="css/left_nav.css?ver=1" rel="stylesheet">
 </head>
 <body>
@@ -28,9 +27,7 @@
 					for (int i = 0; i < 6; i++) {
 					%>
 					<li>
-						<a href="post_list_<%=i + 1%>.jsp">
-							위스키
-							<%=i + 1%></a>
+						<a href="post_review.jsp"> 위스키 </a>
 					</li>
 					<%
 					}

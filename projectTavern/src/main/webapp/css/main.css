@@ -4,7 +4,8 @@
 	margin: 0;
 	padding: 0;
 }
-.main{
+
+.main {
 	width: 100%;
 	height: auto;
 }
@@ -74,12 +75,16 @@
 	right: 0;
 }
 
-button:hover {
+.bt:hover {
 	background-color: #222;
 	opacity: 0.6;
 	cursor: pointer;
 }
 
-button:focus {
+.bt:focus {
 	outline: 0;
+}
+
+.main>h4 {
+	font-size: 50px;
 }

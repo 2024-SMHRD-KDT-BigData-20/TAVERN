@@ -18,23 +18,32 @@
 			<%@include file="layout/left_nav.jsp"%>
 		</div>
 		<!-- 카드 -->
+		<%
+		for (int i = 0; i < 6; i++) {
+		%>
 		<div class="card">
-			<h3>
-				<a href="#">술카테고리</a>
-			</h3>
-			<a class="list">
-				<p></p>
-			</a>
-			<a class="list">
-				<p></p>
-			</a>
-			<a class="list">
-				<p></p>
+			<a href="post_review.jsp">
+				<div class="title">
+					<div>
+						<h3>카테고리</h3>
+					</div>
+					<%
+					for (int j = 0; j < 3; j++) {
+					%>
+					<div>
+						<p>각 카테고리별 제목</p>
+					</div>
+					<%
+					}
+					%>
+				</div>
 			</a>
 		</div>
-
-		<!-- footer -->
+		<%
+		}
+		%>
 	</div>
+	<!-- footer -->
 	<%@include file="layout/footer.jsp"%>
 </body>
 </html>
