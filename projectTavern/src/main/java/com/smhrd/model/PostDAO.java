@@ -11,14 +11,14 @@ public class PostDAO {
 	// DB에서 연결고리를 만들어 놓고 가져다 쓸 수 있게 sqlSession생성
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	
-	// 글작성저장
-	public int insertpost(PostVO postin) {
-		int cnt = 0;
-		SqlSession sqlSession = sqlSessionFactory.openSession(true);
-		cnt = sqlSession.insert("com.smhrd.db.PostMapper.insertpost", postin);
-		sqlSession.close();
-		return cnt;
-	}// 글작성저장 끝
+	// 글 작성 저장
+    public int insertpost(PostVO postin) {
+        int cnt = 0;
+        try (SqlSession sqlSession = sqlSessionFactory.openSession(true)) {
+            cnt = sqlSession.insert("com.smhrd.db.PostMapper.insertpost", postin);
+        }
+        return cnt;
+    } // 글 작성 저장 끝
 	
 	// 게시글리스트 구현
 		public List<PostVO> selectAll(){
