@@ -52,7 +52,7 @@
 	height: 100%;
 }
 
-button {
+.button {
 	position: absolute;
 	/* 이미지 높이에 맞추기 */
 	height: 100%;
