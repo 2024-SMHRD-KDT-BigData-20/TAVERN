@@ -11,6 +11,7 @@
 	<typeAliases>
 		<typeAlias type="com.smhrd.model.MemberVO" alias="MemberVO"/>
 		<typeAlias type="com.smhrd.model.LiquorVO" alias="LiquorVO"/>
+		<typeAlias type="com.smhrd.model.PostVO" alias="PostVO"/>
 	</typeAliases>
 
   <environments default="development">
@@ -28,5 +29,6 @@
   <!-- SQL문을 JAVA파일과 별도 관리 (기능별로 파일 추가하면 됨, mapper태그 추가)-->
     <mapper resource="com/smhrd/db/MemberMapper.xml"/>
     <mapper resource="com/smhrd/db/LiquorMapper.xml"/>
+    <mapper resource="com/smhrd/db/PostMapper.xml"/>
   </mappers>
 </configuration>

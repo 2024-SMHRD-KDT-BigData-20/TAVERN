@@ -12,10 +12,10 @@
 	<!-- 게시판 리스트 끝 -->
 	
 	<!-- 게시글 저장 -->
-	<insert id="insertpost" parameterType="PostVO">
-	    INSERT INTO post_info (POST_TITLE, POST_CONTENT, POST_FILE, CREATED_AT, ID)
-	    VALUES (#{POST_TITLE}, #{POST_CONTENT}, #{POST_FILE}, sysdate, #{ID})
-	</insert>
-	<!-- 게시글 저장 끝 -->
+    <insert id="insertpost" parameterType="com.smhrd.model.PostVO">
+        INSERT INTO post_info
+        VALUES (#{POST_TITLE}, #{POST_CONTENT}, #{POST_FILE}, sysdate, #{ID})
+    </insert>
+    <!-- 게시글 저장 끝 -->
 
 </mapper>
