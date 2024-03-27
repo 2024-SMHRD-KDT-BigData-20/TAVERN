@@ -18,8 +18,8 @@ public class Post_in_Con extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 	    // 1. 파라미터 수집
-	    String post_title = request.getParameter("post_title");
-	    String post_content = request.getParameter("post_content");
+	    String post_title = request.getParameter("title");
+	    String post_content = request.getParameter("content");
 	    // 나머지 파라미터(post_index, post_file, created_at, post_views, post_likes, id)는 자동으로 증가되는 값이거나 사용자 입력이 아니므로 수집하지 않음.
 
 	    // 2. post_title이 비어있는지 확인
