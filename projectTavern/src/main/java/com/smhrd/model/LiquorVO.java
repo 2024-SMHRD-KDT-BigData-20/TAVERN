@@ -1,14 +1,16 @@
 package com.smhrd.model;
 
+import java.math.BigDecimal;
+
 public class LiquorVO {
 	private String liq_idx;
 	private String liq_name;
 	private String liq_category;
-	private String liq_alcohol;
+	private BigDecimal liq_alcohol;
 	private String tasty;
 	private String smell;
 	private String body;
-	private String sugar;
+	private BigDecimal sugar;
 	private String food;
 	private String liq_type;
 
@@ -24,7 +26,7 @@ public class LiquorVO {
 		return liq_category;
 	}
 
-	public String getLiq_alcohol() {
+	public BigDecimal getLiq_alcohol() {
 		return liq_alcohol;
 	}
 
@@ -40,7 +42,7 @@ public class LiquorVO {
 		return body;
 	}
 
-	public String getSugar() {
+	public BigDecimal getSugar() {
 		return sugar;
 	}
 
@@ -62,8 +64,8 @@ public class LiquorVO {
 		this.liq_name = liq_name;
 	}
 
-	public LiquorVO(String liq_name, String liq_category, String liq_alcohol, String tasty,
-			String smell, String body, String sugar, String food, String liq_type) {
+	public LiquorVO(String liq_name, String liq_category, BigDecimal liq_alcohol, String tasty,
+			String smell, String body, BigDecimal sugar, String food, String liq_type) {
 		this.liq_name = liq_name;
 		this.liq_category = liq_category;
 		this.liq_alcohol = liq_alcohol;

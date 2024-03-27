@@ -34,6 +34,6 @@ public class DetailCon extends HttpServlet {
 		session.setAttribute("liquorDetails", liquor);
 
 		// 상세 페이지로 리다이렉트
-		response.sendRedirect("detail_page.jsp");
+		response.sendRedirect("liquor_list_1.jsp");
 	}
 }
