@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import com.smhrd.model.LiquorDAO;
 import com.smhrd.model.LiquorVO;
 
-@WebServlet("/LiquorCon") // 이 서블릿이 "/LiquorCon" URL에 매핑됨
+
 public class LiquorCon extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
