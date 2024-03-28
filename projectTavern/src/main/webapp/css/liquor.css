@@ -6,6 +6,11 @@
 	height: auto;
 }
 
+.title {	
+	padding-left: 20px;
+	border-bottom: solid 1px black;
+}
+
 /* 정보 메인페이지 스타일 */
 #pt {
 	display: flex;
@@ -13,6 +18,12 @@
 
 #pt>img {
 	margin-right: 30px;
+}
+
+.o {
+	padding-top: 30px;
+	display: flex;
+	text-align: center;
 }
 
 .card {
@@ -28,6 +39,7 @@
 	display: flex; /* 가로로 배열 */
 	flex-wrap: wrap; /* 필요시 줄 바꿈 */
 	justify-content: space-between; /* 요소들 사이의 간격을 최대한 벌리기 */
+	width: 1443.24px;
 }
 
 /* liquor-item의 스타일 */
@@ -67,4 +79,5 @@
 
 .review {
 	float: right;
+	background: none;
 }

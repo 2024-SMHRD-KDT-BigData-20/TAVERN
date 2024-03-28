@@ -47,8 +47,9 @@ public class LoginCon extends HttpServlet {
 			// 실패
 			// 실패 메시지를 request에 설정
 			request.setAttribute("message", "로그인에 실패했습니다. 아이디 또는 비밀번호를 확인해주세요.");
-			// 리다이렉트로 인해 실패 메시지가 유지되지 않도록, forward를 사용하여 이전 페이지로 이동
+			// 로그인 페이지로 다시 포워딩하여 실패 메시지를 보여줍니다.
 			request.getRequestDispatcher("main.jsp").forward(request, response);
 		}
+
 	}
 }

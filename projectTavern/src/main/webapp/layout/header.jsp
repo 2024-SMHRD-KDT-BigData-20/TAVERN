@@ -20,6 +20,18 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 </head>
 
 <body>
+
+	<%
+	String message = (String) request.getAttribute("message");
+	if (message != null && !message.isEmpty()) {
+	%>
+	<script>
+            alert("<%=message%>
+		");
+	</script>
+	<%
+	}
+	%>
 	<!-- header -->
 	<div class="header alt">
 		<div class="left-icon">
@@ -63,26 +75,43 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 						</ul>
 					</li>
 					<li>
-						<a href="post_main.jsp">
-							커뮤니티<span>🔻</span>
-						</a>
-						<ul>
-							<li>
-								<a href="post_review.jsp">리뷰</a>
-							</li>
-							<li>
-								<a href="post_free.jsp">자유</a>
-							</li>
-						</ul>
+						<c:choose>
+							<c:when test="${empty loginMember }">
+								<a href="#" onclick="alertLogin()">
+									커뮤니티<span>🔻</span>
+								</a>
+								<ul>
+									<li>
+										<a href="#" onclick="alertLogin()">리뷰</a>
+									</li>
+									<li>
+										<a href="#" onclick="alertLogin()">자유</a>
+									</li>
+								</ul>
+							</c:when>
+							<c:otherwise>
+								<a href="post_main.jsp">
+									커뮤니티<span>🔻</span>
+								</a>
+								<ul>
+									<li>
+										<a href="post_review.jsp">리뷰</a>
+									</li>
+									<li>
+										<a href="post_free.jsp">자유</a>
+									</li>
+								</ul>
+							</c:otherwise>
+						</c:choose>
 					<li>
 						<a href="event.jsp">소식</a>
 					</li>
 					<li>
 						<a href="inquiry.jsp">문의하기</a>
 					</li>
-					</li>
-				</ul>
 
+
+				</ul>
 			</nav>
 		</div>
 		<!-- 로그인 아이콘 -->
@@ -105,7 +134,6 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background: new 0 0 512 512;" xml:space="preserve" width="25px" height="25px">
 								<path d="M487.06,195.669l-82.752-82.752c-8.475-8.185-21.98-7.95-30.165,0.525c-7.985,8.267-7.985,21.374,0,29.641l82.752,82.752   c2.459,2.507,4.607,5.301,6.4,8.32c-0.32,0-0.576-0.171-0.896-0.171l0,0l-334.592,0.683c-11.782,0-21.333,9.551-21.333,21.333   c0,11.782,9.551,21.333,21.333,21.333l0,0l334.464-0.683c0.597,0,1.088-0.299,1.664-0.341c-1.892,3.609-4.292,6.928-7.125,9.856   l-82.752,82.752c-8.475,8.185-8.71,21.69-0.525,30.165c8.185,8.475,21.69,8.71,30.165,0.525c0.178-0.172,0.353-0.347,0.525-0.525   l82.752-82.752c33.313-33.323,33.313-87.339,0-120.661L487.06,195.669z" />
 								<path d="M149.374,469.333h-42.667c-35.346,0-64-28.654-64-64V106.667c0-35.346,28.654-64,64-64h42.667   c11.782,0,21.333-9.551,21.333-21.333S161.157,0,149.374,0h-42.667C47.827,0.071,0.112,47.786,0.041,106.667v298.667   C0.112,464.214,47.827,511.93,106.708,512h42.667c11.782,0,21.333-9.551,21.333-21.333   C170.708,478.885,161.157,469.333,149.374,469.333z" />
-					
 					
 					
 					

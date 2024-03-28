@@ -10,7 +10,7 @@
 	<div class="left_nav">
 		<section id="user_info">
 			<div class="My_img">
-				<img alt="프로필사진" src="img/gohom.jpg">
+				<img alt="프로필사진" src="img/user.png">
 			</div>
 			<div>${loginMember.nick }님</div>
 			<div class="m_link">
