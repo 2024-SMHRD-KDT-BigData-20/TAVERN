@@ -9,7 +9,7 @@
 <link href="css/post.css" rel="stylesheet">
 </head>
 <body>
-	<div>
+	<div> 
 		<%@include file="../layout/header.jsp"%>
 	</div>
 	<div class="main" style="height: 600px">

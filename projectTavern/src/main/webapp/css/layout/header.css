@@ -20,6 +20,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	background-color: lightgray;
 	font-family: tk;
 }
 
@@ -38,6 +39,7 @@ ul, li, ol {
 	display: flex;
 	flex-direction: column;
 	scroll-behavior: smooth;
+	background-color: #e6decf;
 	padding: 0 30px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -56,6 +58,7 @@ ul, li, ol {
 	left: 0;
 	width: 98%;
 	height: 100px;
+	background-color: lightgray;
 	margin-left: 20px;
 	border-bottom: 1px solid rgba(44, 45, 42, 0.25);
 }
@@ -131,8 +134,8 @@ ul, li, ol {
 #topMenu ul {
 	display: none; /* 서브 메뉴는 초기에는 숨깁니다 */
 	position: absolute; /* 절대 위치로 설정하여 부모 요소에 상대적으로 배치합니다 */
-	padding: 20px; /* 서브 메뉴의 여백을 추가합니다 */
-	background-color: white;
+	background-color: lightgray; /* 서브 메뉴의 배경색을 설정합니다 */
+	padding: 10px; /* 서브 메뉴의 여백을 추가합니다 */
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
