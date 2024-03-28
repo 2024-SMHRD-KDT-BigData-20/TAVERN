@@ -1,5 +1,6 @@
 package com.smhrd.model;
 
+import java.math.BigDecimal;
 import java.util.Locale.Category;
 
 import lombok.AllArgsConstructor;
@@ -17,7 +18,7 @@ import lombok.NonNull;
 public class PostVO {
 	
 	// 글 식별자
-    private Double POST_IDX;
+    private BigDecimal POST_IDX;
 
     // 글 제목
     @NonNull
@@ -34,16 +35,16 @@ public class PostVO {
     private String CREATED_AT;
 
     // 글 조회수 
-    private Double POST_VIEWS;
+    private BigDecimal POST_VIEWS;
 
     // 글 좋아요수 
-    private Double POST_LIKES;
+    private BigDecimal POST_LIKES;
 
     // 글 작성자 
     private String ID;
     
     // 글 카테고리
-    private Category POST_CATEGORY;
+    private String POST_CATEGORY;
     
     
 }
