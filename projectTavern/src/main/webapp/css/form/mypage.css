@@ -1,13 +1,39 @@
 @charset "UTF-8";
 
 /* 마이페이지 */
+
 #mypage {
-	display: none; /* 초기에는 숨김 */
-	position: fixed;
-	top: 0%;
-	right: 0%;
-	width: 600px;
-	height: 100%;
-	z-index: 1001;
-	text-align: center;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+#mypage .close_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#mypage h1 {
+    margin-bottom: 20px;
+}
+
+#mypage div {
+    margin-bottom: 15px;
+}
+
+#mypage a {
+    color: #007bff;
+}
+
+#mypage a:hover {
+    text-decoration: underline;
 }

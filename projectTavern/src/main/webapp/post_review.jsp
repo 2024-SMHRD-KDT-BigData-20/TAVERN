@@ -12,7 +12,7 @@
 	<div>
 		<%@include file="../layout/header.jsp"%>
 	</div>
-	<div class="main">
+	<div class="main" style="height: 600px">
 		<div>
 			<%@include file="layout/left_nav.jsp"%>
 		</div>

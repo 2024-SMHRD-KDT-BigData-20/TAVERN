@@ -11,10 +11,12 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 <head>
 <meta charset="UTF-8">
 <title>헤더</title>
-<link rel="stylesheet" type="text/css" href="css/form/login.css?ver=1">
 <link rel="stylesheet" type="text/css" href="css/form/mypage.css?ver=1">
 <link rel="stylesheet" type="text/css" href="css/form/join.css?ver=1">
+<link rel="stylesheet" type="text/css" href="css/form/update.css">
+<link rel="stylesheet" type="text/css" href="css/form/login.css">
 <link rel="stylesheet" type="text/css" href="css/layout/header.css">
+
 </head>
 
 <body>
@@ -104,6 +106,9 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 								<path d="M487.06,195.669l-82.752-82.752c-8.475-8.185-21.98-7.95-30.165,0.525c-7.985,8.267-7.985,21.374,0,29.641l82.752,82.752   c2.459,2.507,4.607,5.301,6.4,8.32c-0.32,0-0.576-0.171-0.896-0.171l0,0l-334.592,0.683c-11.782,0-21.333,9.551-21.333,21.333   c0,11.782,9.551,21.333,21.333,21.333l0,0l334.464-0.683c0.597,0,1.088-0.299,1.664-0.341c-1.892,3.609-4.292,6.928-7.125,9.856   l-82.752,82.752c-8.475,8.185-8.71,21.69-0.525,30.165c8.185,8.475,21.69,8.71,30.165,0.525c0.178-0.172,0.353-0.347,0.525-0.525   l82.752-82.752c33.313-33.323,33.313-87.339,0-120.661L487.06,195.669z" />
 								<path d="M149.374,469.333h-42.667c-35.346,0-64-28.654-64-64V106.667c0-35.346,28.654-64,64-64h42.667   c11.782,0,21.333-9.551,21.333-21.333S161.157,0,149.374,0h-42.667C47.827,0.071,0.112,47.786,0.041,106.667v298.667   C0.112,464.214,47.827,511.93,106.708,512h42.667c11.782,0,21.333-9.551,21.333-21.333   C170.708,478.885,161.157,469.333,149.374,469.333z" />
 					
+					
+					
+					
 					</a>
 				</c:otherwise>
 			</c:choose>
@@ -131,8 +136,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<div id="join_btn">
 				<button onclick=" location.href='#Join' " class="join-link">회원가입</button>
 			</div>
-			<div>
-				<a href="find.jsp">아이디/비밀번호 찾기</a>
+			<div id="find_btn">
+				<a href="find.jsp" class="find_link">아이디/비밀번호 찾기</a>
 			</div>
 		</div>
 	</nav>
@@ -141,7 +146,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 	<nav id="mypage" class="mypage-form">
 		<span class="close_btn">×</span>
 		<div>
-			<h4>마이페이지</h4>
+			<h1>마이페이지</h1>
 			<div>id = ${loginMember.id}</div>
 			<div>nick = ${loginMember.nick}</div>
 		</div>
@@ -164,7 +169,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 	<nav id="Update" class="update-form">
 		<span class="close_btn">×</span>
 		<li>
-			<h5>회원정보수정</h5>
+			<h1>회원정보수정</h1>
 		</li>
 		<form action="UpdateCon" method="post">
 			<input type="hidden" value="보낼값" name="name값">
@@ -172,24 +177,25 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<div>
 				<div class="text_box">
 					<label class="form_label">새로운 비밀번호</label>
-					<input type="password" id="user_pw" name="pw" placeholder="비밀번호">
+					<input type="password" id="up_pw" name="pw" placeholder="비밀번호">
 				</div>
-				<div class="pw error_box" id="pw_error">6글자 이상 입력해주세요</div>
+				<div class="pw error_box" id="u_pw_error">6글자 이상 입력해주세요</div>
 			</div>
 			<!-- 비밀번호 확인 -->
-			<div>
+			<div>	
 				<div class="text_box">
 					<label class="form_label">비밀번호 재입력</label>
-					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인">
+					<input type="password" id="up_re_pw" name="re_pw" placeholder="비밀번호 확인">
 				</div>
-				<div class="re_pw error_box" id="re_pw_error">비밀번호가 일치하지 않습니다</div>
+				<div class="re_pw error_box" id="u_re_pw_error">비밀번호가 일치하지 않습니다</div>
 			</div>
 			<div>이름 Name : ${loginMember.name }</div>
 			<!-- 닉네임 변경 -->
 			<div>
 				<div class="text_box">
+					<label class="form_label">닉네임 입력</label>
 					<input type="text" id="user_nick" name="nick" placeholder="새로운 닉네임을 입력하세요">
-					<label class="form_label">새로운 닉네임</label>
+
 				</div>
 				<div class="error_box"></div>
 			</div>
@@ -210,56 +216,56 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		<form id="joinForm" action="JoinCon" method="post" name="frm">
 			<span class="close_btn">×</span>
 			<!-- 회원정보 입력 타이틀 -->
-			<div class="title">회원가입</div>
+			<div class="title"><h1>회원가입</h1></div>
 			<!-- 회원 아이디 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="text" id="user_id" name="id" placeholder="아이디">
 					<label class="form_label">아이디</label>
+					<input type="text" id="user_id" name="id" placeholder="아이디">
 				</div>
 				<div class="id error_box" id="id_error">영문자 혹은 영문자와 숫자를 포함해서 만들어주세요</div>
 			</div>
 			<!-- 비밀번호 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="password" id="user_pw" name="pw" placeholder="비밀번호">
 					<label class="form_label">비밀번호</label>
+					<input type="password" id="user_pw" name="pw" placeholder="비밀번호">
 				</div>
 				<div class="pw error_box" id="pw_error">6글자 이상 입력해주세요</div>
 			</div>
 			<!-- 비밀번호 확인 -->
 			<div>
 				<div class="text_box">
-					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인">
 					<label class="form_label">비밀번호 재입력</label>
+					<input type="password" id="user_re_pw" name="re_pw" placeholder="비밀번호 확인">
 				</div>
 				<div class="re_pw error_box" id="re_pw_error">비밀번호가 일치하지 않습니다</div>
 			</div>
 			<!-- 이름 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="text" id="user_name" name="name" placeholder="이름을 입력하세요">
 					<label class="form_label">이름</label>
+					<input type="text" id="user_name" name="name" placeholder="이름을 입력하세요">
 				</div>
 			</div>
 			<!-- 닉네임 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="text" id="user_nick" name="nick" placeholder="닉네임을 입력하세요">
 					<label class="form_lavel">닉네임</label>
+					<input type="text" id="user_nick" name="nick" placeholder="닉네임을 입력하세요">
 				</div>
 			</div>
 			<!-- 생년월일 양식에 맞게 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="text" id="user_date" name="birthdate" placeholder="생년월일을 입력하세요">
 					<label class="form_lavel">생년월일 ex)20011203</label>
+					<input type="text" id="user_date" name="birthdate" placeholder="생년월일을 입력하세요">
 				</div>
 				<div class="date error_box" id="date_error_box">양식에 맞게 써주세요</div>
 			</div>
 			<!-- 성별 선택 -->
 			<div>
-				<div>
+				<div class="text_box">
 					<label for="gender">성별</label> <select name="gender" id="gender">
 						<option value="0">남성</option>
 						<option value="1">여성</option>
@@ -269,8 +275,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<!-- 이메일 형식으로 입력 -->
 			<div>
 				<div class="text_box">
-					<input type="email" id="email" name="email" placeholder="이메일형식으로 입력하세요">
 					<label for="email">이메일 입력: </label>
+					<input type="email" id="email" name="email" placeholder="이메일형식으로 입력하세요">
 				</div>
 				<div class="error_box">이메일 양식에 맞게 해주세요</div>
 			</div>
@@ -303,7 +309,8 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		
 	</script>
 	<script src="js/header.js" type="text/javascript"></script>
-	<script src="js/pw.js" type="text/javascript"></script>
+	<script src="js/update.js" type="text/javascript"></script>
+	<script src="js/join.js" type="text/javascript"></script>
 
 </body>
 

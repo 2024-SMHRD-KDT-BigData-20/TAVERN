@@ -20,7 +20,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: lightgray;
 	font-family: tk;
 }
 
@@ -39,7 +38,6 @@ ul, li, ol {
 	display: flex;
 	flex-direction: column;
 	scroll-behavior: smooth;
-	background-color: #e6decf;
 	padding: 0 30px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -58,7 +56,6 @@ ul, li, ol {
 	left: 0;
 	width: 98%;
 	height: 100px;
-	background-color: lightgray;
 	margin-left: 20px;
 	border-bottom: 1px solid rgba(44, 45, 42, 0.25);
 }
@@ -68,50 +65,17 @@ ul, li, ol {
 	display: flex;
 	align-items: center;
 }
-/* 로그인 */
+
 .link {
 	float: right;
 	display: flex;
 	align-items: center;
 	margin-left: auto; /* 나머지 공간을 로그인에 맡김 */
+	padding: 20px;
 }
 
-#login {
-	display: none;
-	position: fixed;
-	top: 0; /* 상단에 고정 */
-	right: 0px; /* 오른쪽에 고정 */
-	width: 600px; /* 폼의 너비 */
-	height: 100%; /* 전체 높이 */
-	z-index: 1001; /* 헤더보다 높은 z-index */
-}
-
-/* 정보수정 */
-#Update {
-	display: none; /* 초기에는 숨김 */
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 10px;
-}
-
-#Join {
-	display: none; /* 초기에는 숨김 */
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	border-radius: 10px;
-	z-index: 1001;
-}
-
-/* 에러 메시지 */
-.error_box {
-	display: none;
-	color: red;
-	font-size: 14px;
-	margin-top: 5px;
+.login-link, .mypage-link, .logout-link {
+	padding: 10px;
 }
 
 /* 헤더 영역 스타일링 */
@@ -167,8 +131,7 @@ ul, li, ol {
 #topMenu ul {
 	display: none; /* 서브 메뉴는 초기에는 숨깁니다 */
 	position: absolute; /* 절대 위치로 설정하여 부모 요소에 상대적으로 배치합니다 */
-	background-color: lightgray; /* 서브 메뉴의 배경색을 설정합니다 */
-	padding: 10px; /* 서브 메뉴의 여백을 추가합니다 */
+	padding: 20px; /* 서브 메뉴의 여백을 추가합니다 */
 }
 
 #topMenu li:hover>ul {

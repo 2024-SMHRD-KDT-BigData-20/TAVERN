@@ -6,12 +6,10 @@
 	position: absolute;
 	margin-left: 20px;
 	left: 0px;
-	top: 110px;
 	width: 200px;
-	height: 100%;
+	height: auto;
 	border: solid 1px rgb(45, 45, 42, 0.25);
 	border-radius: 0.1%;
-	top: 110px;
 }
 
 #user_info {
