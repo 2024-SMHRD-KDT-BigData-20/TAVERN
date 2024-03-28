@@ -1,6 +1,7 @@
 package com.smhrd.model;
 
 import java.math.BigDecimal;
+import java.sql.Date;
 import java.util.Locale.Category;
 
 import lombok.AllArgsConstructor;
@@ -80,6 +81,11 @@ public class PostVO {
 
 	public void setPOST_CATEGORY(String pOST_CATEGORY) {
 		POST_CATEGORY = pOST_CATEGORY;
+	}
+
+	public void setCREATED_AT(Date createdAt) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

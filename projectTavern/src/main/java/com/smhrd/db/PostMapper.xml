@@ -13,8 +13,8 @@
 	
 	<!-- 게시글 저장 -->
 	<insert id="insertpost" parameterType="com.smhrd.model.PostVO">
-	    INSERT INTO post_info (post_title, post_content, id, post_category)
-	    VALUES (#{POST_TITLE}, #{POST_CONTENT}, #{ID}, #{POST_CATEGORY})
+	    INSERT INTO post_info (post_title, post_content, created_at, id, post_category)
+	    VALUES (#{POST_TITLE}, #{POST_CONTENT}, sysdate, #{ID}, #{POST_CATEGORY})
 	</insert>
     <!-- 게시글 저장 끝 -->
     

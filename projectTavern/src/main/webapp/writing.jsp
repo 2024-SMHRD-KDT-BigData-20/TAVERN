@@ -35,7 +35,7 @@ request.setCharacterEncoding("UTF-8");
 				</tr>
 				<tr>
 					<td>작성자</td>
-					<td><input type="text" name="writer"></td>
+					<td><input type="text" name="writer" value=${loginMember.name } readonly="readonly"></td>
 				</tr>
 				<tr>
 					<td>카테고리</td>
