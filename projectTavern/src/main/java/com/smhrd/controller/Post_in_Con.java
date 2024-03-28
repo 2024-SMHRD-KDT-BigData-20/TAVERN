@@ -60,7 +60,7 @@ public class Post_in_Con extends HttpServlet {
 
         if (result > 0) {
             // 성공 시 post_main.jsp로 이동
-            response.sendRedirect("post_main.jsp");
+            response.sendRedirect("post_review.jsp");
         } else {
             // 실패 시 알림창 출력 후 이전 페이지로 이동
             response.setContentType("text/html; charset=UTF-8");

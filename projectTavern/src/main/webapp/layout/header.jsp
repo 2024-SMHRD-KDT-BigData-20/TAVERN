@@ -26,8 +26,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 	if (message != null && !message.isEmpty()) {
 	%>
 	<script>
-            alert("<%=message%>
-		");
+            alert(<%=message%>);
 	</script>
 	<%
 	}

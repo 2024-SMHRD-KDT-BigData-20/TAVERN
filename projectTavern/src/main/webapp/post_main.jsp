@@ -29,7 +29,6 @@
 					<h3>카테고리</h3>
 				</div>
 				<%
-				for (int j = 0; j < 3; j++) {
 						    List<PostVO> postList = (List<PostVO>)request.getAttribute("postList"); // 서블릿에서 받아온 게시글 목록
 						    for (PostVO post : postList) { 
 						%>
@@ -50,9 +49,6 @@
 						        </div>
 						</div>
 						<% } %>
-				<%
-				}
-				%>
 			</div>
 		</div>
 		<%

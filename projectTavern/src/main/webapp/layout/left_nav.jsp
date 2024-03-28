@@ -14,7 +14,7 @@
 			</div>
 			<div>${loginMember.nick }님</div>
 			<div class="m_link">
-				<a href="#mypage">마이페이지</a>
+				<a href="#" onclick="showMyPage()">마이페이지</a>
 				/
 				<a href="LogoutCon">로그아웃</a>
 			</div>
@@ -49,6 +49,21 @@
 			</ul>
 		</div>
 	</div>
+	<script type="text/javascript">
+		// 마이페이지 링크를 클릭했을 때 실행되는 함수
+		function showMyPage() {
+			// 마이페이지 폼을 포함하는 header.jsp의 ID인 mypage를 가져옴
+			var mypageForm = document.getElementById("mypage");
+
+			// 만약 마이페이지 폼이 숨겨져 있다면 보이도록 변경하고, 그렇지 않으면 숨김
+			if (mypageForm.style.display === "none"
+					|| mypageForm.style.display === "") {
+				mypageForm.style.display = "block";
+			} else {
+				mypageForm.style.display = "none";
+			}
+		}
+	</script>
 
 </body>
 </html>
