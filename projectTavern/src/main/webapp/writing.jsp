@@ -15,6 +15,10 @@ request.setCharacterEncoding("UTF-8");
 	<div>
 		<%@include file="layout/header.jsp"%>
 	</div>
+	<%
+	// 세션에서 술의 유형 가져오기
+	String liqType = (String) session.getAttribute("liq_type");
+	%>
 	<div class="main">
 		<div>
 			<%@include file="layout/left_nav.jsp"%>
@@ -23,7 +27,7 @@ request.setCharacterEncoding("UTF-8");
 		<form action="Post_in_Con" method="post">
 			<table>
 				<!-- 여기에 텍스트 입력인데 자동으로 세션에 저장된 유저 닉을 데베에 저장 -->
-				
+
 				<!-- 술 테이블에서 카테고리 뽑아가지고 저장 -->
 				<tr>
 					<td>제목</td>
@@ -39,7 +43,7 @@ request.setCharacterEncoding("UTF-8");
 				</tr>
 				<tr>
 					<td>카테고리</td>
-					<td><input type="text" name="category"></td>
+					<td><input type="text" name="category" value=<%= session.getAttribute("liq_type") %> readonly="readonly"></td>
 				</tr>
 				<tr>
 					<td colspan="2">
