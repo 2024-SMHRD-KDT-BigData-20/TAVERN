@@ -25,7 +25,7 @@
 		<div class="cate">
 			<h4>
 				<!-- 여기에 위스키나 제목 입력 DB로 가져오기 -->
-				 <%= liqType %>	
+				 <%= session.getAttribute("liq_type") %>
 			</h4>
 		</div>
 		<div>
