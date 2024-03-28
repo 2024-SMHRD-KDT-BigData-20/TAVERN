@@ -107,8 +107,6 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 								<path d="M149.374,469.333h-42.667c-35.346,0-64-28.654-64-64V106.667c0-35.346,28.654-64,64-64h42.667   c11.782,0,21.333-9.551,21.333-21.333S161.157,0,149.374,0h-42.667C47.827,0.071,0.112,47.786,0.041,106.667v298.667   C0.112,464.214,47.827,511.93,106.708,512h42.667c11.782,0,21.333-9.551,21.333-21.333   C170.708,478.885,161.157,469.333,149.374,469.333z" />
 					
 					
-					
-					
 					</a>
 				</c:otherwise>
 			</c:choose>
@@ -182,7 +180,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 				<div class="pw error_box" id="u_pw_error">6글자 이상 입력해주세요</div>
 			</div>
 			<!-- 비밀번호 확인 -->
-			<div>	
+			<div>
 				<div class="text_box">
 					<label class="form_label">비밀번호 재입력</label>
 					<input type="password" id="up_re_pw" name="re_pw" placeholder="비밀번호 확인">
@@ -202,7 +200,19 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<!-- 기존 회원 정보 (수정 불가능) -->
 			<div>접속한 Email : ${loginMember.email }</div>
 			<div>생일 : ${loginMember.birthdate }</div>
-			<div>성별 : ${loginMember.gender }</div>
+			<div>
+				<%
+				int gender = (int) session.getAttribute("gender");
+				String genderText = "";
+				if (gender == 0) {
+					genderText = "여자";
+				} else if (gender == 1) {
+					genderText = "남자";
+				}
+				%>
+				성별 :
+				<%=genderText%>
+			</div>
 			<div>가입일자 : ${loginMember.joined_at }</div>
 			<div>
 				<input type="submit" value="회원정보변경" class="button fit">
@@ -216,7 +226,9 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 		<form id="joinForm" action="JoinCon" method="post" name="frm">
 			<span class="close_btn">×</span>
 			<!-- 회원정보 입력 타이틀 -->
-			<div class="title"><h1>회원가입</h1></div>
+			<div class="title">
+				<h1>회원가입</h1>
+			</div>
 			<!-- 회원 아이디 입력 -->
 			<div>
 				<div class="text_box">
