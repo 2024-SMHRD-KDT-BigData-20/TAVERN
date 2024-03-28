@@ -41,7 +41,7 @@ request.setCharacterEncoding("UTF-8");
 					<td>작성자</td>
 					<td><input type="text" name="writer" value=${loginMember.name } readonly="readonly"></td>
 				</tr>
-				<tr>
+				<tr>	
 					<td>카테고리</td>
 					<td><input type="text" name="category" value=<%= session.getAttribute("liq_type") %> readonly="readonly"></td>
 				</tr>
