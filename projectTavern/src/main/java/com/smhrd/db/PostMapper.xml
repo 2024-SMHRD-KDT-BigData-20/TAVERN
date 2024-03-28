@@ -22,7 +22,7 @@
 	<!-- 글 카테고리 -->
 	<select id="postcate" parameterType="String"
 		resultType="PostVO">
-		select post_title, post_content, created_at, id, post_category  from post_info where post_category=#{post_category}
+		select post_title, created_at, id, post_category from post_info where post_category=#{post_category}
 	</select>
 	<!-- 글 카테고리 끝 -->    
     

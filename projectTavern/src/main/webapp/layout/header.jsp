@@ -90,7 +90,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 								</ul>
 							</c:when>
 							<c:otherwise>
-								<a href="post_main.jsp">
+								<a href="Post_main_Con?post_category=<%="위스키"%>">
 									커뮤니티<span>🔻</span>
 								</a>
 								<ul>
