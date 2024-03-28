@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	if (joinCloseBtn) {
 		joinCloseBtn.addEventListener('click', function() {
 			document.getElementById('Join').style.display = 'none';
+			document.getElementById('login').style.display = 'block';
 		});
 	}
 	

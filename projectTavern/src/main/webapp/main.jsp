@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>메인</title>
 <link href="css/main.css?ver=1" rel="stylesheet">
 </head>
 <body>
