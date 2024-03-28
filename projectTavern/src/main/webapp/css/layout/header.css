@@ -132,6 +132,10 @@ ul, li, ol {
 	display: none; /* 서브 메뉴는 초기에는 숨깁니다 */
 	position: absolute; /* 절대 위치로 설정하여 부모 요소에 상대적으로 배치합니다 */
 	padding: 20px; /* 서브 메뉴의 여백을 추가합니다 */
+	background-color: white;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #topMenu li:hover>ul {
