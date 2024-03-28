@@ -34,7 +34,7 @@ public class Post_list_Con extends HttpServlet {
 			session.setAttribute("liquorList", liquorList);
 			session.setAttribute("liq_type", liq_type);
 		}
-
+ 
 		// 클라이언트에게 'liquor_list.jsp' 페이지로 리다이렉션 요청
 		response.sendRedirect("post_review.jsp");
 	}
