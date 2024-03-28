@@ -22,16 +22,9 @@ request.setCharacterEncoding("UTF-8");
 		<div class="title">신규 게시글 작성</div>
 		<form action="Post_in_Con" method="post">
 			<table>
-				<tr>
-					<td>작성자</td>
-					<!-- 여기에 텍스트 입력인데 자동으로 세션에 저장된 유저 닉을 데베에 저장 -->
-					<td><input type="text" name="writer"></td>
-				</tr>
+				<!-- 여기에 텍스트 입력인데 자동으로 세션에 저장된 유저 닉을 데베에 저장 -->
+				
 				<!-- 술 테이블에서 카테고리 뽑아가지고 저장 -->
-				<tr>
-					<td>카테고리</td>
-					<td><input type="text" name="category"></td>
-				</tr>
 				<tr>
 					<td>제목</td>
 					<td><input type="text" name="title"></td>
@@ -39,6 +32,14 @@ request.setCharacterEncoding("UTF-8");
 				<tr>
 					<td>내용</td>
 					<td><textarea rows="10" cols="20" name="content"></textarea></td>
+				</tr>
+				<tr>
+					<td>작성자</td>
+					<td><input type="text" name="writer"></td>
+				</tr>
+				<tr>
+					<td>카테고리</td>
+					<td><input type="text" name="category"></td>
 				</tr>
 				<tr>
 					<td colspan="2">

@@ -18,8 +18,10 @@ public class Post_in_Con extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 	    // 1. 파라미터 수집
-	    String post_title = request.getParameter("title");
-	    String post_content = request.getParameter("content");
+		String post_title = request.getParameter("title");
+		String post_content = request.getParameter("content");
+		String id = request.getParameter("id");
+		String post_category = request.getParameter("category");
 	    // 나머지 파라미터(post_index, post_file, created_at, post_views, post_likes, id)는 자동으로 증가되는 값이거나 사용자 입력이 아니므로 수집하지 않음.
 
 	    // 2. post_title이 비어있는지 확인
@@ -31,7 +33,11 @@ public class Post_in_Con extends HttpServlet {
 	    }
 
 	    // 3. PostVO 객체 생성
-	    PostVO postin = new PostVO(post_title, post_content);
+	    PostVO postin = new PostVO();
+	    postin.setPOST_TITLE(post_title);
+	    postin.setPOST_CONTENT(post_content);
+	    postin.setID(id);
+	    postin.setPOST_CATEGORY(post_category);
 
 	    // 4. PostDAO 객체 생성 및 게시글 작성 시도
 	    PostDAO postDAO = new PostDAO();

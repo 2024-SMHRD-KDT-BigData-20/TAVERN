@@ -1,5 +1,6 @@
 package com.smhrd.model;
 
+import java.math.BigDecimal;
 import java.util.Locale.Category;
 
 import lombok.AllArgsConstructor;
@@ -9,41 +10,78 @@ import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 import lombok.NonNull;
 
-@AllArgsConstructor // 모든 파라미터 담는 생성자
-@NoArgsConstructor // 기본 생성자
-@RequiredArgsConstructor // 필요 파라미터 담는 생성자
-@Getter
-@ToString
+
 public class PostVO {
 	
 	// 글 식별자
-    private Double POST_IDX;
+    private BigDecimal POST_IDX;
 
     // 글 제목
-    @NonNull
+    
     private String POST_TITLE;
 
     // 글 내용
-    @NonNull
+    
     private String POST_CONTENT;
 
-    // 글 첨부파일 
-    private String POST_FILE;
 
     // 글 작성일자 
     private String CREATED_AT;
-
-    // 글 조회수 
-    private Double POST_VIEWS;
-
-    // 글 좋아요수 
-    private Double POST_LIKES;
 
     // 글 작성자 
     private String ID;
     
     // 글 카테고리
-    private Category POST_CATEGORY;
-    
+    private String POST_CATEGORY;
+
+	public BigDecimal getPOST_IDX() {
+		return POST_IDX;
+	}
+
+	public void setPOST_IDX(BigDecimal pOST_IDX) {
+		POST_IDX = pOST_IDX;
+	}
+
+	public String getPOST_TITLE() {
+		return POST_TITLE;
+	}
+
+	public void setPOST_TITLE(String pOST_TITLE) {
+		POST_TITLE = pOST_TITLE;
+	}
+
+	public String getPOST_CONTENT() {
+		return POST_CONTENT;
+	}
+
+	public void setPOST_CONTENT(String pOST_CONTENT) {
+		POST_CONTENT = pOST_CONTENT;
+	}
+
+	public String getCREATED_AT() {
+		return CREATED_AT;
+	}
+
+	public void setCREATED_AT(String cREATED_AT) {
+		CREATED_AT = cREATED_AT;
+	}
+
+	public String getID() {
+		return ID;
+	}
+
+	public void setID(String iD) {
+		ID = iD;
+	}
+
+	public String getPOST_CATEGORY() {
+		return POST_CATEGORY;
+	}
+
+	public void setPOST_CATEGORY(String pOST_CATEGORY) {
+		POST_CATEGORY = pOST_CATEGORY;
+	}
+
+
     
 }
