@@ -11,26 +11,35 @@ import javax.servlet.http.HttpSession;
 import com.smhrd.model.LiquorDAO;
 import com.smhrd.model.LiquorVO;
 
-
+@WebServlet("/LiquorCon") // 이 서블릿이 "/LiquorCon" URL에 매핑됨
 public class LiquorCon extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        System.out.println("[LiquorCon]");
-        String liq_type = request.getParameter("liq_type"); // request 파라미터로부터 liq_type 전달 받음
+        System.out.println("[LiquorCon]"); // 콘솔에 로그를 출력
 
-        // 술 이름을 가져오기 위한 DAO 객체 생성
+        // 클라이언트로부터 전달된 요청 파라미터 중 'liq_type'을 가져옴
+        String liq_type = request.getParameter("liq_type");
+
+        // LiquorDAO 객체 생성
         LiquorDAO liquorDAO = new LiquorDAO();
-        // 술 이름 목록 가져오기 (liq_type에 따라 다른 술의 목록을 가져오도록 함)
+
+        // liq_type을 이용하여 LiquorDAO에서 해당하는 술의 정보를 가져옴
         List<LiquorVO> liquorList = liquorDAO.liqName(liq_type);
+
+        // 콘솔에 liq_type과 해당하는 술 리스트 출력
         System.out.println(liq_type + " 리스트: " + liquorList);
-        // 세션에 술 이름 목록을 저장
+
+        // 만약 가져온 술 리스트가 null이 아니면
         if (liquorList != null) {
+            // 현재 세션을 가져옴
             HttpSession session = request.getSession();
+            // 세션에 'liquorList'와 'liq_type' 속성을 설정하여 정보를 저장
             session.setAttribute("liquorList", liquorList);
             session.setAttribute("liq_type", liq_type);
         }
-        // 리다이렉션: 새로운 URL로 클라이언트에게 이동 요청
+
+        // 클라이언트에게 'liquor_list.jsp' 페이지로 리다이렉션 요청
         response.sendRedirect("liquor_list.jsp");
     }
 }

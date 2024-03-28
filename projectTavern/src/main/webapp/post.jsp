@@ -7,6 +7,8 @@
 <link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-	<div id="container"><</div>
+	<div class="main">
+		
+	</div>
 </body>
 </html>
