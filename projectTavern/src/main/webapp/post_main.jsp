@@ -1,3 +1,5 @@
+<%@page import="com.smhrd.model.PostVO"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -28,23 +30,26 @@
 				</div>
 				<%
 				for (int j = 0; j < 3; j++) {
-				%>
-				<div>
-					<a href="post_review.jsp">
+						    List<PostVO> postList = (List<PostVO>)request.getAttribute("postList"); // 서블릿에서 받아온 게시글 목록
+						    for (PostVO post : postList) { 
+						%>
 						<div>
-							<p>카테고리(타입)</p>
+						    <a href="post_review.jsp">
+						        <div>
+						            <p><%= post.getPOST_TITLE() %></p> <!-- 제목 표시 -->
+						        </div>
+						    </a>
+						    <div>
+						        <p><%= post.getCREATED_AT() %></p> <!-- 작성날짜 표시 -->
+						    </div>
+						    <div>
+						        <p><%= post.getID() %></p> <!-- 작성자 표시 -->
+						    </div>
+						    <div>
+						            <p><%= post.getPOST_CATEGORY() %></p> <!-- 카테고리 표시 -->
+						        </div>
 						</div>
-						<div>
-							<p>제목</p>
-						</div>
-					</a>
-					<div>
-						<p>작성날짜</p>
-					</div>
-					<div>
-						<p>작성자</p>
-					</div>
-				</div>
+						<% } %>
 				<%
 				}
 				%>
