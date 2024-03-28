@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.getElementById('mypage').style.display = 'block';
 		});
 	}
-	
+
 	// X버튼 클릭시 회원가입 폼 닫기
 	let joinCloseBtn = document.querySelector("#Join .close_btn");
 	if (joinCloseBtn) {
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.getElementById('login').style.display = 'block';
 		});
 	}
-	
+
 
 	// 로그인 버튼 클릭 시 로그인 폼 표시
 	let loginButton = document.querySelector(".login-link");
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			document.getElementById('login').style.display = 'block'; // 로그인 폼 표시
 		});
 	}
-	
+
 	// 회원가입 버튼 클릭시 회원가입 폼 표시
 	let joinButton = document.querySelector(".join-link");
 	if (joinButton) {
@@ -73,16 +73,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 });
-function checkLogin() {
-	// 세션에서 로그인 정보를 확인
-	let loginMember = '<%= session.getAttribute("loginMember") %>';
-	if (loginMember === 'null') {
-		// 세션이 없을 때
-		alert('커뮤니티를 이용하려면 먼저 로그인해주세요.');
-		return false; // 링크 클릭 이벤트 취소
-	} else {
-		// 세션이 있을 때
-		return true; // 링크 이동
-	}
+function alertLogin() {
+	alert("로그인이 필요합니다.");
 }
-

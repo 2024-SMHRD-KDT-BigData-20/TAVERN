@@ -66,7 +66,18 @@
 		</section>
 		<!-- 리뷰 페이지 링크 -->
 		<div class="review">
-			<a href="reviewPage.jsp">리뷰 페이지로 이동</a>
+			<c:choose>
+				<c:when test="${empty loginMember }">
+					<a href="#" onclick="alertLogin()">
+						리뷰페이지로 이동
+					</a>
+				</c:when>
+				<c:otherwise>
+					<a href="post_main.jsp">
+						리뷰페이지로 이동
+					</a>
+				</c:otherwise>
+			</c:choose>
 		</div>
 	</div>
 	<div>

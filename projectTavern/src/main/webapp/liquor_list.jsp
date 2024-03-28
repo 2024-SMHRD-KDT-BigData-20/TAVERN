@@ -60,7 +60,7 @@
 
 		</div>
 		<!-- 내용 -->
-		<div>
+		<div class="o">
 			<section>
 				<div id="linkList">
 					<!-- 세션에서 술 이름 목록을 가져와서 출력 -->
@@ -104,11 +104,15 @@
 					}
 					%>
 				</div>
-
-				<!-- 더보기 버튼 -->
-				<button id="moreButton">더보기</button>
+				<div style="text-align: center;">
+					<!-- 더보기 버튼 -->
+					<button id="moreButton">더보기</button>
+				</div>
 			</section>
 		</div>
+	</div>
+	<div>
+		<%@include file="layout/footer.jsp"%>
 	</div>
 	<script>
 		var currentIndex = 0;

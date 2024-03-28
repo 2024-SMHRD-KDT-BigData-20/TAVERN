@@ -9,12 +9,16 @@ request.setCharacterEncoding("UTF-8");
 <meta charset="UTF-8">
 <title>JSP 게시판 웹 사이트</title>
 <link href="css/main.css" rel="stylesheet">
+<link href="css/post.css" rel="stylesheet">
 </head>
 <body>
 	<div>
 		<%@include file="layout/header.jsp"%>
 	</div>
 	<div class="main">
+		<div>
+			<%@include file="layout/left_nav.jsp"%>
+		</div>
 		<div class="title">신규 게시글 작성</div>
 		<form action="Post_in_Con" method="post">
 			<table>
