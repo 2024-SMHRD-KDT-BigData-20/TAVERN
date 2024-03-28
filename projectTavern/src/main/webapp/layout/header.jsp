@@ -95,7 +95,7 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 								</a>
 								<ul>
 									<li>
-										<a href="post_review.jsp">리뷰</a>
+										<a href="Post_listCon?liq_type=<%="위스키"%>.jsp">리뷰</a>
 									</li>
 									<li>
 										<a href="post_free.jsp">자유</a>

@@ -18,12 +18,14 @@
 		<div>
 			<%@include file="layout/left_nav.jsp"%>
 		</div>
+		<%
+		// 세션에서 술의 유형 가져오기
+		String liqType = (String) session.getAttribute("liq_type");
+		%>
 		<div class="cate">
 			<h4>
 				<!-- 여기에 위스키나 제목 입력 DB로 가져오기 -->
-				<%
-				List<LiquorVO> liquorList = (List<LiquorVO>) session.getAttribute("liquorList");
-				%>
+				 <%= liqType %>	
 			</h4>
 		</div>
 		<div>

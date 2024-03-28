@@ -11,7 +11,6 @@ import javax.servlet.http.HttpSession;
 import com.smhrd.model.LiquorDAO;
 import com.smhrd.model.LiquorVO;
 
-
 public class LiquorCon extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
