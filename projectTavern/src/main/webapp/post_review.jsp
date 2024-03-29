@@ -18,22 +18,18 @@
 		<div>
 			<%@include file="layout/left_nav.jsp"%>
 		</div>
-		<%
-		// 세션에서 술의 유형 가져오기
-		String liqType = (String) session.getAttribute("liq_type");
-		%>
 		<div class="cate">
 			<h4>
 				<!-- 여기에 위스키나 제목 입력 DB로 가져오기 -->
-				 <%= session.getAttribute("liq_type") %>
+				<%=session.getAttribute("liq_type")%>
 			</h4>
 		</div>
 		<div>
-			<div class="card">
 
-				<a href="writing.jsp">
-					<div class="writing">글쓰기</div>
-				</a>
+			<a href="writing.jsp">
+				<div class="writing">글쓰기</div>
+			</a>
+			<div class="card">
 				<!-- 이 부분을 데베의 길이만큼 출력 -->
 				<div class="title">
 					<a href="#">
@@ -43,7 +39,20 @@
 						</h4>
 					</a>
 				</div>
-				<!-- 글 내용 div -->
+				<div class="dt">
+					<div>
+						<p>작성날짜</p>
+						<!-- 작성날짜 표시 -->
+					</div>
+					<div>
+						<p>작성자</p>
+						<!-- 작성자 표시 -->
+					</div>
+					<div>
+						<p>카테고리</p>
+						<!-- 카테고리 표시 -->
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

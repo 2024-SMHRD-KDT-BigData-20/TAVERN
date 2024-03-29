@@ -20,10 +20,12 @@
     
     
 	<!-- 글 카테고리 -->
-	<select id="postcate" parameterType="String"
-		resultType="PostVO">
-		select post_title, created_at, id, post_category from post_info where post_category=#{post_category}
-	</select>
+	<select id="postCateIn" parameterType="java.util.List" resultType="com.smhrd.model.PostVO">
+    SELECT * FROM post_info WHERE post_category IN
+    <foreach item="category" collection="list" open="(" separator="," close=")">
+        #{category}
+    </foreach>
+</select>
 	<!-- 글 카테고리 끝 -->    
     
     

@@ -14,7 +14,7 @@
 	<div class="main">
 		<div id="slideShow">
 			<div id="slides">
-				<img src="img/bono1.jpg" alt="간판 이미지1"> <img src="img/bono2.jpg" alt="간판 이미지2">
+				<img src="img/bono1" alt="간판 이미지1"> <img src="img/bono2" alt="간판 이미지2">
 				<button id="prev" class="bt">&lang;</button>
 				<button id="next" class="bt">&rang;</button>
 			</div>

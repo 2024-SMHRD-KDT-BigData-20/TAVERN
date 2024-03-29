@@ -31,10 +31,10 @@ public class PostDAO {
 	}// 게시글리스트 끝
 
 	// 카테고리별 게시글 가져오기
-	public List<PostVO> getPostsByCategory(String post_category) {
+	public List<PostVO> getPostsByCategories(List<String> post_categories) {
 	    List<PostVO> postList = null;
 	    try (SqlSession sqlSession = sqlSessionFactory.openSession(true)) {
-	        postList = sqlSession.selectList("com.smhrd.db.PostMapper.postcate", post_category);
+	        postList = sqlSession.selectList("com.smhrd.db.PostMapper.postCateIn", post_categories);
 	    }
 	    return postList;
 	}

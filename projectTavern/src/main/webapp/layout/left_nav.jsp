@@ -22,26 +22,53 @@
 		<div class="s">
 			<ul>
 				<div>리뷰</div>
-				<ol>
-					<li>
-						<a href="Post_list_Con?liq_type=<%="위스키"%>">위스키</a>
-					</li>
-					<li>
-						<a href="Post_list_Con?liq_type=<%="럼"%>">럼</a>
-					</li>
-					<li>
-						<a href="Post_list_Con?liq_type=<%="보드카"%>">보드카</a>
-					</li>
-					<li>
-						<a href="Post_list_Con?liq_type=<%="리큐르"%>">리큐르</a>
-					</li>
-					<li>
-						<a href="Post_list_Con?liq_type=<%="꼬냑"%>">꼬냑</a>
-					</li>
-					<li>
-						<a href="Post_list_Con?liq_type=<%="데킬라"%>">데킬라</a>
-					</li>
-				</ol>
+				<c:choose>
+					<c:when test="${empty loginMember }">
+						<ol>
+							<li>
+								<a href="#" onclick="alertLogin()">위스키</a>
+							</li>
+							<li>
+								<a href="#" onclick="alertLogin()">럼</a>
+							</li>
+							<li>
+								<a href="#" onclick="alertLogin()">보드카</a>
+							</li>
+							<li>
+								<a href="#" onclick="alertLogin()">리큐르</a>
+							</li>
+							<li>
+								<a href="#" onclick="alertLogin()">꼬냑</a>
+							</li>
+							<li>
+								<a href="#" onclick="alertLogin()">데킬라</a>
+							</li>
+						</ol>
+					</c:when>
+					<c:otherwise>
+						<ol>
+							<li>
+								<a href="Post_list_Con?liq_type=<%="위스키"%>">위스키</a>
+							</li>
+							<li>
+								<a href="Post_list_Con?liq_type=<%="럼"%>">럼</a>
+							</li>
+							<li>
+								<a href="Post_list_Con?liq_type=<%="보드카"%>">보드카</a>
+							</li>
+							<li>
+								<a href="Post_list_Con?liq_type=<%="리큐르"%>">리큐르</a>
+							</li>
+							<li>
+								<a href="Post_list_Con?liq_type=<%="꼬냑"%>">꼬냑</a>
+							</li>
+							<li>
+								<a href="Post_list_Con?liq_type=<%="데킬라"%>">데킬라</a>
+							</li>
+						</ol>
+					</c:otherwise>
+				</c:choose>
+
 				<br>
 				<div>
 					<a href="#">자유</a>
@@ -49,7 +76,7 @@
 			</ul>
 		</div>
 	</div>
-	<script type="text/javascript">
+	<script>
 		// 마이페이지 링크를 클릭했을 때 실행되는 함수
 		function showMyPage() {
 			// 마이페이지 폼을 포함하는 header.jsp의 ID인 mypage를 가져옴
@@ -63,7 +90,9 @@
 				mypageForm.style.display = "none";
 			}
 		}
+		function alertLogin() {
+			alert("로그인이 필요합니다.");
+		}
 	</script>
-
 </body>
 </html>
