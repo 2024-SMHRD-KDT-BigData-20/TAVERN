@@ -35,7 +35,7 @@ request.setCharacterEncoding("UTF-8");
 				</tr>
 				<tr>
 					<td>내용</td>
-					<td><textarea rows="10" cols="20" name="content"></textarea></td>
+					<td><textarea rows="20" cols="150" name="content" style="padding: 10px"></textarea></td>
 				</tr>
 				<tr>
 					<td>작성자</td>
