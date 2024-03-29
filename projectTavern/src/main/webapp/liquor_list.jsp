@@ -72,7 +72,7 @@
 							if (count < 6) { // 처음 6개의 항목만 처리
 					%>
 					<div class="liquor-item">
-						<img src="images/<%=liquor.getLiq_name()%>.jpg">
+						<img src="img/liquor/<%=liquor.getLiq_name()%>.png">
 						<!-- 이미지 -->
 						<h3>
 							<a href="DetailCon?liq_name=<%=liquor.getLiq_name()%>"><%=liquor.getLiq_name()%></a>
@@ -93,7 +93,7 @@
 					for (int i = 6; i < liquorList.size(); i++) {
 					%>
 					<div class="liquor-item hidden" style="display: none">
-						<img src="images/<%=liquorList.get(i).getLiq_name()%>.jpg">
+						<img src="img/liquor/<%=liquorList.get(i).getLiq_name()%>.png">
 						<!-- 이미지 -->
 						<h3>
 							<a href="javascript:void(0);"><%=liquorList.get(i).getLiq_name()%></a>

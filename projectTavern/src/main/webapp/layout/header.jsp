@@ -189,7 +189,6 @@ MemberVO loginMember = (MemberVO) session.getAttribute("loginMember");
 			<div>임시저장보기</div>
 			<div>문의보기</div>
 			<div>댓글보기</div>
-			<div><a href="http://localhost:3000/">체팅</a></div>
 			<div id="updateLink">
 				<a href="#Update">정보수정</a>
 			</div>

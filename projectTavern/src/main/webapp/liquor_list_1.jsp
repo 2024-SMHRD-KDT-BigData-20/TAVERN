@@ -26,38 +26,49 @@
 				%>
 				<div class="left-side">
 					<!-- 이미지 표시 (여기서는 이미지 URL이 LiquorVO에 없으므로 생략) -->
-					<img src="images/<%=liquor.getLiq_name()%>.jpg">
+					<img src="img/liquor/<%=liquor.getLiq_name()%>.png" alt="<%=liquor.getLiq_name()%>">
 				</div>
 				<div class="right-side">
 					<!-- 술 정보 표시 -->
-					<h2>
-						술 이름:
-						<%=liquor.getLiq_name()%></h2>
-					<p>
-						술 카테고리:
-						<%=liquor.getLiq_category()%></p>
-					<p>
-						도수:
-						<%=liquor.getLiq_alcohol()%></p>
-					<p>
-						맛:
-						<%=liquor.getTasty()%></p>
-					<p>
-						향:
-						<%=liquor.getSmell()%></p>
-					<p>
-						무게감:
-						<%=liquor.getBody()%></p>
-					<p>
-						당분:
-						<%=liquor.getSugar()%></p>
-					<p>
-						어울리는 음식:
-						<%=liquor.getFood()%></p>
-					<p>
-						술정보:
-						<%=liquor.getLiq_type()%></p>
-					<!-- 술 정보(liq_type)는 상세 설명이 아니므로 여기서는 생략 -->
+					<table>
+						<tr>
+							<td>술 이름 :</td>
+							<td><%=liquor.getLiq_name()%></td>
+						</tr>
+						<tr>
+							<td>술 카테고리 :</td>
+							<td><%=liquor.getLiq_category()%></td>
+						</tr>
+						<tr>
+							<td>도수 :</td>
+							<td><%=liquor.getLiq_alcohol()%></td>
+						</tr>
+						<tr>
+							<td>맛 :</td>
+							<td><%=liquor.getTasty()%></td>
+						</tr>
+						<tr>
+							<td>향 :</td>
+							<td><%=liquor.getSmell()%></td>
+						</tr>
+						<tr>
+							<td>무게감 :</td>
+							<td><%=liquor.getBody()%></td>
+						</tr>
+						<tr>
+							<td>당분 :</td>
+							<td><%=liquor.getSugar()%></td>
+						</tr>
+						<tr>
+							<td>어울리는 음식 :</td>
+							<td><%=liquor.getFood()%></td>
+						</tr>
+						<tr>
+							<td>술정보 :</td>
+							<td><%=liquor.getLiq_type()%></td>
+						</tr>
+						<!-- 술 정보(liq_type)는 상세 설명이 아니므로 여기서는 생략 -->
+					</table>
 				</div>
 				<%
 				}
@@ -68,14 +79,10 @@
 		<div class="review">
 			<c:choose>
 				<c:when test="${empty loginMember }">
-					<a href="#" onclick="alertLogin()">
-						리뷰페이지로 이동
-					</a>
+					<a href="#" onclick="alertLogin()"> 리뷰페이지로 이동 </a>
 				</c:when>
 				<c:otherwise>
-					<a href="post_main.jsp">
-						리뷰페이지로 이동
-					</a>
+					<a href="post_main.jsp"> 리뷰페이지로 이동 </a>
 				</c:otherwise>
 			</c:choose>
 		</div>
