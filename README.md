@@ -23,3 +23,7 @@ TARVERN : 선술집이라는 의미
 ## 정보페이지
 ![정보페이지](https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN/blob/master/liquor_main_2.png?raw=true)
 정보페이지는 카테고리를 6개씩 나열해주고 더보기버튼을 클릭시 3개씩 추가로 보여준다 또 이미지를 클릭시 해당 술의 상세페이지로 넘어간다.
+
+
+## 팀원소감
+![팀원소감](https://github.com/2024-SMHRD-KDT-BigData-20/TAVERN/blob/master/%ED%8C%80%EC%9B%90%EC%86%8C%EA%B0%90.png)
